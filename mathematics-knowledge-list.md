@@ -45,7 +45,7 @@
 
 ## 其他
 
-已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标是什么？[^7]
+已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标是什么？![](http://res.niuxuewei.com/2018-11-17-013041.gif)
 
 # 极限与连续
 
@@ -134,24 +134,24 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 ## ★一元不定积分
 
-- $\int {\tan xdx} $[^1]
+- $\int {\tan xdx} $ [How to solve ∫ tanx dx ?](https://socratic.org/questions/how-to-solve-tanx-dx)
 - $\int {\cot xdx} $
-- $\int {\sec xdx} $[^2]
-- $\int {\csc xdx} $[^3]
+- $\int {\sec xdx} $ [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
+- $\int {\csc xdx} $ [How do you integrate cscx?](https://socratic.org/questions/how-do-you-integrate-cscx)
 - $\int {{{\sec }^2}xdx} $
 - $\int {{{\csc }^2}xdx} $
-- $\int {\tan x\sec xdx} $[^15]
+- $\int {\tan x\sec xdx} $ $\sec x + C$
 - $\int {\cot x\csc xdx} $
-- $\int {{{\sec }^3}xdx} $[^14]
+- $\int {{{\sec }^3}xdx} $ [answer](https://socratic.org/questions/what-is-the-integral-of-sec-3-x)
 - $\int {\ln xdx} $
 - $\int {{1 \over {\sqrt {1 - {x^2}} }}dx} $
 - $\int { - {1 \over {\sqrt {1 - {x^2}} }}dx} $
 - $\int {{1 \over {\sqrt {{x^2} + 1} }}dx} $
 - $\int {{1 \over {\sqrt {{x^2} - 1} }}dx} $
-- $\int {{1 \over {{a^2}{x^2} + {b^2}}}dx} $[^4]
-- $\int {{1 \over {{x^2} - {a^2}}}dx} $[^5]
-- $\int {{1 \over {{a^2} - {x^2}}}dx} $[^6]
-- $\int {{1 \over {\cos x + \sin x}}dx} $[^16] <1000题5.39>
+- $\int {{1 \over {{a^2}{x^2} + {b^2}}}dx} $ ![](http://res.niuxuewei.com/2018-11-14-141022.gif)
+- $\int {{1 \over {{x^2} - {a^2}}}dx} $![](http://res.niuxuewei.com/2018-11-14-140956.gif)
+- $\int {{1 \over {{a^2} - {x^2}}}dx} $ ![Untitled 1](http://res.niuxuewei.com/2018-11-14-141236.gif)
+- $\int {{1 \over {\cos x + \sin x}}dx} $ ![image-20190618165454770](http://res.niuxuewei.com/2019-06-18-085456.png) <1000题5.39>
 
 ## ★一元定积分 
 
@@ -181,8 +181,8 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 ## 针对于概率论的积分
 
-- 针对指数分布：$\int_0^{ + \infty } {{x^n}{e^{ -  x}}dx} $[^8]
-- 针对正态分布：$\int_{ - \infty }^{ + \infty } {{e^{ - {x^2}}}dx} $[^9]
+- 针对指数分布：$\int_0^{ + \infty } {{x^n}{e^{ -  x}}dx} $![](http://res.niuxuewei.com/2018-12-02-11.gif)
+- 针对正态分布：$\int_{ - \infty }^{ + \infty } {{e^{ - {x^2}}}dx} $![](http://res.niuxuewei.com/2018-11-24-Untitled%201-1.gif)
 
 ## 反常积分比阶
 
@@ -247,7 +247,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 ## 概率论用到的无穷级数
 
-- $\sum\limits_{k = 0}^\infty  {{1 \over {k!}}} $[^10]
+- $\sum\limits_{k = 0}^\infty  {{1 \over {k!}}} $![Untitled 1](http://res.niuxuewei.com/2018-11-27-070652.gif)
 
 
 # 数学一、数学二专题内容
@@ -264,9 +264,33 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 # 空间解析几何
 
+
+## 面积、体积、表面积公式以及曲线公式
+
+面积、体积、表面积公式 
+
+- 半径为$r$的球的体积 
+- 半径为$r$的球的表面积
+- 椭圆${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = 1$的面积公式 
+- 圆锥体积公式 
+- 四面体体积公式 <1000题4.52>
+
+椭圆 *(p307)*
+
+- 椭圆方程
+- 椭圆切线 ${{{x_0}x} \over {{a^2}}} + {{{y_0}y} \over {{b^2}}} = 1$
+
+二次曲面 *(p307)*
+
+- 椭球面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} + {{{z^2}} \over {{c^2}}} = 1$
+
+- 椭圆柱面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = {z^2}$
+- 椭圆抛物面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = z$
+- 旋转圆锥面$z = \sqrt {{x^2} + {y^2}} $
+
 ## 叉乘
 
--  几何意义[^17]
+-  几何意义 ![image-20190619110727916](http://res.niuxuewei.com/2019-06-19-030729.png)
 
 - $\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    a}  \times \mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
@@ -308,17 +332,6 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
   - 参数方程
 - 空间曲面方程 *(p307)*
 
-## 空间中的曲线、曲面积分
-
-- 方向余弦怎么求？[^11]
-- 方向导数怎么求 *(p311)*
-- 梯度怎么求 *(p311)*
-- 散度怎么求 *(p360)*
-- 旋度怎么求 *(p360)*[☢︎]
-- 斯托克斯公式怎么用？
-  - 方向
-  - 可以转化成哪种积分
-
 ## 多元函数积分学的几何应用
 
 - 空间曲线(参数方程)$\left\{ {\matrix{{x = \varphi (t)}  \cr {y = \psi (t)}  \cr {z = \omega (t)}  \cr } } \right.$并过$P_0\left(x_0,y_0,z_0 \right)$的切线和法平面 *(p308)*
@@ -332,31 +345,9 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 ## 方向导数与梯度
 
-- 设三元函数$u=u\left(x,y,z\right)$，方向导数计算公式 *(p311)* [☢︎]
-- 梯度公式 *(p311)* [☢︎]
-
-## 基础知识
-
-面积、体积、表面积公式 *(p307)*
-
-- 半径为$r$的球的体积 
-- 半径为$r$的球的表面积
-- 椭圆${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = 1$的面积公式 
-- 圆锥体积公式 
-- 四面体体积公式(1000题4.52)
-
-椭圆 *(p307)*
-
-- 椭圆方程
-- 椭圆切线[^12]
-
-二次曲面 *(p307)*
-
-- 椭球面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} + {{{z^2}} \over {{c^2}}} = 1$
-
-- 椭圆柱面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = {z^2}$
-- 椭圆抛物面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = z$
-- 旋转圆锥面$z = \sqrt {{x^2} + {y^2}} $
+- 方向余弦：方向导数是通过面的法向量求出的，如n=(a,b,c)，那么方向导数cosα=a/||n||
+- 方向导数怎么求 *(p311)*
+- 梯度怎么求 *(p311)*
 
 ## 三重积分极坐标转化
 
@@ -364,6 +355,14 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
    {f\left( {x,y,z} \right)dV} $角坐标系转极坐标 *(p328)*
   - $dx,dy,dz$
   - $x,y,z$
+
+## 其他
+
+- 散度怎么求 *(p360)*
+- 旋度怎么求 *(p360)*[☢︎]
+- 斯托克斯公式怎么用？
+  - 方向
+  - 可以转化成哪种积分
 
 # 行列式
 
@@ -458,50 +457,3 @@ X,Y独立可以推出什么？
 - ${n(\bar X-\mu)^2 \over S^2}$
 - ${1 \over {{\sigma ^2}}}\sum\limits_{i = 1}^n {{{({X_i} - \bar X)}^2}} $
 - ${1 \over {{\sigma ^2}}}\sum\limits_{i = 1}^n {{{({X_i} - \mu )}^2}} $
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[^1]: [How to solve ∫ tanx dx ?](https://socratic.org/questions/how-to-solve-tanx-dx)
-[^2]: [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
-[^3]: [How do you integrate cscx?](https://socratic.org/questions/how-do-you-integrate-cscx)
-[^4]: ![](http://res.niuxuewei.com/2018-11-14-141022.gif)
-[^5]: ![](http://res.niuxuewei.com/2018-11-14-140956.gif)
-[^6]: ![Untitled 1](http://res.niuxuewei.com/2018-11-14-141236.gif)
-[^7]: ![](http://res.niuxuewei.com/2018-11-17-013041.gif)
-[^8]: ![](http://res.niuxuewei.com/2018-12-02-11.gif)
-[^9]: ![](http://res.niuxuewei.com/2018-11-24-Untitled%201-1.gif)
-
-[^10]: ![Untitled 1](http://res.niuxuewei.com/2018-11-27-070652.gif)
-[^11]: 方向导数是通过面的法向量求出的，如n=(a,b,c)，那么方向导数cosα=a/||n||
-
-
-
-[^12  ]: $${{{x_0}x} \over {{a^2}}} + {{{y_0}y} \over {{b^2}}} = 1$$
-[^13]: V=(三角形底面积 x 高) /3
-[^14]: [answer](https://socratic.org/questions/what-is-the-integral-of-sec-3-x)
-[^15]: $\sec x + C$
-[^16]: ![image-20190618165454770](http://res.niuxuewei.com/2019-06-18-085456.png)
-[^17]: ![image-20190619110727916](http://res.niuxuewei.com/2019-06-19-030729.png)
