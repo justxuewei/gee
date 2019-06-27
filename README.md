@@ -4,4 +4,4 @@
 
 目录
 
-- [记忆清单](knowledge-list.md)
+- [知识清单](knowledge-list.md)
