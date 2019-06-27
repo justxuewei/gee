@@ -31,21 +31,22 @@
 
 经典不等式 *(2020 p111)*
 
-1. $2\left| {ab} \right|$[☢︎]
+1. $2\left| {ab} \right|$
 2. $\left| {a \pm b} \right|$
-3. $\left| {\left| a \right| - \left| b \right|} \right|$[☢︎]
+3. $\left| {\left| a \right| - \left| b \right|} \right|$
 4. $\left| {\int {f\left( x \right)dx} } \right|$
-5. 平均值不等式大于等于谁？小于等于谁？[☢︎☢︎]
+5. 平均值不等式大于等于谁？小于等于谁？
 6. $\tan x,\sin x,x$的关系，在什么区间上？
 7. $x,\sin x$的关系，在什么区间上？
 8. $\ln \left( {1 + {1 \over x}} \right)$与其他的大小关系，并证明，在什么区间上？
 9. $x,\arcsin x,\arctan x$的关系在，什么区间上？
 10. ${e^x}$与$x$的关系
-11. $\ln x$与$x$的关系在，什么区间上？ [☢︎☢︎]
+11. $\ln x$与$x$的关系在，什么区间上？
 
 ## 其他
 
-已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标是什么？![](http://res.niuxuewei.com/2018-11-17-013041.gif)
+已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标是什么？
+![](http://res.niuxuewei.com/2018-11-17-013041.gif)
 
 # 极限与连续
 
@@ -151,7 +152,8 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 - $\int {{1 \over {{a^2}{x^2} + {b^2}}}dx} $ ![](http://res.niuxuewei.com/2018-11-14-141022.gif)
 - $\int {{1 \over {{x^2} - {a^2}}}dx} $![](http://res.niuxuewei.com/2018-11-14-140956.gif)
 - $\int {{1 \over {{a^2} - {x^2}}}dx} $ ![Untitled 1](http://res.niuxuewei.com/2018-11-14-141236.gif)
-- $\int {{1 \over {\cos x + \sin x}}dx} $ ![image-20190618165454770](http://res.niuxuewei.com/2019-06-18-085456.png) <1000题5.39>
+- $\int {{1 \over {\cos x + \sin x}}dx} $  <1000题5.39>
+  ![image-20190618165454770](http://res.niuxuewei.com/2019-06-18-085456.png) 
 
 ## ★一元定积分 
 
@@ -247,7 +249,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 ## 概率论用到的无穷级数
 
-- $\sum\limits_{k = 0}^\infty  {{1 \over {k!}}} $![Untitled 1](http://res.niuxuewei.com/2018-11-27-070652.gif)
+- $\sum\limits_{k = 0}^\infty  {{1 \over {k!}}} =e$
 
 
 # 数学一、数学二专题内容
@@ -323,7 +325,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 - [针对三维坐标系]已知点$P\left( {{x_0},{y_0},{z_0}} \right)$，在直线$L_1$中方向向量为$\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    s} $，其线上任一点$P_0$，$P$点到直线距离为$d = {{\left| {P{P_0} \times \mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    s} } \right|} \over {\left| {\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
-   s} } \right|}}$[^17] <1000题6.8, 6.30>
+   s} } \right|}}$ <1000题6.8, 6.30>
 
 ## 空间曲线与曲面
 
@@ -345,7 +347,8 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 ## 方向导数与梯度
 
-- 方向余弦：方向导数是通过面的法向量求出的，如n=(a,b,c)，那么方向导数cosα=a/||n||
+- 方向余弦
+  ![img](http://res.niuxuewei.com/2019-06-27-125833.jpg)
 - 方向导数怎么求 *(p311)*
 - 梯度怎么求 *(p311)*
 
@@ -359,7 +362,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 ## 其他
 
 - 散度怎么求 *(p360)*
-- 旋度怎么求 *(p360)*[☢︎]
+- 旋度怎么求 *(p360)*
 - 斯托克斯公式怎么用？
   - 方向
   - 可以转化成哪种积分
