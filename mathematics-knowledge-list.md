@@ -193,6 +193,11 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 # 多元函数微分学
 
+## 全微分
+
+- [如何理解](https://www.zhihu.com/question/272499712)
+- 公式$du = {{\partial u} \over {\partial x}}dx + {{\partial u} \over {\partial y}}dy + {{\partial u} \over {\partial z}}dz$
+
 ## 隐函数
 
 隐函数存在定理 *(p182)*
@@ -251,19 +256,6 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 - $\sum\limits_{k = 0}^\infty  {{1 \over {k!}}} =e$
 
-
-# 数学一、数学二专题内容
-
-曲率相关 *(p267)*
-
-- 曲率公式
-- 曲率半径
-- 曲率圆
-
-傅里叶级数
-
-- 傅里叶级数收敛公式：在连续点收敛，在间断点收敛，在端点收敛 *(Notability中的讲义)*
-
 # 空间解析几何
 
 
@@ -271,9 +263,9 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 面积、体积、表面积公式 
 
-- 半径为$r$的球的体积 
-- 半径为$r$的球的表面积
-- 椭圆${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = 1$的面积公式 
+- 半径为$R$的球的体积$V={4\over3}\pi R^3$
+- 半径为$R$的球的表面积$S=4\pi R^2$
+- 椭圆${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = 1$的面积公式 $S=\pi ab$
 - 圆锥体积公式 
 - 四面体体积公式 <1000题4.52>
 
@@ -325,7 +317,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 - [针对三维坐标系]已知点$P\left( {{x_0},{y_0},{z_0}} \right)$，在直线$L_1$中方向向量为$\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    s} $，其线上任一点$P_0$，$P$点到直线距离为$d = {{\left| {P{P_0} \times \mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    s} } \right|} \over {\left| {\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
-   s} } \right|}}$ <1000题6.8, 6.30>
+   s} } \right|}}$ (原理参见叉乘的几何意义) <1000题6.8, 6.30>
 
 ## 空间曲线与曲面
 
@@ -349,7 +341,8 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 - 方向余弦
   ![img](http://res.niuxuewei.com/2019-06-27-125833.jpg)
-- 方向导数怎么求 *(p311)*
+- 方向导数
+  ![img](http://res.niuxuewei.com/2019-06-28-002942.png)
 - 梯度怎么求 *(p311)*
 
 ## 三重积分极坐标转化
@@ -366,6 +359,29 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 - 斯托克斯公式怎么用？
   - 方向
   - 可以转化成哪种积分
+
+# 曲线、曲面积分
+
+## 第二型曲线积分
+
+- 第二型曲线积分与全微分问题结合 <1000题7.41, 7.45>
+  - 观察法找原函数
+  - 利用积分与路径无关，通过补一条折线求取
+- 积分与路径无关$\Rightarrow$${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$
+- ${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$与包含点的区域为单连通$\Rightarrow$积分与路径无关，根据与路径无关再找一个易解曲线解决问题 <1000题7.43>
+- 第一型曲线积分与第二型曲线积分是可以相互转化的，其转化公式为$\int\limits_L {P\cos \alpha  + Q\cos \beta ds}  = \int\limits_L {Pdx + Qdy} $，其中$\cos\alpha$与$\cos\beta$为曲线$L$的切向量的方向余弦 <1000题7.47>
+
+# 数学一、数学二专题内容
+
+曲率相关 *(p267)*
+
+- 曲率公式
+- 曲率半径
+- 曲率圆
+
+傅里叶级数
+
+- 傅里叶级数收敛公式：在连续点收敛，在间断点收敛，在端点收敛 *(Notability中的讲义)*
 
 # 行列式
 
