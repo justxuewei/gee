@@ -362,6 +362,8 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 # 曲线、曲面积分
 
+
+
 ## 第二型曲线积分
 
 - 第二型曲线积分与全微分问题结合 <1000题7.41, 7.45>
@@ -370,6 +372,14 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 - 积分与路径无关$\Rightarrow$${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$
 - ${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$与包含点的区域为单连通$\Rightarrow$积分与路径无关，根据与路径无关再找一个易解曲线解决问题 <1000题7.43>
 - 第一型曲线积分与第二型曲线积分是可以相互转化的，其转化公式为$\int\limits_L {P\cos \alpha  + Q\cos \beta ds}  = \int\limits_L {Pdx + Qdy} $，其中$\cos\alpha$与$\cos\beta$为曲线$L$的切向量的方向余弦 <1000题7.47>
+
+## 第二型曲面积分
+
+- 化为二重积分
+- 利用高斯公式 <1000题7.50>
+- 利用转换公式，将其投影至$XoY$面 <1000题7.51>
+  ![image-20190630121625205](http://res.niuxuewei.com/2019-06-30-041625.png)
+- 第二型曲面积分转换为第一型曲面积分，利用对称性解决（第二型不谈对称性）<1000题7.54>
 
 # 数学一、数学二专题内容
 
