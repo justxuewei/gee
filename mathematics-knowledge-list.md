@@ -335,34 +335,16 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
   - 曲面方程为$z = f\left( {x,y} \right)$
 - 空间曲面面积 *(p309)*
 - 曲面全微分的几何意义 *(p309)*
-- 法向量的方向余弦 *(p309)*
+- 法向量的方向余弦 *(p309)
 
-## 方向导数与梯度
-
-- 方向余弦
-  ![img](http://res.niuxuewei.com/2019-06-27-125833.jpg)
-- 方向导数
-  ![img](http://res.niuxuewei.com/2019-06-28-002942.png)
-- 梯度怎么求 *(p311)*
-
-## 三重积分极坐标转化
+## 三重积分球坐标转化
 
 - 三重积分$\mathop{\int\!\!\!\int\!\!\!\int}\limits_{\kern-5.5pt \Omega } 
    {f\left( {x,y,z} \right)dV} $角坐标系转极坐标 *(p328)*
   - $dx,dy,dz$
   - $x,y,z$
 
-## 其他
-
-- 散度怎么求 *(p360)*
-- 旋度怎么求 *(p360)*
-- 斯托克斯公式怎么用？
-  - 方向
-  - 可以转化成哪种积分
-
 # 曲线、曲面积分
-
-
 
 ## 第二型曲线积分
 
@@ -376,10 +358,31 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 ## 第二型曲面积分
 
 - 化为二重积分
-- 利用高斯公式 <1000题7.50>
-- 利用转换公式，将其投影至$XoY$面 <1000题7.51>
+- 利用**高斯公式** <1000题7.50, 投影也要讲究±号7.53, 高斯公式反向使用7.56>
+- 利用**转换公式**，将其投影至$XoY$面 <1000题7.51, 7.52>
   ![image-20190630121625205](http://res.niuxuewei.com/2019-06-30-041625.png)
+  - [高数18讲2020版P377]与$z$轴夹角在$0$到$\pi\over2$时取正，其余取负
 - 第二型曲面积分转换为第一型曲面积分，利用对称性解决（第二型不谈对称性）<1000题7.54>
+- **斯托克斯公式**可以将**空间**第二型**曲线**积分转为第二型**曲面**积分 <1000题7.57>
+  - 方向（右手法则）
+
+## 场论
+
+- 方向余弦：设${\mathbf  {v}}=v_{1}{\boldsymbol  {{\hat  {x}}}}+v_{2}{\boldsymbol  {{\hat  {y}}}}+v_{3}{\boldsymbol  {{\hat  {z}}}}\,$为一个三维空间向量，则
+  $$
+  {\begin{aligned}\alpha &=\cos a={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {x}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{1}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\\\beta &=\cos b={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {y}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{2}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\\\gamma &=\cos c={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {z}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{3}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\end{aligned}}\,
+  $$
+
+- 散度：$div\mathbf{F}={{\partial P} \over {\partial x}}+{{\partial Q} \over {\partial y}}+{{\partial R} \over {\partial z}}$，散度最后求出来是一个数 <1000题 7.55>
+
+- 梯度：${\displaystyle \nabla f={\begin{pmatrix}{\frac {\partial f}{\partial x}},{\frac {\partial f}{\partial y}},{\frac {\partial f}{\partial z}}\end{pmatrix}}={\frac {\partial f}{\partial x}}\mathbf {i} +{\frac {\partial f}{\partial y}}\mathbf {j} +{\frac {\partial f}{\partial z}}\mathbf {k} }$，梯度最后求出来是一个向量
+
+  - 几何意义：梯度方向导数最大；相反方向导数最小；垂直方向（有两个）导数值为0 <1000题7.64>
+
+- 旋度：向量场$\mathbf{A}=(A_x, A_y, A_z)$，${\displaystyle \mathbf {rot\,} \mathbf {A} ={\begin{vmatrix}\mathbf {i} &\mathbf {j} &\mathbf {k} \\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\A_{x}&A_{y}&A_{z}\end{vmatrix}}}$，同样也是一个向量
+
+- 方向导数：
+  ![img](http://res.niuxuewei.com/2019-06-28-002942.png)
 
 # 数学一、数学二专题内容
 
