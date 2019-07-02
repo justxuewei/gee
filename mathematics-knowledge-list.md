@@ -135,25 +135,49 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 ## ★一元不定积分
 
-- $\int {\tan xdx} $ [How to solve ∫ tanx dx ?](https://socratic.org/questions/how-to-solve-tanx-dx)
+- $\int {\tan xdx} = \int \frac{\sin x}{\cos x} d x =\ln |\sec x|+C$
+
 - $\int {\cot xdx} $
+
 - $\int {\sec xdx} $ [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
+
 - $\int {\csc xdx} $ [How do you integrate cscx?](https://socratic.org/questions/how-do-you-integrate-cscx)
+
 - $\int {{{\sec }^2}xdx} $
+
 - $\int {{{\csc }^2}xdx} $
+
 - $\int {\tan x\sec xdx} $ $\sec x + C$
+
 - $\int {\cot x\csc xdx} $
+
 - $\int {{{\sec }^3}xdx} $ [answer](https://socratic.org/questions/what-is-the-integral-of-sec-3-x)
+
 - $\int {\ln xdx} $
+
 - $\int {{1 \over {\sqrt {1 - {x^2}} }}dx} $
+
 - $\int { - {1 \over {\sqrt {1 - {x^2}} }}dx} $
+
 - $\int {{1 \over {\sqrt {{x^2} + 1} }}dx} $
+
 - $\int {{1 \over {\sqrt {{x^2} - 1} }}dx} $
-- $\int {{1 \over {{a^2}{x^2} + {b^2}}}dx} $ ![](http://res.niuxuewei.com/2018-11-14-141022.gif)
-- $\int {{1 \over {{x^2} - {a^2}}}dx} $![](http://res.niuxuewei.com/2018-11-14-140956.gif)
-- $\int {{1 \over {{a^2} - {x^2}}}dx} $ ![Untitled 1](http://res.niuxuewei.com/2018-11-14-141236.gif)
-- $\int {{1 \over {\cos x + \sin x}}dx} $  <1000题5.39>
-  ![image-20190618165454770](http://res.niuxuewei.com/2019-06-18-085456.png) 
+
+- $\int \frac{1}{a^{2} x^{2}+b^{2}} d x=\frac{1}{a b} \int \frac{1}{\left(\frac{a}{b}\right)^{2} x^{2}+1} d\left(\frac{a}{b}\right) x=\frac{1}{a b} \arctan \left(\frac{a}{b} x\right)+C$
+
+- $\int \frac{1}{x^{2}-a^{2}} d x=\int \frac{1}{(x-a)(x+a)} d x=\frac{1}{2 a} \int \frac{1}{x-a}-\frac{1}{x+a} d x=\frac{1}{2 a} \ln \left|\frac{x-a}{x+a}\right|+C$
+
+- $\int \frac{1}{a^{2}-x^{2}} d x=\int \frac{1}{(a-x)(a+x)} d x=\frac{1}{2 a} \int \frac{1}{a-x}+\frac{1}{a+x} d x=\frac{1}{2 a} \ln \left|\frac{a+x}{a-x}\right|+C$
+
+- $\int {{1 \over {\cos x + \sin x}}dx}$ <1000题5.39> 
+$$
+\begin{align}
+I &= \int \frac{\frac{1}{\sqrt{2}}}{\sqrt{\frac{1}{2}} \cos x+\frac{1}{\sqrt{2}} \sin x} d x \\
+&=\frac{1}{\sqrt{2}} \int \frac{1}{\sin \frac{\pi}{4} \cos x+\cos \frac{\pi}{4} \sin x} d x \\
+&=\frac{1}{\sqrt{2}} \int \frac{1}{\sin \left(x+\frac{\pi}{4}\right)} d x \\
+&=-\frac{1}{\sqrt{2}} \ln \left|\csc \left(x+\frac{\pi}{4}\right)+\cot \left(x+\frac{\pi}{4}\right)\right|+C
+\end{align}
+$$
 
 ## ★一元定积分 
 
@@ -183,8 +207,8 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 ## 针对于概率论的积分
 
-- 针对指数分布：$\int_0^{ + \infty } {{x^n}{e^{ -  x}}dx} $![](http://res.niuxuewei.com/2018-12-02-11.gif)
-- 针对正态分布：$\int_{ - \infty }^{ + \infty } {{e^{ - {x^2}}}dx} $![](http://res.niuxuewei.com/2018-11-24-Untitled%201-1.gif)
+- 针对指数分布：$\int_{0}^{+\infty} x^{n} e^{-x} d x=n ! $
+- 针对正态分布：$\int_{ - \infty }^{ + \infty } {{e^{ - {x^2}}}dx} = \sqrt{\pi}$
 
 ## 反常积分比阶
 
@@ -221,9 +245,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 
 # 微分方程
 
-记忆微分方程的“特征+解法” *(p219)*
-
-- 变量可分离型
+- 变量可分离型 <1000题8.1>
 - 齐次微分方程
 - 一阶线性微分方程
 - 伯努利方程
@@ -373,15 +395,15 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
   {\begin{aligned}\alpha &=\cos a={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {x}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{1}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\\\beta &=\cos b={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {y}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{2}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\\\gamma &=\cos c={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {z}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{3}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\end{aligned}}\,
   $$
 
-- 散度：$div\mathbf{F}={{\partial P} \over {\partial x}}+{{\partial Q} \over {\partial y}}+{{\partial R} \over {\partial z}}$，散度最后求出来是一个数 <1000题 7.55>
+- 散度：$div\mathbf{F}={{\partial P} \over {\partial x}}+{{\partial Q} \over {\partial y}}+{{\partial R} \over {\partial z}}$，散度最后求出来是一个数 <1000题7.55>
 
 - 梯度：${\displaystyle \nabla f={\begin{pmatrix}{\frac {\partial f}{\partial x}},{\frac {\partial f}{\partial y}},{\frac {\partial f}{\partial z}}\end{pmatrix}}={\frac {\partial f}{\partial x}}\mathbf {i} +{\frac {\partial f}{\partial y}}\mathbf {j} +{\frac {\partial f}{\partial z}}\mathbf {k} }$，梯度最后求出来是一个向量
 
   - 几何意义：梯度方向导数最大；相反方向导数最小；垂直方向（有两个）导数值为0 <1000题7.64>
 
-- 旋度：向量场$\mathbf{A}=(A_x, A_y, A_z)$，${\displaystyle \mathbf {rot\,} \mathbf {A} ={\begin{vmatrix}\mathbf {i} &\mathbf {j} &\mathbf {k} \\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\A_{x}&A_{y}&A_{z}\end{vmatrix}}}$，同样也是一个向量
+- 旋度：向量场$\mathbf{A}=(A_x, A_y, A_z)$，${\displaystyle \mathbf {rot\,} \mathbf {A} ={\begin{vmatrix}\mathbf {i} &\mathbf {j} &\mathbf {k} \\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\A_{x}&A_{y}&A_{z}\end{vmatrix}}}$，同样也是一个向量 <1000题7.60>
 
-- 方向导数：
+- 方向导数：<1000题7.61>
   ![img](http://res.niuxuewei.com/2019-06-28-002942.png)
 
 # 数学一、数学二专题内容
