@@ -45,8 +45,7 @@
 
 ## 其他
 
-已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标是什么？
-![](http://res.niuxuewei.com/2018-11-17-013041.gif)
+已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标$\left(x_{2}-x_{1}, y_{2}-y_{1}\right)$
 
 # 极限与连续
 
@@ -135,9 +134,9 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 ## ★一元不定积分
 
-- $\int {\tan xdx} = \int \frac{\sin x}{\cos x} d x =\ln |\sec x|+C$
+- $\int {\tan xdx} = \int \frac{\sin x}{\cos x} d x =-\ln |\cos x|+C =\ln |\sec x|+C$
 
-- $\int {\cot xdx} $
+- $\int {\cot xdx}= \int \frac{\cos x}{\sin x} d x=\ln |\sin x|+C=-\ln |\csc x|+C $
 
 - $\int {\sec xdx} $ [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
 
@@ -159,7 +158,16 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 - $\int { - {1 \over {\sqrt {1 - {x^2}} }}dx} $
 
-- $\int {{1 \over {\sqrt {{x^2} + 1} }}dx} $
+- $\int {{1 \over {\sqrt {1+{x^2}} }}dx}$
+$$
+\begin{align}
+I&=\int \frac{1}{\sqrt{1+\tan ^{2} \theta}} \sec ^{2} \theta d \theta (令x=\tan\theta) \\
+&=\int \frac{1}{\sqrt{\sec^2\theta}} \sec ^{2} \theta d \theta\\
+&=\int \sec \theta d \theta\\
+&=\ln |\sec \theta+\tan \theta|+C \\
+&=\ln \left|x+\sqrt{1+x^{2}}\right|+C
+\end{align}
+$$
 
 - $\int {{1 \over {\sqrt {{x^2} - 1} }}dx} $
 
@@ -169,15 +177,24 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 
 - $\int \frac{1}{a^{2}-x^{2}} d x=\int \frac{1}{(a-x)(a+x)} d x=\frac{1}{2 a} \int \frac{1}{a-x}+\frac{1}{a+x} d x=\frac{1}{2 a} \ln \left|\frac{a+x}{a-x}\right|+C$
 
-- $\int {{1 \over {\cos x + \sin x}}dx}$ <1000题5.39> 
+- $\int {{1 \over {\cos x + \sin x}}dx}=-\frac{1}{\sqrt{2}} \ln \left|\csc \left(x+\frac{\pi}{4}\right)+\cot \left(x+\frac{\pi}{4}\right)\right|+C$ <1000题5.39> 
 $$
 \begin{align}
 I &= \int \frac{\frac{1}{\sqrt{2}}}{\sqrt{\frac{1}{2}} \cos x+\frac{1}{\sqrt{2}} \sin x} d x \\
-&=\frac{1}{\sqrt{2}} \int \frac{1}{\sin \frac{\pi}{4} \cos x+\cos \frac{\pi}{4} \sin x} d x \\
+&=\frac{1}{\sqrt{2}} \int \frac{1}{\sin \frac{\pi}{4} \cos x+\cos \frac{\pi}{4} \sin x} d x (和差化积公式)\\
 &=\frac{1}{\sqrt{2}} \int \frac{1}{\sin \left(x+\frac{\pi}{4}\right)} d x \\
 &=-\frac{1}{\sqrt{2}} \ln \left|\csc \left(x+\frac{\pi}{4}\right)+\cot \left(x+\frac{\pi}{4}\right)\right|+C
 \end{align}
 $$
+
+- $\int \arctan x d x=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C$，思路是分部积分法 <1000题8.9>
+  $$
+  \begin{array}{l}
+  {I=x \arctan x-\int \frac{x}{1+x^{2}} d x} \\ 
+  {=x \arctan x-\frac{1}{2} \int \frac{2 x}{1+x^{2}} d x} \\
+  {=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C}
+  \end{array}
+  $$
 
 ## ★一元定积分 
 
@@ -228,13 +245,13 @@ $$
 
 ## 泰勒公式
 
-$$f\left( {x,y} \right)$$在点$$\left( {{x_0},{y_0}} \right)$$处的二阶展开式公式(详见1000题4.11)
+$$f\left( {x,y} \right)$$在点$$\left( {{x_0},{y_0}} \right)$$处的二阶展开式公式 <1000题4.11>
 
 # 二重积分
 
 ## 直角坐标转极坐标
 
-$\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\chi  {f(r\cos \theta ,r\sin \theta )rdr} } } $，千万不要忘了是rdr，具体事例参见1000题5.1。
+$\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{r_1} ^{r_2}  {f(r\cos \theta ,r\sin \theta )rdr} } } $，千万不要忘了是$rdr$ <1000题5.1>
 
 ## 物理应用
 
@@ -246,11 +263,21 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 # 微分方程
 
 - 变量可分离型 <1000题8.1>
-- 齐次微分方程
-- 一阶线性微分方程
+
+- 齐次微分方程 <1000题8.5>
+
+  - 拓展1：将函数看做 $x=x(y)$，即令$u = {x\over y}$ <1000题8.6>
+
+  - 拓展2：用换元法化成变量可分离型 <1000题8.8>
+
+- 一阶线性微分方程$y=\mathrm{e}^{-\int \rho(x) d x}\left[\int e^{\int \rho(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
+
 - 伯努利方程
+
 - 二阶可降阶方程(2种形式)
+
 - 二阶齐次式微分方程通解(3种)
+
 - 二阶非齐次式微分方程特解(2种)
 
 # 无穷级数
@@ -404,7 +431,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_\beta ^\alpha  {d\theta \int_\delta ^\c
 - 旋度：向量场$\mathbf{A}=(A_x, A_y, A_z)$，${\displaystyle \mathbf {rot\,} \mathbf {A} ={\begin{vmatrix}\mathbf {i} &\mathbf {j} &\mathbf {k} \\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\A_{x}&A_{y}&A_{z}\end{vmatrix}}}$，同样也是一个向量 <1000题7.60>
 
 - 方向导数：<1000题7.61>
-  ![img](http://res.niuxuewei.com/2019-06-28-002942.png)
+![img](http://res.niuxuewei.com/2019-06-28-002942.png)
 
 # 数学一、数学二专题内容
 
