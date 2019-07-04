@@ -10,9 +10,9 @@
 - $\sum\limits_{k = 1}^n {k\left( {k + 1} \right) = 1 \times 2 + 2 \times 3 +  \cdots  + n \times \left( {n + 1} \right)} $
 - $\sum\limits_{k = 1}^n {{1 \over {k\left( {k + 1} \right)}} = {1 \over {1 \times 2}} + {1 \over {2 \times 3}} +  \cdots  + {1 \over {n \times \left( {n + 1} \right)}}} $
 
-## 三角函数
+## 三角函数相关公式
 
-常用三角函数 *(p11)*
+常用三角函数
 
 - $\sin 2x$
 - $\cos 2x$
