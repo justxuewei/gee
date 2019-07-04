@@ -276,11 +276,27 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 
   - 拓展2：用换元法化成变量可分离型 <1000题8.8>
 - 一阶线性微分方程$y=\mathrm{e}^{-\int \rho(x) d x}\left[\int e^{\int \rho(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
-- 拓展1：将函数看做 $x=x(y)$ <1000题8.11>
-- 伯努利方程
+  - 拓展1：将函数看做 $x=x(y)$ <1000题8.11>
+- 伯努利方程$y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
+  1. 恒等变形为$y^{-n} \cdot y^{\prime}+p(x) y^{1-n}=q(x)$
+  2. 令$z=y^{1-n}$，得$\frac{\mathrm{d} z}{\mathrm{d} x}=(1-n) y^{-n} \frac{\mathrm{d} y}{\mathrm{d} x}$，则$\frac{1}{1-n} \frac{\mathrm{d} z}{\mathrm{d} x}+p(x) z=q(x)$
 - 二阶可降阶方程(2种形式)
 - 二阶齐次式微分方程通解(3种)
-- 二阶非齐次式微分方程特解(2种)
+- **二阶非齐次式微分方程特解**
+  - 自由项$f(x)=P_{n}(x) e^{a x}$，特解设为$y^{*}=\mathrm{e}^{a x} Q_{n}(x) x^{k}$
+    1. $\mathrm{e}^{a x}$照抄
+    2. $Q_{n}(x)$为$n$次一般多项式，如二次多项式要设为$Ax^2+Bx+C$
+    3. $k$取值分为三种
+       - 当$ \alpha \neq \lambda_{1}, \alpha \neq \lambda_{2}$时，$k$取0 <1000题8.18>
+       - 当$\alpha=\lambda_{1}$或$\alpha=\lambda_{2}$，$k$取1
+       - 当$\alpha=\lambda_{1}=\lambda_{2}$，$k$取2，也就是首先$\lambda_1=\lambda_2$这个条件才有可能成立 <1000题8.19>
+  - 自由项$f(x)=\mathrm{e}^{a r}\left[P_{m}(x) \cos \beta x+P_{n}(x) \sin \beta x\right]$，特解设为$y^{*}=e^{e x}\left[Q_{l}^{(1)}(x) \cos \beta x+Q_{l}^{(2)}(x) \sin \beta x\right] x^{k}$
+    1. $\mathrm{e}^{a x}$照抄
+    2. $l=\max \{m, n\}$，$Q_{l}^{(1)}(x), Q_{l}^{(2)}(x)$分别为两个不同的多项式
+    3. $k$取值分为两种，特征根求法为$\lambda=\frac{-b\pm\sqrt{4ac-b^2}}{2a}$
+       - 当$\alpha \pm \beta i$不是特征根时，其值为0，如果有实根则直接设为0即可 <1000题8.21>
+       - 当$\alpha \pm \beta i$是特征根时，其值为1 <1000题8.20>
+- 二阶非齐次微分方程的解 = 齐次通解 + 非齐次特解
 
 # 无穷级数
 
