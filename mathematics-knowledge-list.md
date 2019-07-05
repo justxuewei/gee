@@ -125,6 +125,13 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 - 函数$f(x)$是周期函数，那么它的导数必然是周期函数（用定义法证明）
 - 函数$f(x)$是周期函数，它的原函数不一定是周期函数 <1000题8.14>
 
+## 反函数
+
+对于$x=x(y)$函数 <1000题8.25>
+
+- $\frac{dy}{dx}={1\over{dx\over dy}}={1\over x'_y}$
+- ${d^2y\over dx^2}={d\over dx}({1\over x'_y})={d\over dy}({1\over x'_y})\frac{dy}{dx}={0-x''_y\over x'^2_y} {1\over{dx\over dy}}=-{x''_y\over x'^3_y}$，这个地方极易想当然
+
 # 一元函数积分学
 
 ## 积分性质
@@ -269,39 +276,56 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 
 # 微分方程
 
-- 变量可分离型 <1000题8.1>
-- 齐次微分方程 <1000题8.5>
+- 基本方程求解
+  - 变量可分离型 <1000题8.1>
+  - 齐次微分方程 <1000题8.5>
 
-  - 拓展1：将函数看做 $x=x(y)$，即令$u = {x\over y}$ <1000题8.6>
+    - 拓展1：如果不好直接做试试将函数看做 $x=x(y)$，即令$u = {x\over y}$ <1000题8.6>
 
-  - 拓展2：用换元法化成变量可分离型 <1000题8.8>
-- 一阶线性微分方程$y=\mathrm{e}^{-\int \rho(x) d x}\left[\int e^{\int \rho(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
-  - 拓展1：将函数看做 $x=x(y)$ <1000题8.11>
-- 伯努利方程$y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
-  1. 恒等变形为$y^{-n} \cdot y^{\prime}+p(x) y^{1-n}=q(x)$
-  2. 令$z=y^{1-n}$，得$\frac{\mathrm{d} z}{\mathrm{d} x}=(1-n) y^{-n} \frac{\mathrm{d} y}{\mathrm{d} x}$，则$\frac{1}{1-n} \frac{\mathrm{d} z}{\mathrm{d} x}+p(x) z=q(x)$
-- 二阶可降阶方程
-  - $y^{\prime \prime}=f\left(x, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p^{\prime}$
-  - $y^{\prime \prime}=f\left(y, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p^{\prime}$
-- **二阶齐次式微分方程通解**，设方程为$y^{\prime \prime}+p y^{\prime}+q y=0$，则特征方程为$\lambda^{2}+p \lambda+q=0$
-  - 若$p^{2}-4 q>0$，则设为$y=C_{1} \mathrm{e}^{\lambda_{1}x}+C_{2} \mathrm{e}^{\lambda_{2}x}$
-  - 若$p^{2}-4 q=0$，则设为$y=\left(C_{1}+C_{2} x\right) \mathrm{e}^{\lambda x}$
-  - 若$p^{2}-4 q<0$，设$\alpha \pm \beta i$是特征方程的复根，则设为$y=e^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$
-- **二阶非齐次式微分方程特解**
-  - 自由项$f(x)=P_{n}(x) e^{a x}$，特解设为$y^{*}=\mathrm{e}^{a x} Q_{n}(x) x^{k}$
-    1. $\mathrm{e}^{a x}$照抄
-    2. $Q_{n}(x)$为$n$次一般多项式，如二次多项式要设为$Ax^2+Bx+C$
-    3. $k$取值分为三种
-       - 当$ \alpha \neq \lambda_{1}, \alpha \neq \lambda_{2}$时，$k$取0 <1000题8.18>
-       - 当$\alpha=\lambda_{1}$或$\alpha=\lambda_{2}$，$k$取1
-       - 当$\alpha=\lambda_{1}=\lambda_{2}$，$k$取2，也就是首先$\lambda_1=\lambda_2$这个条件才有可能成立 <1000题8.19>
-  - 自由项$f(x)=\mathrm{e}^{a r}\left[P_{m}(x) \cos \beta x+P_{n}(x) \sin \beta x\right]$，特解设为$y^{*}=e^{e x}\left[Q_{l}^{(1)}(x) \cos \beta x+Q_{l}^{(2)}(x) \sin \beta x\right] x^{k}$
-    1. $\mathrm{e}^{a x}$照抄
-    2. $l=\max \{m, n\}$，$Q_{l}^{(1)}(x), Q_{l}^{(2)}(x)$分别为两个不同的多项式
-    3. $k$取值分为两种，特征根求法为$\lambda=\frac{-b\pm\sqrt{4ac-b^2}}{2a}$
-       - 当$\alpha \pm \beta i$不是特征根时，其值为0，如果有实根则直接设为0即可 <1000题8.21>
-       - 当$\alpha \pm \beta i$是特征根时，其值为1 <1000题8.20>
-- 二阶非齐次微分方程的解 = 齐次通解 + 非齐次特解
+    - 拓展2：用换元法化成变量可分离型 <1000题8.8>
+  - 一阶线性微分方程$y=\mathrm{e}^{-\int \rho(x) d x}\left[\int e^{\int \rho(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
+    - 拓展1：如果不好直接做试试将函数看做 $x=x(y)$ <1000题8.11>
+  - 伯努利方程$y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
+    1. 恒等变形为$y^{-n} \cdot y^{\prime}+p(x) y^{1-n}=q(x)$
+    2. 令$z=y^{1-n}$，得$\frac{\mathrm{d} z}{\mathrm{d} x}=(1-n) y^{-n} \frac{\mathrm{d} y}{\mathrm{d} x}$，则$\frac{1}{1-n} \frac{\mathrm{d} z}{\mathrm{d} x}+p(x) z=q(x)$
+  - 二阶可降阶方程
+    - $y^{\prime \prime}=f\left(x, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p^{\prime}$ <1000题8.32>
+    - $y^{\prime \prime}=f\left(y, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p\frac{dp}{dy}$ <1000题8.33>
+  - **二阶齐次式微分方程通解**，设方程为$y^{\prime \prime}+p y^{\prime}+q y=0$，则特征方程为$\lambda^{2}+p \lambda+q=0$
+    - 若$p^{2}-4 q>0$，则设为$y=C_{1} \mathrm{e}^{\lambda_{1}x}+C_{2} \mathrm{e}^{\lambda_{2}x}$
+    - 若$p^{2}-4 q=0$，则设为$y=\left(C_{1}+C_{2} x\right) \mathrm{e}^{\lambda x}$
+    - 若$p^{2}-4 q<0$，设$\alpha \pm \beta i$是特征方程的复根，则设为$y=e^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$ <1000题8.38>
+  - **二阶非齐次式微分方程特解**
+    - 自由项$f(x)=P_{n}(x) e^{a x}$，特解设为$y^{*}=\mathrm{e}^{a x} Q_{n}(x) x^{k}$
+      1. $\mathrm{e}^{a x}$照抄
+      2. $Q_{n}(x)$为$n$次一般多项式，如二次多项式要设为$Ax^2+Bx+C$
+      3. $k$取值分为三种
+         - 当$ \alpha \neq \lambda_{1}, \alpha \neq \lambda_{2}$时，$k$取0 <1000题8.18>
+         - 当$\alpha=\lambda_{1}$或$\alpha=\lambda_{2}$，$k$取1
+         - 当$\alpha=\lambda_{1}=\lambda_{2}$，$k$取2，也就是首先$\lambda_1=\lambda_2$这个条件才有可能成立 <1000题8.19>
+    - 自由项$f(x)=\mathrm{e}^{a r}\left[P_{m}(x) \cos \beta x+P_{n}(x) \sin \beta x\right]$，特解设为$y^{*}=e^{e x}\left[Q_{l}^{(1)}(x) \cos \beta x+Q_{l}^{(2)}(x) \sin \beta x\right] x^{k}$
+      1. $\mathrm{e}^{a x}$照抄
+      2. $l=\max \{m, n\}$，$Q_{l}^{(1)}(x), Q_{l}^{(2)}(x)$分别为两个不同的多项式
+      3. $k$取值分为两种，特征根求法为$\lambda=\frac{-b\pm\sqrt{4ac-b^2}}{2a}$
+         - 当$\alpha \pm \beta i$不是特征根时，其值为0，如果有实根则直接设为0即可 <1000题8.21>
+         - 当$\alpha \pm \beta i$是特征根时，其值为1 <1000题8.20>
+  - 二阶非齐次微分方程的通解 = 齐次通解 + 非齐次特解，也就是带$C_1$和$C_2$的解 <1000题8.29>
+    还有一种题求非齐次微分方程的特解为带入初始条件求出$C_1$和$C_2$的解 <1000题8.25>
+  - 高阶齐次微分方程的解 <1000题8.27>
+
+- 利用线性方程解的理论求解，条件为:
+
+  - 非齐次**线性方程**，只要含$y$的量是一次方程，无需关心$x$，如$y^{\prime \prime}+p(x) y^{\prime}+q(x) y=f(x)$，如$y^{\prime \prime}+p(x) y^{\prime2}+q(x) y=f(x)$则不是线性的了
+  - 解相减后线性无关，即$\frac{y_{1}-y_{2}}{y_{2}-y_{3}} \neq k$
+
+  那么齐次通解为$C_1(y_{1}-y_{2})+C_2(y_{2}-y_{3})$，非齐次通解为$C_1(y_{1}-y_{2})+C_2(y_{2}-y_{3})+y_1$
+
+- 通过换元求解 <1000题8.37, 8.38>
+
+- 根据解反求方程 
+
+  - 常系数齐次方程，利用特征方程系数求解 <1000题8.26>
+  - 非常系数方程利用通解和微分方程定义消除常数 <1000题8.28>
 
 # 无穷级数
 
