@@ -300,8 +300,9 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
     - 拓展1：如果不好直接做试试将函数看做 $x=x(y)$，即令$u = {x\over y}$ <1000题8.6>
 
     - 拓展2：用换元法化成变量可分离型 <1000题8.8>
-  - 一阶线性微分方程$y=\mathrm{e}^{-\int \rho(x) d x}\left[\int e^{\int \rho(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
+  - 一阶线性微分方程$y=\mathrm{e}^{-\int p(x) d x}\left[\int e^{\int p(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
     - 拓展1：如果不好直接做试试将函数看做 $x=x(y)$ <1000题8.11>
+    - 注：若这里的$\int p(x) d x=\ln|\varphi(x)|$，那么可以不加绝对值变为$\ln\varphi(x)$
   - 伯努利方程$y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
     1. 恒等变形为$y^{-n} \cdot y^{\prime}+p(x) y^{1-n}=q(x)$
     2. 令$z=y^{1-n}$，得$\frac{\mathrm{d} z}{\mathrm{d} x}=(1-n) y^{-n} \frac{\mathrm{d} y}{\mathrm{d} x}$，则$\frac{1}{1-n} \frac{\mathrm{d} z}{\mathrm{d} x}+p(x) z=q(x)$
@@ -328,8 +329,8 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
          - 当$\alpha \pm \beta i$是特征根时，其值为1 <1000题8.20>
   - 二阶非齐次微分方程的通解 = 齐次通解 + 非齐次特解，也就是带$C_1$和$C_2$的解 <1000题8.29>
     还有一种题求非齐次微分方程的特解为带入初始条件求出$C_1$和$C_2$的解 <1000题8.25>
-  - 高阶齐次微分方程的解 <1000题8.27>
-
+- 高阶齐次微分方程的解 <1000题8.27>
+  
 - 利用线性方程解的理论求解，条件为:
 
   - 非齐次**线性方程**，只要含$y$的量是一次方程，无需关心$x$，如$y^{\prime \prime}+p(x) y^{\prime}+q(x) y=f(x)$，如$y^{\prime \prime}+p(x) y^{\prime2}+q(x) y=f(x)$则不是线性的了
@@ -343,6 +344,15 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 
   - 常系数齐次方程，利用特征方程系数求解 <1000题8.26>
   - 非常系数方程利用通解和微分方程定义消除常数 <1000题8.28>
+  
+- 全微分问题，一般格式为$Pdx+Qdy=0$，其步骤为：<1000题7.41, 7.45, 8.35>
+
+  1. 验证是否是全微分方程，方法有：
+     - 当$P$和$Q$给定具体的式子时，使用$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$ <1000题8.35>
+     - 当$P$和$Q$是抽象的时，可以考虑使用第二型曲线积分的积分与路径无关 <1000题7.41>
+  2. 求解找出原函数
+     - 观察法 [不推荐]
+     - 折线法$u(x, y)=\int_{(0,0)}^{(x, y)} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=\int_{0}^{x} P(x, 0) \mathrm{d} x+\int_{0}^{y} Q(x, y) \mathrm{d} y$
 
 # 无穷级数
 
@@ -450,20 +460,25 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 - 曲面全微分的几何意义 *(p309)*
 - 法向量的方向余弦 *(p309)*
 
+# 三重积分
+
+## 对称性
+
+- 普通对称性
+- 轮转对称性
+
 ## 三重积分球坐标转化
 
-- 三重积分$\mathop{\int\!\!\!\int\!\!\!\int}\limits_{\kern-5.5pt \Omega } 
-   {f\left( {x,y,z} \right)dV} $角坐标系转极坐标 *(p328)*
-  - $dx,dy,dz$
-  - $x,y,z$
+三重积分$\mathop{\int\!\!\!\int\!\!\!\int}\limits_{\kern-5.5pt \Omega } 
+{f\left( {x,y,z} \right)dV} $角坐标系转球坐标
+
+- $dx,dy,dz$
+- $x,y,z$
 
 # 曲线、曲面积分
 
 ## 第二型曲线积分
 
-- 第二型曲线积分与全微分问题结合 <1000题7.41, 7.45>
-  - 观察法找原函数
-  - 利用积分与路径无关，通过补一条折线求取
 - 积分与路径无关$\Rightarrow$${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$
 - ${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$与包含点的区域为单连通$\Rightarrow$积分与路径无关，根据与路径无关再找一个易解曲线解决问题 <1000题7.43>
 - 第一型曲线积分与第二型曲线积分是可以相互转化的，其转化公式为$\int\limits_L {P\cos \alpha  + Q\cos \beta ds}  = \int\limits_L {Pdx + Qdy} $，其中$\cos\alpha$与$\cos\beta$为曲线$L$的切向量的方向余弦 <1000题7.47>
