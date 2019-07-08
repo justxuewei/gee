@@ -132,6 +132,19 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 - $\frac{dy}{dx}={1\over{dx\over dy}}={1\over x'_y}$
 - ${d^2y\over dx^2}={d\over dx}({1\over x'_y})={d\over dy}({1\over x'_y})\frac{dy}{dx}={0-x''_y\over x'^2_y} {1\over{dx\over dy}}=-{x''_y\over x'^3_y}$，这个地方极易想当然
 
+## 几何应用
+
+曲率相关
+
+- 曲率公式$k=\frac{\left|y^{\prime \prime}\right|}{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}$
+
+- 曲率半径$R=\frac{1}{k}=\frac{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}{\left|y^{\prime \prime}\right|}\left(y^{\prime \prime} \neq 0\right)$
+
+- 曲率圆
+  $$
+  \begin{array}{c}{(X-\alpha)^{2}+(Y-\beta)^{2}=R^{2}} \\ 其中\quad{\alpha=x-\frac{y^{\prime}\left[1+\left(y^{\prime}\right)^{2}\right]}{y^{\prime \prime}}, \quad \beta=y+\frac{1+\left(y^{\prime}\right)^{2}}{y^{\prime \prime}}}\end{array}
+$$
+
 # 一元函数积分学
 
 ## 积分性质
@@ -435,7 +448,7 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
   - 曲面方程为$z = f\left( {x,y} \right)$
 - 空间曲面面积 *(p309)*
 - 曲面全微分的几何意义 *(p309)*
-- 法向量的方向余弦 *(p309)
+- 法向量的方向余弦 *(p309)*
 
 ## 三重积分球坐标转化
 
@@ -469,9 +482,9 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 ## 场论
 
 - 方向余弦：设${\mathbf  {v}}=v_{1}{\boldsymbol  {{\hat  {x}}}}+v_{2}{\boldsymbol  {{\hat  {y}}}}+v_{3}{\boldsymbol  {{\hat  {z}}}}\,$为一个三维空间向量，则
-  $$
-  {\begin{aligned}\alpha &=\cos a={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {x}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{1}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\\\beta &=\cos b={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {y}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{2}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\\\gamma &=\cos c={\frac  {{{\mathbf  v}}\cdot {\boldsymbol  {{\hat  {z}}}}}{\left\Vert {{\mathbf  v}}\right\Vert }}&={\frac  {v_{3}}{{\sqrt  {v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}}}}\end{aligned}}\,
-  $$
+$$
+\begin{aligned} \alpha &=\cos a=\frac{\mathbf{v} \cdot \hat{\boldsymbol{x}}}{\|\mathbf{v}\|} &=\frac{v_{1}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \\ \beta &=\cos b=\frac{\mathbf{v} \cdot \hat{\boldsymbol{y}}}{\|\mathbf{v}\|} &=\frac{v_{2}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \\ \gamma &=\cos c=\frac{\mathbf{v} \cdot \hat{\boldsymbol{z}}}{\|\mathbf{v}\|} &=\frac{v_{3}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \end{aligned}
+$$
 
 - 散度：$div\mathbf{F}={{\partial P} \over {\partial x}}+{{\partial Q} \over {\partial y}}+{{\partial R} \over {\partial z}}$，散度最后求出来是一个数 <1000题7.55>
 
@@ -485,12 +498,6 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 ![img](http://res.niuxuewei.com/2019-06-28-002942.png)
 
 # 数学一、数学二专题内容
-
-曲率相关 *(p267)*
-
-- 曲率公式
-- 曲率半径
-- 曲率圆
 
 傅里叶级数
 
