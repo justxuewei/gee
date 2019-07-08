@@ -7,6 +7,4 @@
 
 ---
 
-Author: Xavier Niu<br>
-Email: a@nxw.name<br>
-Homepage: https://www.nxw.name
+作者: Xavier Niu<br>邮箱: a@nxw.name<br>主页: https://www.nxw.name
