@@ -383,6 +383,13 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
    - 观察法 [不推荐]
    - 折线法$u(x, y)=\int_{(0,0)}^{(x, y)} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=\int_{0}^{x} P(x, 0) \mathrm{d} x+\int_{0}^{y} Q(x, y) \mathrm{d} y$
 
+## 欧拉方程
+
+形如$x^{2} \frac{d^{2} y}{d x^{2}}+p x \frac{d y}{d x}+q y=f(x)$，其中$p$和$q$为常数 <1000题8.36, 8.37>
+
+- $x>0$时，令$x=\mathrm{e}^{t}$
+- $x<0$时，令$x=-\mathrm{e}^{t}$
+
 # 无穷级数
 
 ## 幂级数展开式
