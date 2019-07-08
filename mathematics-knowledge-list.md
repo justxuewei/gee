@@ -141,7 +141,7 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 - $\int_\alpha ^\beta  {f(x)dx} >0$的条件是什么
 - 估值定理
 - 中值定理
-- 周期性：若$f(x)$在$(-\infty,+\infty)$内连续，以$T$为周期
+- **周期性**：若$f(x)$在$(-\infty,+\infty)$内连续，以$T$为周期
   - $\int_{a}^{a+T} f(x) \mathrm{d} x=\int_{0}^{T} f(x) \mathrm{d} x$（$a$为任意实数）<1000题8.14>
   - $\int_{0}^{x} f(t) \mathrm{d} t$以$T$为周期$\Leftrightarrow \int_{0}^{T} f(x) \mathrm{d} x=0$ <1000题8.14>
   - $\int f(x) \mathrm{d} x$（$f(x)$的全体原函数）周期为$T$$\Leftrightarrow \int_{0}^{T} f(x) \mathrm{d} x=0$
