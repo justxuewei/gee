@@ -29,7 +29,7 @@
 
 经典不等式 *(2020 p111)*
 
-1. $2\left| {ab} \right|$
+1. $|ab| \leq \frac{a^2+b^2}{2}$，也可写做$2|ab|\leq a^2+b^2$ <1000题9.3>
 2. $\left| {a \pm b} \right|$
 3. $\left| {\left| a \right| - \left| b \right|} \right|$
 4. $\left| {\int {f\left( x \right)dx} } \right|$
