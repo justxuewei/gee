@@ -45,16 +45,23 @@
 
 - 高阶方程求根：试根法+除法 <1000题8.37>
 
-## 其他
+# 极限与连续
 
-已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标$\left(x_{2}-x_{1}, y_{2}-y_{1}\right)$
+## 性质
 
-# 一元函数微分学
+$\lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
+
+- 唯一性
+- 有界性
+- 保号性
+- 脱帽法，$a_n=C+\alpha$，其中$\alpha\rightarrow0$
 
 ## 函数极限计算公式
 
 - ${1^\infty }$型公式 *(p41)*
 - $\mathop {\lim }\limits_{x \to \infty } {\left( {1 + {1 \over x}} \right)^x}$
+
+# 一元函数微分学
 
 ## 等价无穷小
 
@@ -565,6 +572,10 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
    s} $，其线上任一点$P_0$，$P$点到直线距离为$d = {{\left| {P{P_0} \times \mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    s} } \right|} \over {\left| {\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over 
    s} } \right|}}$ (原理参见叉乘的几何意义) <1000题6.8, 6.30>
+
+线
+
+- 已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标$\left(x_{2}-x_{1}, y_{2}-y_{1}\right)$
 
 ## 空间曲线与曲面
 
