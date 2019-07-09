@@ -47,7 +47,7 @@
 
 # 极限与连续
 
-## 性质
+## 极限性质
 
 $\lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
 
@@ -55,13 +55,6 @@ $\lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
 - 有界性
 - 保号性
 - 脱帽法，$a_n=C+\alpha$，其中$\alpha\rightarrow0$
-
-## 函数极限计算公式
-
-- ${1^\infty }$型公式 *(p41)*
-- $\mathop {\lim }\limits_{x \to \infty } {\left( {1 + {1 \over x}} \right)^x}$
-
-# 一元函数微分学
 
 ## 等价无穷小
 
@@ -71,6 +64,13 @@ $x \to 0$时，等价无穷小公式 *(p27)*
 - $\arcsin x - x$
 - $\tan x - x$
 - $x - \arctan x$
+
+## 函数极限计算公式
+
+- ${1^\infty }$型公式 *(p41)*
+- $\mathop {\lim }\limits_{x \to \infty } {\left( {1 + {1 \over x}} \right)^x}$
+
+# 一元函数微分学
 
 ## 级数经典放缩公式
 
