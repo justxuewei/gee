@@ -292,6 +292,57 @@ $\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{
 - 半圆的质心为${4 \over {3\pi }}R$，详见1000题5.5视频35:00左右
 - 已知薄片$D$密度为$\mu \left( {x,y} \right)$，其质量$M = \int\!\!\!\int\limits_D {\mu \left( {x,y} \right)d\sigma } $ <1000题5.46>
 
+# 三重积分
+
+## 对称性
+
+- 普通对称性
+- 轮转对称性
+
+## 三重积分球坐标转化
+
+三重积分$\mathop{\int\!\!\!\int\!\!\!\int}\limits_{\kern-5.5pt \Omega } 
+{f\left( {x,y,z} \right)dV} $角坐标系转球坐标
+
+- $dx,dy,dz$
+- $x,y,z$
+
+# 曲线、曲面积分
+
+## 第二型曲线积分
+
+- 积分与路径无关$\Rightarrow$${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$
+- ${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$与包含点的区域为单连通$\Rightarrow$积分与路径无关，根据与路径无关再找一个易解曲线解决问题 <1000题7.43>
+- 第一型曲线积分与第二型曲线积分是可以相互转化的，其转化公式为$\int\limits_L {P\cos \alpha  + Q\cos \beta ds}  = \int\limits_L {Pdx + Qdy} $，其中$\cos\alpha$与$\cos\beta$为曲线$L$的切向量的方向余弦 <1000题7.47>
+
+## 第二型曲面积分
+
+- 化为二重积分
+- 利用**高斯公式** <1000题7.50, 投影也要讲究±号7.53, 高斯公式反向使用7.56>
+- 利用**转换公式**，以投影至$XoY$面为例，其转换公式为$\iint_{\Sigma} Pd y d z+Qd z d x+Rd x d y=\iint_{\Sigma} [P(-z^{\prime}_x) +Q(-z^{\prime}_y) +R]d x d y$ <1000题7.51, 7.52>
+  - 需要注意正负号，与$z$轴夹角在$0$到$\pi\over2$时取正，其余取负[高数18讲2020版P377]
+- 第二型曲面积分转换为第一型曲面积分，利用对称性解决（第二型不谈对称性）<1000题7.54>
+- **斯托克斯公式**可以将**空间**第二型**曲线**积分转为第二型**曲面**积分 <1000题7.57>
+  - 方向（右手法则）
+
+## 场论
+
+- 方向余弦：设${\mathbf  {v}}=v_{1}{\boldsymbol  {{\hat  {x}}}}+v_{2}{\boldsymbol  {{\hat  {y}}}}+v_{3}{\boldsymbol  {{\hat  {z}}}}\,$为一个三维空间向量，则
+$$
+\begin{aligned} \alpha &=\cos a=\frac{\mathbf{v} \cdot \hat{\boldsymbol{x}}}{\|\mathbf{v}\|} &=\frac{v_{1}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \\ \beta &=\cos b=\frac{\mathbf{v} \cdot \hat{\boldsymbol{y}}}{\|\mathbf{v}\|} &=\frac{v_{2}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \\ \gamma &=\cos c=\frac{\mathbf{v} \cdot \hat{\boldsymbol{z}}}{\|\mathbf{v}\|} &=\frac{v_{3}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \end{aligned}
+$$
+
+- 散度：$div\mathbf{F}={{\partial P} \over {\partial x}}+{{\partial Q} \over {\partial y}}+{{\partial R} \over {\partial z}}$，散度最后求出来是一个数 <1000题7.55>
+
+- 梯度：${\displaystyle \nabla f={\begin{pmatrix}{\frac {\partial f}{\partial x}},{\frac {\partial f}{\partial y}},{\frac {\partial f}{\partial z}}\end{pmatrix}}={\frac {\partial f}{\partial x}}\mathbf {i} +{\frac {\partial f}{\partial y}}\mathbf {j} +{\frac {\partial f}{\partial z}}\mathbf {k} }$，梯度最后求出来是一个向量
+
+  - 几何意义：梯度方向导数最大；相反方向导数最小；垂直方向（有两个）导数值为0 <1000题7.64>
+
+- 旋度：向量场$\mathbf{A}=(A_x, A_y, A_z)$，${\displaystyle \mathbf {rot\,} \mathbf {A} ={\begin{vmatrix}\mathbf {i} &\mathbf {j} &\mathbf {k} \\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\A_{x}&A_{y}&A_{z}\end{vmatrix}}}$，同样也是一个向量 <1000题7.60>
+
+- 方向导数：<1000题7.61>
+![img](http://res.niuxuewei.com/2019-06-28-002942.png)
+
 # 微分方程
 
 ## 基本方程求解
@@ -399,6 +450,31 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
 
 # 无穷级数
 
+## 性质
+
+- 线性性质（3条）
+- 无穷级数改变**任意有限项**，敛散性不会改变
+- 若$S = \sum_{n=1}^{\infty} u_{n}$收敛，则$\lim _{n \rightarrow \infty} u_{n}=0$
+  - 此性质是级数收敛的**必要条件**：也就是仅有$\lim _{n \rightarrow \infty} u_{n}=0$这个条件时，不能说明级数收敛一定收敛
+
+## 级数敛散性判别方法
+
+### 正项级数
+
+正项级数是指$u_n > 0$，那么同样的$S > 0$且$\{S_n\}$是单调递增的。
+
+- 收敛原则：$\sum_{n=1}^{\infty} u_{n}$收敛$\Leftrightarrow$数列$\{S_n\}$有界。
+  - 利用单调有界准则，前面说了$\{S_n\}$是单调递增的，只要有上界即可判定$\lim _{n \rightarrow \infty} S_n$存在，即$\sum_{n=1}^{\infty} u_{n}$收敛
+  - 由于单调递增的性质，导致$\lim _{n \rightarrow \infty} S_n$的结果只有两种，要么是一个有限数，要么是$+\infty$
+- 比较判别法：小发散则大发散，大收敛则小收敛
+  - 如果需要证明某级数收敛，则需要通过放缩法找到一个比它大的级数$v_n$收敛即可（难点在于放缩）
+  - 相反，如果证明发散，则通过放缩法找到一个比它小的级数并证明发散即可
+- 比值判别法：如果$\lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho$，那么$\rho < 1$则收敛，$\rho > 1$则发散。
+  - 适用于：通项含有阶乘的级数
+- 根值判别法：$\lim _{x \rightarrow \infty} \sqrt[n]{u_{n}}=\rho$，那么$\rho < 1$则收敛，$\rho > 1$则发散。
+  - 适用于：通项中含有$n$次方的级数
+  - 基础公式：$\lim _{x \rightarrow \infty} \sqrt[n]{a}=1$（其中$a$为任意常数），$\lim _{x \rightarrow \infty} \sqrt[n]{n}=1$
+
 ## 幂级数展开式
 
 需要熟稔于心的幂级数展开式，要记住“展开式+收敛域” *(p244)*
@@ -495,64 +571,12 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
 ## 多元函数积分学的几何应用
 
 - 空间曲线(参数方程)$\left\{ {\matrix{{x = \varphi (t)}  \cr {y = \psi (t)}  \cr {z = \omega (t)}  \cr } } \right.$并过$P_0\left(x_0,y_0,z_0 \right)$的切线和法平面 *(p308)*
-
 - 空间曲面在点$P_0\left(x_0, y_0, z_0 \right)$处的法线和切平面 *(p309)*
-  - 曲面方程为$F\left( {x,y,z} \right) = 0$ [☢︎]
+  - 曲面方程为$F\left( {x,y,z} \right) = 0$
   - 曲面方程为$z = f\left( {x,y} \right)$
 - 空间曲面面积 *(p309)*
 - 曲面全微分的几何意义 *(p309)*
 - 法向量的方向余弦 *(p309)*
-
-# 三重积分
-
-## 对称性
-
-- 普通对称性
-- 轮转对称性
-
-## 三重积分球坐标转化
-
-三重积分$\mathop{\int\!\!\!\int\!\!\!\int}\limits_{\kern-5.5pt \Omega } 
-{f\left( {x,y,z} \right)dV} $角坐标系转球坐标
-
-- $dx,dy,dz$
-- $x,y,z$
-
-# 曲线、曲面积分
-
-## 第二型曲线积分
-
-- 积分与路径无关$\Rightarrow$${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$
-- ${{\partial Q} \over {\partial x}} = {{\partial Q} \over {\partial y}}$与包含点的区域为单连通$\Rightarrow$积分与路径无关，根据与路径无关再找一个易解曲线解决问题 <1000题7.43>
-- 第一型曲线积分与第二型曲线积分是可以相互转化的，其转化公式为$\int\limits_L {P\cos \alpha  + Q\cos \beta ds}  = \int\limits_L {Pdx + Qdy} $，其中$\cos\alpha$与$\cos\beta$为曲线$L$的切向量的方向余弦 <1000题7.47>
-
-## 第二型曲面积分
-
-- 化为二重积分
-- 利用**高斯公式** <1000题7.50, 投影也要讲究±号7.53, 高斯公式反向使用7.56>
-- 利用**转换公式**，以投影至$XoY$面为例，其转换公式为$\iint_{\Sigma} Pd y d z+Qd z d x+Rd x d y=\iint_{\Sigma} [P(-z^{\prime}_x) +Q(-z^{\prime}_y) +R]d x d y$ <1000题7.51, 7.52>
-  - 需要注意正负号，与$z$轴夹角在$0$到$\pi\over2$时取正，其余取负[高数18讲2020版P377]
-- 第二型曲面积分转换为第一型曲面积分，利用对称性解决（第二型不谈对称性）<1000题7.54>
-- **斯托克斯公式**可以将**空间**第二型**曲线**积分转为第二型**曲面**积分 <1000题7.57>
-  - 方向（右手法则）
-
-## 场论
-
-- 方向余弦：设${\mathbf  {v}}=v_{1}{\boldsymbol  {{\hat  {x}}}}+v_{2}{\boldsymbol  {{\hat  {y}}}}+v_{3}{\boldsymbol  {{\hat  {z}}}}\,$为一个三维空间向量，则
-$$
-\begin{aligned} \alpha &=\cos a=\frac{\mathbf{v} \cdot \hat{\boldsymbol{x}}}{\|\mathbf{v}\|} &=\frac{v_{1}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \\ \beta &=\cos b=\frac{\mathbf{v} \cdot \hat{\boldsymbol{y}}}{\|\mathbf{v}\|} &=\frac{v_{2}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \\ \gamma &=\cos c=\frac{\mathbf{v} \cdot \hat{\boldsymbol{z}}}{\|\mathbf{v}\|} &=\frac{v_{3}}{\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}} \end{aligned}
-$$
-
-- 散度：$div\mathbf{F}={{\partial P} \over {\partial x}}+{{\partial Q} \over {\partial y}}+{{\partial R} \over {\partial z}}$，散度最后求出来是一个数 <1000题7.55>
-
-- 梯度：${\displaystyle \nabla f={\begin{pmatrix}{\frac {\partial f}{\partial x}},{\frac {\partial f}{\partial y}},{\frac {\partial f}{\partial z}}\end{pmatrix}}={\frac {\partial f}{\partial x}}\mathbf {i} +{\frac {\partial f}{\partial y}}\mathbf {j} +{\frac {\partial f}{\partial z}}\mathbf {k} }$，梯度最后求出来是一个向量
-
-  - 几何意义：梯度方向导数最大；相反方向导数最小；垂直方向（有两个）导数值为0 <1000题7.64>
-
-- 旋度：向量场$\mathbf{A}=(A_x, A_y, A_z)$，${\displaystyle \mathbf {rot\,} \mathbf {A} ={\begin{vmatrix}\mathbf {i} &\mathbf {j} &\mathbf {k} \\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\A_{x}&A_{y}&A_{z}\end{vmatrix}}}$，同样也是一个向量 <1000题7.60>
-
-- 方向导数：<1000题7.61>
-![img](http://res.niuxuewei.com/2019-06-28-002942.png)
 
 # 数学一、数学二专题内容
 
