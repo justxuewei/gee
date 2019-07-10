@@ -34,12 +34,12 @@
 3. $\left| {\left| a \right| - \left| b \right|} \right|$
 4. $\left| {\int {f\left( x \right)dx} } \right|$
 5. 平均值不等式大于等于谁？小于等于谁？
-6. $\tan x,\sin x,x$的关系，在什么区间上？
-7. $x,\sin x$的关系，在什么区间上？
+6. $\sin x \lt x$，在$x>0$区间上
+7. $x\lt\tan x$，在$0<x<\frac{\pi}{2}$区间上
 8. $\ln \left( {1 + {1 \over x}} \right)$与其他的大小关系，并证明，在什么区间上？
 9. $x,\arcsin x,\arctan x$的关系在，什么区间上？
-10. ${e^x}$与$x$的关系
-11. $\ln x$与$x$的关系在，什么区间上？
+10. 对于任意的$x$有$e^x\geq x+1$
+11. 对于$x>0$有$\ln x<x-1$
 
 ## 方程求根问题
 
@@ -58,16 +58,29 @@ $\lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
 
 ## 等价无穷小
 
-$x \to 0$时，等价无穷小公式 *(p27)*
+$x \to 0$时，等价无穷小公式有：
 
 - $x - \sin x$
 - $\arcsin x - x$
 - $\tan x - x$
-- $x - \arctan x$
+- $x - \arctan x$ 
+- $(1+x)^\alpha-1\sim\alpha x$ <1000题9.4(3)>
+  - 拓展：$(1+x)^{\alpha(x)}-1\sim\alpha(x) x$，其中$\alpha(x)\rightarrow0$ <1000题1.31>
+
+## 基本极限公式
+
+- $\lim_{x\rightarrow0^+} x^x=1$
+- $\lim_{x\rightarrow+\infty} x^{1\over x}=1$
+- $\lim_{x\rightarrow0^+} x\ln x=0$，意义在于$x$趋近于0的速度远大于$\ln x$趋近于负无穷的速度
+  - 拓展：$\lim_{x\rightarrow0^+} x^\alpha\ln x=0$，其中$\alpha>0$
+- $\lim _{x \rightarrow \infty} \sqrt[n]{a}=1$（其中$a$为任意常数）
+- $\lim _{x \rightarrow \infty} \sqrt[n]{n}=1$
+- $\lim_{n\rightarrow\infty} (1+\frac{1}{n})^n=e$ <1000题9.8>
+  - 拓展：$\lim_{n\rightarrow\infty} (1+\frac{x}{n})^n=e^x$，对其证明[在这](https://math.stackexchange.com/questions/882741/limit-of-1-x-nn-when-n-tends-to-infinity)
 
 ## 函数极限计算公式
 
-- ${1^\infty }$型公式 *(p41)*
+- ${1^\infty }$型公式 $\lim u^v=e^{\lim (u-1)v}$
 - $\mathop {\lim }\limits_{x \to \infty } {\left( {1 + {1 \over x}} \right)^x}$
 
 # 一元函数微分学
@@ -355,70 +368,52 @@ $$
 
 ## 基本方程求解
 
-### 变量可分离型 
+- 变量可分离型 <1000题8.1>
 
-<1000题8.1>
+- 齐次微分方程 <1000题8.5>
+  - 拓展1：如果不好直接做试试将函数看做 $x=x(y)$，即令$u = {x\over y}$ <1000题8.6>
 
-### 齐次微分方程 
+  - 拓展2：用换元法化成变量可分离型 <1000题8.8>
 
-<1000题8.5>
+- 一阶线性微分方程：最终解得形式为$y=\mathrm{e}^{-\int p(x) d x}\left[\int e^{\int p(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
+  - 拓展1：如果不好直接做试试将函数看做 $x=x(y)$ <1000题8.11>
+  - 注：若这里的$\int p(x) d x=\ln|\varphi(x)|$，那么可以不加绝对值变为$\ln\varphi(x)$
 
-- 拓展1：如果不好直接做试试将函数看做 $x=x(y)$，即令$u = {x\over y}$ <1000题8.6>
+- 伯努利方程：$y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ ，其结题步骤为：<1000题8.16, 8.17>
+  1. 恒等变形为$y^{-n} \cdot y^{\prime}+p(x) y^{1-n}=q(x)$
+  2. 令$z=y^{1-n}$，得$\frac{\mathrm{d} z}{\mathrm{d} x}=(1-n) y^{-n} \frac{\mathrm{d} y}{\mathrm{d} x}$，则$\frac{1}{1-n} \frac{\mathrm{d} z}{\mathrm{d} x}+p(x) z=q(x)$
 
-- 拓展2：用换元法化成变量可分离型 <1000题8.8>
+- 二阶可降阶方程，其类型有：
+  - $y^{\prime \prime}=f\left(x, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p^{\prime}$ <1000题8.32>
+  - $y^{\prime \prime}=f\left(y, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p\frac{dp}{dy}$ <1000题8.33>
 
-### 一阶线性微分方程
+- 二阶齐次式微分方程通解：设方程为$y^{\prime \prime}+p y^{\prime}+q y=0$，则特征方程为$\lambda^{2}+p \lambda+q=0$
+  - 若$p^{2}-4 q>0$，则设为$y=C_{1} \mathrm{e}^{\lambda_{1}x}+C_{2} \mathrm{e}^{\lambda_{2}x}$
+  - 若$p^{2}-4 q=0$，则设为$y=\left(C_{1}+C_{2} x\right) \mathrm{e}^{\lambda x}$
+  - 若$p^{2}-4 q<0$，设$\alpha \pm \beta i$是特征方程的复根，则设为$y=e^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$ <1000题8.38>
 
-最终解得形式为$y=\mathrm{e}^{-\int p(x) d x}\left[\int e^{\int p(x) d x} \cdot q(x) d x+C\right]$  <1000题8.7>
+- 二阶非齐次式微分方程特解
+  - 自由项$f(x)=P_{n}(x) e^{a x}$，特解设为$y^{*}=\mathrm{e}^{a x} Q_{n}(x) x^{k}$
 
-- 拓展1：如果不好直接做试试将函数看做 $x=x(y)$ <1000题8.11>
-- 注：若这里的$\int p(x) d x=\ln|\varphi(x)|$，那么可以不加绝对值变为$\ln\varphi(x)$
+    1. $\mathrm{e}^{a x}$照抄
+    2. $Q_{n}(x)$为$n$次一般多项式，如二次多项式要设为$Ax^2+Bx+C$
+    3. $k$取值分为三种
+       - 当$ \alpha \neq \lambda_{1}, \alpha \neq \lambda_{2}$时，$k$取0 <1000题8.18>
+       - 当$\alpha=\lambda_{1}$或$\alpha=\lambda_{2}$，$k$取1
+       - 当$\alpha=\lambda_{1}=\lambda_{2}$，$k$取2，也就是首先$\lambda_1=\lambda_2$这个条件才有可能成立 <1000题8.19>
+  - 自由项$f(x)=\mathrm{e}^{a r}\left[P_{m}(x) \cos \beta x+P_{n}(x) \sin \beta x\right]$，特解设为$y^{*}=e^{e x}\left[Q_{l}^{(1)}(x) \cos \beta x+Q_{l}^{(2)}(x) \sin \beta x\right] x^{k}$
+    1. $\mathrm{e}^{a x}$照抄
+    2. $l=\max \{m, n\}$，$Q_{l}^{(1)}(x), Q_{l}^{(2)}(x)$分别为两个不同的多项式
+    3. $k$取值分为两种，特征根求法为$\lambda=\frac{-b\pm\sqrt{4ac-b^2}}{2a}$
+       - 当$\alpha \pm \beta i$不是特征根时，其值为0，如果有实根则直接设为0即可 <1000题8.21>
+       - 当$\alpha \pm \beta i$是特征根时，其值为1 <1000题8.20>
 
-### 伯努利方程
+- 二阶非齐次微分方程的解 
+  - 二阶非齐次微分方程的**通解** = 齐次通解 + 非齐次特解，也就是带$C_1$和$C_2$的解 <1000题8.29>
+  - 还有一种题求非齐次微分方程的**特解**为带入初始条件求出$C_1$和$C_2$的解 <1000题8.25>
 
-$y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
-
-1. 恒等变形为$y^{-n} \cdot y^{\prime}+p(x) y^{1-n}=q(x)$
-2. 令$z=y^{1-n}$，得$\frac{\mathrm{d} z}{\mathrm{d} x}=(1-n) y^{-n} \frac{\mathrm{d} y}{\mathrm{d} x}$，则$\frac{1}{1-n} \frac{\mathrm{d} z}{\mathrm{d} x}+p(x) z=q(x)$
-
-### 二阶可降阶方程
-
-- $y^{\prime \prime}=f\left(x, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p^{\prime}$ <1000题8.32>
-- $y^{\prime \prime}=f\left(y, y^{\prime}\right)$型：设$y^{\prime}=p(x)$，则$y^{\prime \prime}=p\frac{dp}{dy}$ <1000题8.33>
-
-### 二阶齐次式微分方程通解
-
-设方程为$y^{\prime \prime}+p y^{\prime}+q y=0$，则特征方程为$\lambda^{2}+p \lambda+q=0$
-
-- 若$p^{2}-4 q>0$，则设为$y=C_{1} \mathrm{e}^{\lambda_{1}x}+C_{2} \mathrm{e}^{\lambda_{2}x}$
-- 若$p^{2}-4 q=0$，则设为$y=\left(C_{1}+C_{2} x\right) \mathrm{e}^{\lambda x}$
-- 若$p^{2}-4 q<0$，设$\alpha \pm \beta i$是特征方程的复根，则设为$y=e^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$ <1000题8.38>
-
-### 二阶非齐次式微分方程特解
-
-- 自由项$f(x)=P_{n}(x) e^{a x}$，特解设为$y^{*}=\mathrm{e}^{a x} Q_{n}(x) x^{k}$
-  1. $\mathrm{e}^{a x}$照抄
-  2. $Q_{n}(x)$为$n$次一般多项式，如二次多项式要设为$Ax^2+Bx+C$
-  3. $k$取值分为三种
-     - 当$ \alpha \neq \lambda_{1}, \alpha \neq \lambda_{2}$时，$k$取0 <1000题8.18>
-     - 当$\alpha=\lambda_{1}$或$\alpha=\lambda_{2}$，$k$取1
-     - 当$\alpha=\lambda_{1}=\lambda_{2}$，$k$取2，也就是首先$\lambda_1=\lambda_2$这个条件才有可能成立 <1000题8.19>
-- 自由项$f(x)=\mathrm{e}^{a r}\left[P_{m}(x) \cos \beta x+P_{n}(x) \sin \beta x\right]$，特解设为$y^{*}=e^{e x}\left[Q_{l}^{(1)}(x) \cos \beta x+Q_{l}^{(2)}(x) \sin \beta x\right] x^{k}$
-  1. $\mathrm{e}^{a x}$照抄
-  2. $l=\max \{m, n\}$，$Q_{l}^{(1)}(x), Q_{l}^{(2)}(x)$分别为两个不同的多项式
-  3. $k$取值分为两种，特征根求法为$\lambda=\frac{-b\pm\sqrt{4ac-b^2}}{2a}$
-     - 当$\alpha \pm \beta i$不是特征根时，其值为0，如果有实根则直接设为0即可 <1000题8.21>
-     - 当$\alpha \pm \beta i$是特征根时，其值为1 <1000题8.20>
-
-### 二阶非齐次微分方程的解 
-
-二阶非齐次微分方程的**通解** = 齐次通解 + 非齐次特解，也就是带$C_1$和$C_2$的解 <1000题8.29>
-
-还有一种题求非齐次微分方程的**特解**为带入初始条件求出$C_1$和$C_2$的解 <1000题8.25>
-
-### 高阶齐次微分方程的解 
-
-- 类比二阶齐次方程 <1000题8.27, 8.37>
+- 高阶齐次微分方程的解 
+  - 类比二阶齐次方程 <1000题8.27, 8.37>
 
 ## 利用线性方程解的理论求解
 
@@ -431,7 +426,7 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
 
 ## 通过换元求解 
 
-<1000题8.37, 8.38>
+换元基本上是题目告知了如何换 <1000题8.37, 8.38>
 
 ## 根据解反求方程 
 
@@ -464,38 +459,61 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
 - 无穷级数改变**任意有限项**，敛散性不会改变
 - 若$S = \sum_{n=1}^{\infty} u_{n}$收敛，则$\lim _{n \rightarrow \infty} u_{n}=0$
   - 此性质是级数收敛的**必要条件**：也就是仅有$\lim _{n \rightarrow \infty} u_{n}=0$这个条件时，不能说明级数收敛一定收敛
+  - 但是反过来说，如果$\lim _{n \rightarrow \infty} u_{n}\neq0$，那么必发散 ✅
 
 ## 等价无穷小
 
 - 拆开级数，将含有合适的次方项保留，剩余项用$o(x^a)$表示即可 <1000题9.1>
 
+## 常用级数
+
+比较判别法中比较常用的无穷级数，可以直接判定敛散性
+
+- 等比级数：$\sum\limits_{n = 1}^\infty  {a{q^{n - 1}}} $ [证明参见2020·18讲P254]
+  - 若$|p|\geq1$，则发散
+  - 若$|p|\leq1$，则收敛，其和为$\frac{a}{1-q}$
+- P级数：$\sum\limits_{n = 1}^\infty  {{1 \over {{n^p}}}} $，是一种特殊的正向级数 [证明参见2020·18讲P256]
+  - 若$p>1$，则收敛
+  - 若$p\leq1$，则发散
+- $\sum\limits_{n = 1}^\infty  {{{( - 1)}^n}{1 \over {{n^p}}}} $
+- $\sum\limits_{n=1}^{\infty} x_{n+1}-x_n$收敛$\Leftrightarrow$$\lim\limits_{n\rightarrow+\infty} x_n$存在，因为$S_n=x_{n+1}-x_1$
+
 ## 级数敛散性判别方法
 
 收敛类型
 
-- 绝对收敛：若$\sum_{n=1}^{\infty} |u_{n}|$（通项加入绝对值）收敛，称之为绝对值收敛
-- 条件收敛：若$\sum_{n=1}^{\infty} u_{n}$收敛，$\sum_{n=1}^{\infty} |u_{n}|$发散，则成为条件收敛
+- 绝对收敛：若$\sum\limits_{n=1}^{\infty} |u_{n}|$（通项加入绝对值）收敛，称之为绝对值收敛
+- 条件收敛：若$\sum\limits_{n=1}^{\infty} u_{n}$收敛，$\sum\limits_{n=1}^{\infty} |u_{n}|$发散，则成为条件收敛
 
 收敛之间的关系
 
-- 若$\sum_{n=1}^{\infty} |u_{n}|$收敛，则$\sum_{n=1}^{\infty} u_{n}$必收敛
+- 若$\sum\limits_{n=1}^{\infty} |u_{n}|$收敛，则$\sum\limits_{n=1}^{\infty} u_{n}$必收敛
 
 ### 正项级数
 
 正项级数是指$u_n > 0$，那么同样的$S > 0$且$\{S_n\}$是单调递增的。
 
+解题技巧
+
+- 正向级数是可以使用等价无穷小替换的<1000题9.4③提公因子法>，尤其要注意含有$1\over n$的方程，同样的在使用完“比值判别法”或“根值判别法”之后也可以使用基本极限公式将极限计算出来。[参见`极限与连续 > 基本极限公式`] <1000题9.8, 9.14>
+- 当通项为定积分的情况下，一般要使用放缩法把被积式化为一个简单的式子后再进行积分，最后利用比较判别法作出判断 <1000题9.5, 9.6>
+  - $\sin ax$放缩为$ax$
+- 利用无穷级数收敛定义反求数列极限 <1000题9.8>
+
+方法
+
 - 收敛原则：$\sum_{n=1}^{\infty} u_{n}$收敛$\Leftrightarrow$数列$\{S_n\}$有界。
   - 利用单调有界准则，前面说了$\{S_n\}$是单调递增的，只要有上界即可判定$\lim _{n \rightarrow \infty} S_n$存在，即$\sum_{n=1}^{\infty} u_{n}$收敛
   - 由于单调递增的性质，导致$\lim _{n \rightarrow \infty} S_n$的结果只有两种，要么是一个有限数，要么是$+\infty$
-- 比较判别法：小发散则大发散，大收敛则小收敛
+- 比较判别法[难点]：小发散则大发散，大收敛则小收敛
   - 如果需要证明某级数收敛，则需要通过一些手段找到一个比它大的级数$v_n$收敛即可；相反，如果证明发散，则可以找到一个比它小的级数并证明发散即可。这些手段包括：
     - 利用有界性 <1000题9.2②>
-    - 利用常用不等式进行放缩<1000题9.3>
-- 比值判别法：对于级数$\sum_{n=1}^{\infty} u_{n}$，如果$\lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho$（注意用作计算的是通项），那么$\rho < 1$则收敛，$\rho > 1$则发散
+    - 利用常用不等式进行放缩 <1000题9.3, 9.5, 9.6>
+    - 基本不等式：去除部分分母使其变大 <1000题9.5>
+- 比值判别法：对于级数$\sum_{n=1}^{\infty} u_{n}$，如果$\lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho$（注意用作计算的是通项），那么$\rho < 1$则收敛，$\rho > 1$则发散 <1000题9.11>
   - 适用于：通项含有阶乘的级数
 - 根值判别法：对于级数$\sum_{n=1}^{\infty} u_{n}$，如果$\lim _{x \rightarrow \infty} \sqrt[n]{u_{n}}=\rho$（注意用作计算的是通项），那么$\rho < 1$则收敛，$\rho > 1$则发散 <1000题9.4(1)>
   - 适用于：通项中含有$n$次方的级数
-  - 基础公式：$\lim _{x \rightarrow \infty} \sqrt[n]{a}=1$（其中$a$为任意常数），$\lim _{x \rightarrow \infty} \sqrt[n]{n}=1$
 
 ## 幂级数展开式
 
@@ -507,14 +525,6 @@ $y^{\prime}+p(x) y=q(x) y^{n}(n \neq 0,1)$ <1000题8.16, 8.17>
 - $\ln \left( {1 + x} \right)$
 - $\sin x$
 - $\cos x$
-
-## 常用无穷级数
-
-比较判别法中比较常用的无穷级数 *(参见Notability讲义)*
-
-- $\sum\limits_{n = 1}^\infty  {a{q^{n - 1}}} $
-- $\sum\limits_{n = 1}^\infty  {{1 \over {{n^p}}}} $
-- $\sum\limits_{n = 1}^\infty  {{{( - 1)}^n}{1 \over {{n^p}}}} $
 
 ## 概率论用到的无穷级数
 
