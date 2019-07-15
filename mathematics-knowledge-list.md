@@ -49,6 +49,19 @@
 
 - 高阶方程求根：试根法+除法 <1000题8.37>
 
+## 因式分解公式
+
+- $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41>
+
+## 奇偶性
+
+- 奇函数x偶函数=奇函数
+
+## 双阶乘
+
+- $(2n-1)!! = 1\times3\times5\times\cdots\times(2n-1)$
+- $(2n)!! = 2\times4\times6\times\cdots\times2n$
+
 # 极限与连续
 
 ## 极限性质
@@ -73,21 +86,34 @@ $x \to 0$时，等价无穷小公式有：
 
 ## 基本极限公式
 
-- $\lim_{x\rightarrow0^+} x^x=1$
-- $\lim_{x\rightarrow+\infty} x^{1\over x}=1$
-- $\lim_{x\rightarrow0^+} x\ln x=0$，意义在于$x$趋近于0的速度远大于$\ln x$趋近于负无穷的速度
-  - 拓展：$\lim_{x\rightarrow0^+} x^\alpha\ln x=0$，其中$\alpha>0$
-- $\lim _{x \rightarrow \infty} \sqrt[n]{a}=1$（其中$a$为任意常数）
-- $\lim _{x \rightarrow \infty} \sqrt[n]{n}=1$
-- $\lim_{n\rightarrow\infty} (1+\frac{1}{n})^n=e$ <1000题9.8>
-  - 拓展：$\lim_{n\rightarrow\infty} (1+\frac{x}{n})^n=e^x$，对其证明[在这](https://math.stackexchange.com/questions/882741/limit-of-1-x-nn-when-n-tends-to-infinity)
-
-## 函数极限计算公式
+- $\lim\limits_{x\rightarrow0^+} x^x=1$
+- $\lim\limits_{x\rightarrow+\infty} x^{1\over x}=1$
+- $\lim\limits_{x\rightarrow0^+} x\ln x=0$，意义在于$x$趋近于0的速度远大于$\ln x$趋近于负无穷的速度
+  - 拓展：$\lim\limits_{x\rightarrow0^+} x^\alpha\ln x=0$，其中$\alpha>0$
+- $\lim\limits _{x \rightarrow \infty} \sqrt[n]{a}=1$（其中$a$为任意常数）
+- $\lim\limits _{x \rightarrow \infty} \sqrt[n]{n}=1$
+- $\lim\limits_{n\rightarrow\infty} (1+\frac{1}{n})^n=e$ <1000题9.8>
+  - 拓展：$\lim\limits_{n\rightarrow\infty} (1+\frac{x}{n})^n=e^x$，对其证明[在这](https://math.stackexchange.com/questions/882741/limit-of-1-x-nn-when-n-tends-to-infinity)
 
 - ${1^\infty }$型公式 $\lim u^v=e^{\lim (u-1)v}$
-- $\mathop {\lim }\limits_{x \to \infty } {\left( {1 + {1 \over x}} \right)^x}$
+
+## 数列极限
+
+解题技巧
+
+- 递推式是单调的，使用单调有界准则
+- 递推式不是单调的，使用先斩后奏 <1000题1.77, 9.54>
+  1. 求极限并舍去不符合要求的点
+  2. $|x_{n+1}-A|=|f(x_n)-g(A)|$经过计算可以获得一个递推式$|x_{n+1}-A|<k|x_n-A|<\cdots<k^n|x_1-A|$，其中$0<k<1$
+  3. 当$n\rightarrow\infty$时，$0 \leq |x_{n}-A|< 0$，所以我们有理由相信$x_n$的极限为$A$
 
 # 一元函数微分学
+
+## 性质
+
+奇偶性
+
+- 奇函数求导变偶函数，偶函数求导变奇函数
 
 ## 级数经典放缩公式
 
@@ -225,7 +251,7 @@ I&=\int \frac{1}{\sqrt{1+\tan ^{2} \theta}} \sec ^{2} \theta d \theta (令x=\tan
 $$
 - $\int {{1 \over {\sqrt {{x^2} - 1} }}dx} $
 
-- $\int \frac{1}{a^{2} x^{2}+b^{2}} d x=\frac{1}{a b} \int \frac{1}{\left(\frac{a}{b}\right)^{2} x^{2}+1} d\left(\frac{a}{b}\right) x=\frac{1}{a b} \arctan \left(\frac{a}{b} x\right)+C$
+- $\int \frac{1}{a^{2} x^{2}+b^{2}} d x=\frac{1}{a b} \int \frac{1}{\left(\frac{a}{b}\right)^{2} x^{2}+1} d\left(\frac{a}{b}\right) x=\frac{1}{a b} \arctan \left(\frac{a}{b} x\right)+C$ <1000题9.41>
 
 - $\int \frac{1}{x^{2}-a^{2}} d x=\int \frac{1}{(x-a)(x+a)} d x=\frac{1}{2 a} \int \frac{1}{x-a}-\frac{1}{x+a} d x=\frac{1}{2 a} \ln \left|\frac{x-a}{x+a}\right|+C$
 
@@ -278,6 +304,7 @@ $$
 
 - 不定积分转变上限积分：$\int f(x) \mathrm{d} x=\int_{x_{0}}^{x} f(t) \mathrm{d} t+C$ <1000题8.13, 8.14>
 - 变上限积分的等价代换：$\int_{0}^{f(x)} g(t) \mathrm{d} t$在$f(x)\rightarrow 0$时，可以将$f(x)$和$g(t)$同时做等价代换 <1000题9.1>
+- **以0为下限的变上限积分**，奇偶性与被积函数相反，如$f(t)$为奇函数，则$\int_0^xf(t)dt$为偶函数 <1000题9.41>
 
 ## 针对于概率论的积分
 
@@ -288,6 +315,13 @@ $$
 
 - $\int_1^{ + \infty } {{1 \over {{x^p}}}dx} $
 - $\int_0^1 {{1 \over {{x^p}}}dx} $
+
+## 解题技巧
+
+- 分部积分法
+- 换元
+- 凑微分法
+- 有理函数积分法 <1000题9.41>
 
 # 多元函数微分学
 
@@ -547,13 +581,14 @@ $$
 结论
 
 - 收敛半径：假定$\sum\limits_{n = 1}^\infty  a_n(x-p)^n $，则其中心为于$x=p$，设$\lim \limits_{n \rightarrow \infty}\left|\frac{a_{n+1}}{a_{n}}\right|=\rho$，则收敛半径$R$为：
+
   $$
   R=\left\{\begin{array}{ll}{\frac{1}{\rho},} & {\rho \neq 0} \\ {+\infty,} & {\rho=0} \\ {0,} & {\rho=+\infty}\end{array}\right.
   $$
 
-	- 如果给定幂级数不是连续的，如$\sum\limits_{n = 1}^\infty  a_n(x-p)^{\alpha n+\beta} $，那么求半径的时候需要注意$R=\sqrt{\frac{1}{\rho}}$当$\rho\neq0$时 <1000题9.32>
+  - 如果给定幂级数不是连续的，如$\sum\limits_{n = 1}^\infty  a_n(x-p)^{\alpha n+\beta} $，那么求半径的时候需要注意$R=\sqrt{\frac{1}{\rho}}$当$\rho\neq0$时 <1000题9.32>
 
-结题技巧
+解题技巧
 
 - 一般$a_n$是抽象的，但给定中心和某点的敛散性，推测另外一点的敛散性 <1000题9.29>
   - 收敛域内绝对收敛
@@ -563,16 +598,42 @@ $$
   - 求收敛半径
   - 求端点的敛散性
 
-### 幂级数展开式
+### 幂级数展开求和问题
 
-需要熟稔于心的幂级数展开式，要记住“展开式+收敛域” *(p244)*
+展开公式
 
-- ${e^x}$
-- ${1 \over {1 + x}}$
-- ${1 \over {1 - x}}$
-- $\ln \left( {1 + x} \right)$
-- $\sin x$
-- $\cos x$
+- ${e^x}=\sum\limits_{n=0}^{\infty} \frac{x^{n}}{n !}=1+x+\frac{x^{2}}{2 !}+\cdots+\frac{x^{n}}{n !}+\cdots,-\infty<x<+\infty$
+- ${1 \over {1 + x}}=\sum\limits_{n=0}^{\infty}(-1)^{n} x^{n}=1-x+x^{2}-x^{3}+\cdots+(-1)^{n} x^{n}+\cdots,-1<x<1$
+- ${1 \over {1 - x}}=\sum\limits_{n=0}^{\infty} x^{n}=1+x+x^{2}+\cdots+x^{n}+\cdots,-1<x<1$
+- $\ln \left( {1 + x} \right)=\sum\limits_{n=1}^{\infty}(-1)^{n-1} \frac{x^{n}}{n}=x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\frac{x^{4}}{4}+\cdots+(-1)^{n-1} \frac{x^{n}}{n}+\cdots,-1<x \leqslant 1$
+- $\sin x=\sum\limits_{n=0}^{\infty}(-1)^{n} \frac{x^{2 n+1}}{(2 n+1) !} {=x-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}-\frac{x^{7}}{7 !}+\cdots+(-1)^{n} \frac{x^{2 n+1}}{(2 n+1) !}+\cdots,-\infty<x<+\infty}$
+- $\cos x=\sum\limits_{n=0}^{\infty}(-1)^{n} \frac{x^{2 n}}{(2 n) !}=1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}-\frac{x^{6}}{6 !}+\cdots+(-1)^{n} \frac{x^{2 n}}{(2 n) !}+\cdots,-\infty<x<+\infty$
+注意
+  - 角标开始于0还是1
+  - 每个式子的收敛域
+  - 这里的$x$是广义化的，如果需要也可改为$\frac{x}{2}$等，同样的收敛域也需要有相应的变化 <1000题9.36>
+  - 角标+1时对应累加式$n$需要-1：$\sum\limits_{n=0}^{\infty}u_nx^n=\sum\limits_{n=1}^{\infty}u_{n-1}x^{n-1}$ 
+
+解题技巧
+
+- 展开问题：给定$f(x)$，求其幂级数$\sum\limits^\infty_{n=0}a_nx^n$
+  - 当需要求在$x-a$点的展开式时，可以通过换元$t=x-a$转换为在$t$点展开 <1000题9.34>
+    - 需要在最后将$t$转换$x$
+    - 收敛域也需要同时转换
+  - $f(x)$变形为标准的幂级数展开式
+    - 恒等变形 <1000题9.36, 9.39>
+    - 先积后导 <1000题9.38>
+    - 先导后积 <1000题9.40>
+      - 考虑常数$C$的取值问题，一般是$S(0)$，因为$S(x)-S(0) = \int_0^xf(t)dt$
+      - 最后积分需要验证端点是否收敛
+  - 与泰勒公式结合，若$f(x)=\sum\limits_{n=0}^{\infty}a_nx^n$，则$a_n=\frac{f^{(n)}(x)}{n!}$
+
+- 求和问题：给定幂级数$\sum\limits^\infty_{n=0}a_nx^n$，求和函数$f(x)$
+  - 如果通项是$u_n=\frac{1}{a_{n+1}}-\frac{1}{a_n}$，那么求$\sum\limits_{n=0}^{\infty}u_n$就可以全部写开，用加减抵消的方法来求和 <1000题9.43>
+  - 等比数列，如果收敛（$|q|<1$），那么其和为$\frac{首项}{1-公比}$ <1000题9.44>
+  - 先导后积 <1000题9.50>
+  - 先积后导 <1000题9.49>
+  - 常数项级数求和：补一个$x^{n-1}$或$x_n$或$x_{n+1}$使之变为一个幂级数，然后利用上面方法求出和函数，带入$x=1$即可 <1000题9.51>
 
 ## 概率论用到的无穷级数
 
