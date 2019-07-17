@@ -28,6 +28,7 @@
 和差公式
 
 - $\sin (\alpha \pm \beta)=\sin \alpha \cos \beta \pm \cos \alpha \sin \beta$ <1000题9.20>
+- $\cos(\alpha \pm \beta)=\cos \alpha \cos \beta \mp \sin \alpha \sin \beta$ <1000题9.67>
 
 ## 经典不等式
 
@@ -574,6 +575,12 @@ $$
     - 如果原级数收敛，加上括号也收敛
     - 如果加上括号收敛，不能推出原级数收敛，除非加上条件$\lim\limits_{n\rightarrow\infty} u^n=0$
 
+### 求和问题
+
+- 利用等比数列，如果收敛（$|q|<1$），那么其和为$\frac{首项}{1-公比}$ <1000题9.44>
+- 将常数项级数转为幂级数：补一个$x^{n-1}$或$x^n$或$x^{n+1}$使之变为一个幂级数，然后利用上面方法求出和函数，带入合适的$x$值即可 <1000题9.51>
+- 利用傅里叶级数 <1000题9.68, 9.69, 9.70>
+
 ## 幂级数
 
 ### 阿贝尔定理
@@ -582,11 +589,11 @@ $$
 
 - 收敛半径：假定$\sum\limits_{n = 1}^\infty  a_n(x-p)^n $，则其中心为于$x=p$，设$\lim \limits_{n \rightarrow \infty}\left|\frac{a_{n+1}}{a_{n}}\right|=\rho$，则收敛半径$R$为：
 
-  $$
-  R=\left\{\begin{array}{ll}{\frac{1}{\rho},} & {\rho \neq 0} \\ {+\infty,} & {\rho=0} \\ {0,} & {\rho=+\infty}\end{array}\right.
-  $$
+$$
+R=\left\{\begin{array}{ll}{\frac{1}{\rho},} & {\rho \neq 0} \\ {+\infty,} & {\rho=0} \\ {0,} & {\rho=+\infty}\end{array}\right.
+$$
 
-  - 如果给定幂级数不是连续的，如$\sum\limits_{n = 1}^\infty  a_n(x-p)^{\alpha n+\beta} $，那么求半径的时候需要注意$R=\sqrt{\frac{1}{\rho}}$当$\rho\neq0$时 <1000题9.32>
+- 如果给定幂级数不是连续的，如$\sum\limits_{n = 1}^\infty  a_n(x-p)^{\alpha n+\beta} $，那么求半径的时候需要注意$R=\sqrt{\frac{1}{\rho}}$当$\rho\neq0$时 <1000题9.32>
 
 解题技巧
 
@@ -614,7 +621,7 @@ $$
   - 这里的$x$是广义化的，如果需要也可改为$\frac{x}{2}$等，同样的收敛域也需要有相应的变化 <1000题9.36>
   - 角标+1时对应累加式$n$需要-1：$\sum\limits_{n=0}^{\infty}u_nx^n=\sum\limits_{n=1}^{\infty}u_{n-1}x^{n-1}$ 
 
-解题技巧
+解题技巧：不管是展开还是求和归根结底还是要回到幂级数那6种常用的展开公式上去。
 
 - 展开问题：给定$f(x)$，求其幂级数$\sum\limits^\infty_{n=0}a_nx^n$
   - 当需要求在$x-a$点的展开式时，可以通过换元$t=x-a$转换为在$t$点展开 <1000题9.34>
@@ -630,10 +637,29 @@ $$
 
 - 求和问题：给定幂级数$\sum\limits^\infty_{n=0}a_nx^n$，求和函数$f(x)$
   - 如果通项是$u_n=\frac{1}{a_{n+1}}-\frac{1}{a_n}$，那么求$\sum\limits_{n=0}^{\infty}u_n$就可以全部写开，用加减抵消的方法来求和 <1000题9.43>
-  - 等比数列，如果收敛（$|q|<1$），那么其和为$\frac{首项}{1-公比}$ <1000题9.44>
   - 先导后积 <1000题9.50>
   - 先积后导 <1000题9.49>
-  - 常数项级数求和：补一个$x^{n-1}$或$x_n$或$x_{n+1}$使之变为一个幂级数，然后利用上面方法求出和函数，带入$x=1$即可 <1000题9.51>
+
+## 傅里叶级数
+
+- 傅里叶级数展开式：任何连续或有有限个一类间断点的周期函数可以在$[l, -l]$展开为$f(x) \sim S(x) = \frac{a_0}{2} + \sum \limits_{n=1}^{\infty} a_n\cos  \frac{n\pi}{l}x+b_n\sin \frac{n\pi}{l}x$，其中：
+  - $a_n = \frac{1}{l}\int^l_{-l} f(x)\cos \frac{n\pi}{l} x dx$
+  - $b_n = \frac{1}{l}\int^l_{-l} f(x)\sin  \frac{n\pi}{l}x dx$
+
+- 狄利克雷收敛定理
+$$
+  S(x)=
+\left\{
+  \begin{array}{l}
+  {f(x)},\quad x为连续点 \\ 
+  {\frac{f(x-0)+f(x+0)}{2},\quad x为间断点} \\ 
+  {\frac{f(-\pi+0)+f(\pi-0)}{2},\quad x为端点}
+  \end{array}
+  \right.
+$$
+
+- 正弦级数$f(x)$是奇函数，因为正弦级数只有$b_n \sin \frac{n\pi}{l}x$，这是因为$a_n = \frac{1}{l}\int^l_{-l} f(x)\cos \frac{n\pi}{l} x dx$，奇函数$f(x)$x偶函数$\cos \frac{n\pi}{l} x$为奇函数，所以$a_n$为0，所以为正弦函数
+- 余弦函数同理，利用积分的奇偶性可以算出$b_n=0$，这样展开式就只有$a_n\cos  \frac{n\pi}{l}x$了
 
 ## 概率论用到的无穷级数
 
