@@ -52,7 +52,7 @@
 
 ## 因式分解公式
 
-- $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41>
+- $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3>
 
 ## 奇偶性
 
@@ -749,13 +749,42 @@ $$
 - 曲面全微分的几何意义 *(p309)*
 - 法向量的方向余弦 *(p309)*
 
-# 数学一、数学二专题内容
-
-傅里叶级数
-
-- 傅里叶级数收敛公式：在连续点收敛，在间断点收敛，在端点收敛 *(Notability中的讲义)*
-
 # 行列式
+
+## 计算问题
+
+一般性结论
+
+- 利用性质
+
+  1. $\left|A^{T}\right|=|A|$
+  2. $\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {k a_{i 1}} & {k a_{i 2}} & {\cdots} & {k a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|=k\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|$ <1000题 线代1>
+     - 推广：$|k A|=k^{n}|A|$
+  3. 行列交换位置结果不变 <1000题 线代2>
+  4. 行列式可以化为几个小行列式计算 <1000题 线代2>
+  5. $|A B|=|A||B|$
+  6. $\left|A^{*}\right|=|A|^{n-1}$
+  7. 若$A$是$n$阶可逆矩阵，则$\left|A^{-1}\right|=|A|^{-1}$
+  8. 若$\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$是矩阵$A$的特征值，则$|A|=\lambda_{1} \lambda_{2} \cdots \lambda_{n}$
+  9. 若矩阵$A$与矩阵$B$相似，则$|A|=|B|$
+    - $P^{-1}AP=B \Rightarrow |P^{-1}AP|=|B|$
+    - 利用性质3可知，$|P^{-1}||A||P|=|B|$
+    - 利用性质5可知$|P^{-1}||P|=1$，那么可以推出$|A|=|B|$
+
+- 展开公式：行列式的某一行只有1-2个数不是0 <1000题 线代5>
+
+- 加边法：$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right| = \left|\begin{array}{cccc} {1} & {x} & {x} & {\cdots} & {x} \\ {0} &  {a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|$
+
+- 递推式
+  
+  - 三对角型行列式 <1000题 线代7>
+
+特殊行列式
+
+- $\left[\begin{array}{cccccc} {a} & {b} & {b} & {\cdots} & {b} & {b} \\ {b} & {a} & {b} & {\cdots} & {b} & {b} \\ {b} & {b} & {a} & {\cdots} & {b} & {b} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} & {\vdots} \\ {b} & {b} & {b} & {\cdots} & {a} & {b} \\  {b} & {b} & {b} & {\cdots} & {b} & {a} \end{array}\right] = [a+(n-1)b](a-b)^{n-1}$
+- 爪型转三角型 <1000题 线代6>
+
+## 其他
 
 - 余子式、代数余子式 *(p3)*
 - 两列式的展开公式 *(p3)*
