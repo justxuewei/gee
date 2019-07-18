@@ -1,4 +1,4 @@
-# 基础知识
+# 高等数学基础知识
 
 ## 数列基础
 
@@ -678,18 +678,10 @@ $$
 - 圆锥体积公式 
 - 四面体体积公式 <1000题4.52>
 
-椭圆 *(p307)*
+椭圆
 
 - 椭圆方程
 - 椭圆切线 ${{{x_0}x} \over {{a^2}}} + {{{y_0}y} \over {{b^2}}} = 1$
-
-二次曲面 *(p307)*
-
-- 椭球面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} + {{{z^2}} \over {{c^2}}} = 1$
-
-- 椭圆柱面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = {z^2}$
-- 椭圆抛物面${{{x^2}} \over {{a^2}}} + {{{y^2}} \over {{b^2}}} = z$
-- 旋转圆锥面$z = \sqrt {{x^2} + {y^2}} $
 
 ## 叉乘
 
@@ -706,19 +698,6 @@ $$
 
 ## 平面与直线
 
-平面方程 *(p304)*
-
-- 已知平面法向量${\bf{n}} = \left( {A,B,C} \right)$，过点$\left( {{x_0},{y_0},{z_0}} \right)$，求平面方程
-- 已知平面过不公线的三点$A\left( {{x_0},{y_0},{z_0}} \right)$，$B\left( {{x_1},{y_1},{z_1}} \right)$，$C\left( {{x_2},{y_2},{z_2}} \right)$，求平面方程
-- 平面过$\left( {a,0,0} \right)$，$\left( {0,b,0} \right)$，$\left( {0,0,c} \right)$，求平面方程 [☢︎]
-
-直线方程 *(p305)*
-
-- 已知两个面，直线方程是什么？前提是什么？
-- 已知直线的方向导数为$\tau  = \left( {l,m,n} \right)$，过点$\left( x_0,y_0,z_0 \right)$，求直线方程
-- 已知直线的方向导数为$\tau  = \left( {l,m,n} \right)$，过点$\left( x_0,y_0,z_0 \right)$，已知参数$t$，求直线方程 [☢︎]
-- 已知直线过两点$A\left( {{x_0},{y_0},{z_0}} \right)$，$B\left( {{x_1},{y_1},{z_1}} \right)$，求直线方程
-
 点到直线（面）的距离
 
 - 已知点$P\left( {{x_0},{y_0},{z_0}} \right)$，到平面$Ax+By+Cz+D=0$的距离为$d = {{\left| {A{x_0} + B{y_0} + C{z_0} + D} \right|} \over {\sqrt {{A^2} + {B^2} + {C^2}} }}$ <1000题6.28>
@@ -732,63 +711,64 @@ $$
 
 - 已知$A(x_1,y_1),B(x_2,y_2)$，则$\overrightarrow {AB} $的坐标$\left(x_{2}-x_{1}, y_{2}-y_{1}\right)$
 
-## 空间曲线与曲面
+# 线性代数基础知识
 
-- 空间曲线公式 *(p306)*
-  - 一般式
-  - 参数方程
-- 空间曲面方程 *(p307)*
+## 单位矩阵
 
-## 多元函数积分学的几何应用
+- $\boldsymbol{E}=\boldsymbol{E}^T$
+- $|\boldsymbol{E}|=1$
+- 提公因式$\boldsymbol{A}-\boldsymbol{AX}=\boldsymbol{A}(\boldsymbol{E}-\boldsymbol{X})$
 
-- 空间曲线(参数方程)$\left\{ {\matrix{{x = \varphi (t)}  \cr {y = \psi (t)}  \cr {z = \omega (t)}  \cr } } \right.$并过$P_0\left(x_0,y_0,z_0 \right)$的切线和法平面 *(p308)*
-- 空间曲面在点$P_0\left(x_0, y_0, z_0 \right)$处的法线和切平面 *(p309)*
-  - 曲面方程为$F\left( {x,y,z} \right) = 0$
-  - 曲面方程为$z = f\left( {x,y} \right)$
-- 空间曲面面积 *(p309)*
-- 曲面全微分的几何意义 *(p309)*
-- 法向量的方向余弦 *(p309)*
+## 转置
+
+- $\boldsymbol{A}$和$\boldsymbol{B}$是$n$阶矩阵，$\boldsymbol{A}^T\pm\boldsymbol{B}^T = (\boldsymbol{A}\pm\boldsymbol{B})^T $<1000题 线代15>
 
 # 行列式
 
-## 计算问题
+数值型行列式
 
-一般性结论
+- 性质
 
-- 利用性质
-
-  1. $\left|A^{T}\right|=|A|$
-  2. $\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {k a_{i 1}} & {k a_{i 2}} & {\cdots} & {k a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|=k\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|$ <1000题 线代1>
-     - 推广：$|k A|=k^{n}|A|$
-  3. 行列交换位置结果不变 <1000题 线代2>
-  4. 行列式可以化为几个小行列式计算 <1000题 线代2>
-  5. $|A B|=|A||B|$
-  6. $\left|A^{*}\right|=|A|^{n-1}$
-  7. 若$A$是$n$阶可逆矩阵，则$\left|A^{-1}\right|=|A|^{-1}$
-  8. 若$\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$是矩阵$A$的特征值，则$|A|=\lambda_{1} \lambda_{2} \cdots \lambda_{n}$
-  9. 若矩阵$A$与矩阵$B$相似，则$|A|=|B|$
-    - $P^{-1}AP=B \Rightarrow |P^{-1}AP|=|B|$
-    - 利用性质3可知，$|P^{-1}||A||P|=|B|$
-    - 利用性质5可知$|P^{-1}||P|=1$，那么可以推出$|A|=|B|$
-
-- 展开公式：行列式的某一行只有1-2个数不是0 <1000题 线代5>
-
-- 加边法：$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right| = \left|\begin{array}{cccc} {1} & {x} & {x} & {\cdots} & {x} \\ {0} &  {a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|$
+  - 提公因式 <1000题 线代1> 
+    $\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {k a_{i 1}} & {k a_{i 2}} & {\cdots} & {k a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|=k\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|$
+    - 推广：$|k A|=k^{n}|A|$
+  - 行列交换加负号 <1000题 线代2, 线代9>
+- 展开公式，适用于行列式的某一行只有1-2个数不是0 <1000题 线代5>
+- 加边法 
+$$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right| = \left|\begin{array}{cccc} {1} & {*} & {*} & {\cdots} & {*} \\ {0} &  {a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|=\left|\begin{array}{cccc} {1} & {0} & {0} & {\cdots} & {0} \\ {*} &  {a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {*} & {a_{i 1}} & {a_{i 2}} & {\cdots} & {a_{i n}} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} \\ {*} & {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|$$
 
 - 递推式
   
-  - 三对角型行列式 <1000题 线代7>
+  - 三对角型行列式 <1000题 线代7, 线代10, 线代11>
+  
+- 重要行列式
 
-特殊行列式
+  - 主对角线行列式 
+    $\left|\begin{array}{rrrr}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {0} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {0} & {\cdots} & {a_{nn}}\end{array}\right|=\left|\begin{array}{cccc}{a_{11}} & {0} & {\cdots} & {0} \\ {a_{21}} & {a_{22}} & {\cdots} & {0} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{nn}}\end{array}\right|=\left|\begin{array}{cccc}{a_{11}} & {0} & {\cdots} & {0} \\ {0} & {a_{22}} & {\cdots} & {0} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {0} & {\cdots} & {a_{nn}}\end{array}\right|=\prod\limits_{i=1}^{n} a_{ii}$
+  - 副对角线行列式
+    $\left|\begin{array}{ccccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1, n-1}} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2, n-1}} & {0} \\ {\vdots} & {\vdots} & {} & {\vdots} & {\vdots} \\ {a_{n 1}} & {0} & {\cdots} & {0} & {0}\end{array}\right|=\left|\begin{array}{cccc}{0} & {\cdots} & {0} & {a_{1 n}} \\ {0} & {\cdots} & {a_{2, n-1}} & {a_{2 n}} \\ {\vdots} & {} & {\vdots} & {\vdots} \\ {a_{n 1}} & {\cdots} & {a_{n, n-1}} & {a_{m}}\end{array}\right|=\left|\begin{array}{cccc}{0} & {\cdots} & {0} & {a_{1 n}} \\ {0} & {\cdots} & {a_{2, n-1}} & {0} \\ {\vdots} & {} & {\vdots} & {\vdots} \\ {a_{n 1}} & {\cdots} & {0} & {0}\end{array}\right|=(-1)^{\frac{n(n-1)}{2}} a_{1 n} a_{2, n-1} \cdots a_{n 1}$
+  - 拉普拉斯行列式，也分主对角和副对角线：
+    - 主对角线$\left|\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right|=\left|\begin{array}{ll}{A} & {C} \\ {O} & {B}\end{array}\right|=\left|\begin{array}{ll}{A} & {O} \\ {C} & {B}\end{array}\right|=|A||B|$ <1000题 线代2>
+	  - 副对角线$\left|\begin{array}{ll}{O} & {A} \\ {B} & {O}\end{array}\right|=\left|\begin{array}{ll}{C} & {A} \\ {B} & {O}\end{array}\right|=\left|\begin{array}{ll}{O} & {A} \\ {B} & {C}\end{array}\right|=(-1)^{m n}|A||B|$
+	- 范德蒙德行列式，其规律是$n\times n$行列式最高次数为$n-1$，如果是$(n+1)\times(n+1)$行列式则最高次数为$n$才能满足 <1000题 线代9>
+	$\left|\begin{array}{cccc}{1} & {1} & {\cdots} & {1} \\ {x_{1}} & {x_{2}} & {\cdots} & {x_{n}} \\ {x_{1}^{2}} & {x_{2}^{2}} & {\cdots} & {x_{n}^{2}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {x_{1}^{n-1}} & {x_{2}^{n-1}} & {\cdots} & {x_{n}^{n-1}}\end{array}\right|=\prod\limits_{1 \leqslant i<j \leqslant n}\left(x_{j}-x_{i}\right)$
+	- 经常使用的行列式1
+	  $\left|\begin{array}{cccccc} {a} & {b} & {b} & {\cdots} & {b} & {b} \\ {b} & {a} & {b} & {\cdots} & {b} & {b} \\ {b} & {b} & {a} & {\cdots} & {b} & {b} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} & {\vdots} \\ {b} & {b} & {b} & {\cdots} & {a} & {b} \\  {b} & {b} & {b} & {\cdots} & {b} & {a} \end{array}\right|= [a+(n-1)b](a-b)^{n-1}$
+	- 爪型转三角型 <1000题 线代6>
 
-- $\left[\begin{array}{cccccc} {a} & {b} & {b} & {\cdots} & {b} & {b} \\ {b} & {a} & {b} & {\cdots} & {b} & {b} \\ {b} & {b} & {a} & {\cdots} & {b} & {b} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} & {\vdots} \\ {b} & {b} & {b} & {\cdots} & {a} & {b} \\  {b} & {b} & {b} & {\cdots} & {b} & {a} \end{array}\right] = [a+(n-1)b](a-b)^{n-1}$
-- 爪型转三角型 <1000题 线代6>
+抽象型行列式
 
-## 其他
-
-- 余子式、代数余子式 *(p3)*
-- 两列式的展开公式 *(p3)*
-- 5种特殊矩阵的公式 *(p4)*
+- 性质
+  - $\left|A^{T}\right|=|A|$
+  - $|A B|=|A||B|$
+  - $\left|A^{*}\right|=|A|^{n-1}$
+  - 若$A$是$n$阶可逆矩阵，则$\left|A^{-1}\right|=|A|^{-1}$
+  - 若$\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$是矩阵$A$的特征值，则$|A|=\lambda_{1} \lambda_{2} \cdots \lambda_{n}$
+  - 若矩阵$A$与矩阵$B$相似，则$|A|=|B|$
+    - $P^{-1}AP=B \Rightarrow |P^{-1}AP|=|B|$
+    - $|A B|=|A||B|$，$|P^{-1}||A||P|=|B|$
+    - 由$|P^{-1}||P|=1$可以推出$|A|=|B|$
+- 矩阵的性质，适用于矩阵的每一列与$\alpha_1, \alpha_2,  \cdots, \alpha_n$有关，则可分解为$(\alpha_1, \alpha_2, \cdots, \alpha_n)\boldsymbol{C}$，其中$\boldsymbol{C}$是一个$n\times n$的矩阵 <1000题 线代13>
 
 # 矩阵
 
@@ -804,7 +784,8 @@ $$
 
 ## 特殊矩阵
 
-- 正交矩阵 *(p78)*
+- 正交矩阵是指$\boldsymbol{A}^T\boldsymbol{A}=\boldsymbol{E} \Leftrightarrow \boldsymbol{A}^T=\boldsymbol{A}^{-1}$，其性质有
+  - 特征值全部为$1$或$-1$ <1000题 线代15, 线代16>
 
 ## 伴随矩阵
 
