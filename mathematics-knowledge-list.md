@@ -52,7 +52,8 @@
 
 ## 因式分解公式
 
-- $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3>
+- $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3, 线代19>
+- $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19>
 
 ## 奇偶性
 
@@ -718,10 +719,12 @@ $$
 - $\boldsymbol{E}=\boldsymbol{E}^T$
 - $|\boldsymbol{E}|=1$
 - 提公因式$\boldsymbol{A}-\boldsymbol{AX}=\boldsymbol{A}(\boldsymbol{E}-\boldsymbol{X})$
+- $E^n=E$ <1000 线代19>
 
 ## 转置
 
 - $\boldsymbol{A}$和$\boldsymbol{B}$是$n$阶矩阵，$\boldsymbol{A}^T\pm\boldsymbol{B}^T = (\boldsymbol{A}\pm\boldsymbol{B})^T $<1000题 线代15>
+- 假设$\alpha$和$\beta$都是<u>列向量</u>，$\alpha\beta^T$、$\beta\alpha^T$、$\alpha\alpha^T$都是矩阵（T在后面），$\alpha^T\beta$、$\beta^T\alpha$、$\alpha^T\alpha$都是数（T在前面）
 
 # 行列式
 
@@ -771,6 +774,71 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - 矩阵的性质，适用于矩阵的每一列与$\alpha_1, \alpha_2,  \cdots, \alpha_n$有关，则可分解为$(\alpha_1, \alpha_2, \cdots, \alpha_n)\boldsymbol{C}$，其中$\boldsymbol{C}$是一个$n\times n$的矩阵 <1000题 线代13>
 
 # 矩阵
+
+## 基本运算
+
+- 数乘矩阵 <1000题 线代21>
+  $k A=A k=k\left[\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{m 1}} & {a_{m 2}} & {\cdots} & {a_{m n}}\end{array}\right]=\left[\begin{array}{cccc}{k a_{11}} & {k a_{12}} & {\cdots} & {k a_{1 n}} \\ {k a_{21}} & {k a_{22}} & {\cdots} & {k a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {k a_{m 1}} & {k a_{m 2}} & {\cdots} & {k a_{m n}}\end{array}\right]$
+
+## 求$\boldsymbol{A}^n$(方阵的幂)
+
+- 秩为1型，若$\boldsymbol{A}=\boldsymbol{\alpha}\boldsymbol{\beta}^T$，其中$\boldsymbol{\alpha}$和$\boldsymbol{\beta}$是n维非零<u>列向量</u>，则$\boldsymbol{A}^n = l^{n-1}\boldsymbol{A}$，其中$l=\sum\limits_{i=1}^n a_{ii}$（迹）
+- $A=\left[\begin{array}{lll}{0} & {a} & {c} \\ {0} & {0} & {b} \\ {0} & {0} & {0}\end{array}\right]$型，$A^{2}=\left[\begin{array}{ccc}{0} & {0} & {a b} \\ {0} & {0} & {0} \\ {0} & {0} & {0}\end{array}\right], A^{3}=A^{4}=\cdots=A^{n}=0$
+- 用相似，若$P^{-1} A P=\Lambda$，则$P^{-1} A^{n} P=\Lambda^{n}$，则$A^{n}=P\Lambda^{n}P^{-1}$
+- 用归纳法，先求出$A^2, A^3, \cdots$，然后找规律 <1000题 线代27>
+
+## 伴随矩阵
+
+性质
+
+- $\left(A^{*}\right)^{*}=|A|^{n-2} A$
+- $(k A)^{*}=k^{n-1} A^{*}$
+- $(A B )^{*}=B^{*} A^{*}$
+- $\left|A^{*}\right|=|A|^{n-1}$
+
+求伴随
+
+- 定义 $A^{*}=\left[\begin{array}{cccc}{A_{11}} & {A_{21}} & {\cdots} & {A_{n 1}} \\ {A_{12}} & {A_{22}} & {\cdots} & {A_{n 2}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {A_{1 n}} & {A_{2 n}} & {\cdots} & {A_{m}}\end{array}\right]$，$\boldsymbol{A A}^{*}=\boldsymbol{A}^{*} \boldsymbol{A}=|\boldsymbol{A}| \boldsymbol{E}$
+- 若$A$可逆（换句话说$|A|\neq0$），则$A^{-1}=\frac{1}{|A|} A^{*}$，也即$ A^{*}=|A|A^{-1}$
+
+解题思路
+
+- 若$a_{ij}=A_{ij}$，那么$A^T=A^*$ <1000题 线代29>
+
+## 可逆矩阵
+
+条件
+
+- 必须是方阵
+
+等价说法
+
+- 非奇异矩阵 = 可逆矩阵
+
+性质
+
+- $\left(A^{-1}\right)^{-1}=A$
+- $(k A)^{-1}=\frac{1}{k} A^{-1}$
+- $(A B)^{-1}=B^{-1} A^{-1}$
+- $\left|A^{-1}\right|=|A|^{-1}$
+- $AA^{-1} = A^{-1}A = E$ <1000题 线代19>
+
+求可逆矩阵
+
+- 定义法，即$AB=E\Rightarrow A=B^{-1}$ <1000题 线代21>
+- 利用伴随矩阵，即$A^{-1}=\frac{1}{|A|} A^{*}$
+- 初等变换法，即$\left[ \begin{array}{c:c} \begin{matrix} A \end{matrix} & \begin{matrix} E \end{matrix} \end{array} \right ] =\left[ \begin{array}{c:c} \begin{matrix} E \end{matrix} & \begin{matrix} A^{-1} \end{matrix} \end{array} \right ] $
+- 利用分块矩阵
+  - 主对角线 $\left[\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right]^{-1}=\left[\begin{array}{ll}{A^{-1}} & {O} \\ {O} & {B^{-1}}\end{array}\right]$
+  - 副对角线 $\left[\begin{array}{ll}{O} & {A} \\ {B} & {O}\end{array}\right]^{-1}=\left[\begin{array}{cc}{O} & {B^{-1}} \\ {A^{-1}} & {O}\end{array}\right]$
+
+证明矩阵是否可逆
+
+- 利用行列式，如果$|A|\neq0$，那么矩阵$A$可逆 <1000题 线代29>
+
+解题技巧
+
+- 求$(A+B)^{-1}$没有直接可以用的性质，要借助单位矩阵$E$来将其化为相乘后，在使用可逆的性质求解 <1000题 线代18>
 
 ## 秩的性质 
 
