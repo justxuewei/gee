@@ -54,6 +54,7 @@
 
 - $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3, 线代19>
 - $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19>
+- $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$
 
 ## 奇偶性
 
@@ -777,32 +778,54 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 ## 基本运算
 
-- 数乘矩阵 <1000题 线代21>
+- 数乘 <1000题 线代21>
   $k A=A k=k\left[\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{m 1}} & {a_{m 2}} & {\cdots} & {a_{m n}}\end{array}\right]=\left[\begin{array}{cccc}{k a_{11}} & {k a_{12}} & {\cdots} & {k a_{1 n}} \\ {k a_{21}} & {k a_{22}} & {\cdots} & {k a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {k a_{m 1}} & {k a_{m 2}} & {\cdots} & {k a_{m n}}\end{array}\right]$
 
 ## 求$\boldsymbol{A}^n$(方阵的幂)
 
 - $r(A) = 1$型，若$\boldsymbol{A}=\boldsymbol{\alpha}\boldsymbol{\beta}^T$，其中$\boldsymbol{\alpha}$和$\boldsymbol{\beta}$是n维非零<u>列向量</u>，则$\boldsymbol{A}^n = l^{n-1}\boldsymbol{A}$，其中$l=\sum\limits_{i=1}^n a_{ii}$（迹）
 - 用归纳法，先求出$A^2, A^3, \cdots$，然后找规律 <1000题 线代27>
-- $A^n = (B + C)^n$
+  - $ A^{2}=k A\Rightarrow A^{n}=k^{n-1} A$
+  - $A^{2}=k E$
+    - $A^{2 n}=(k E)^{n}=k^{n} E$
+    - $A^{2 n+1}=k^{n} A$
+- $A^n = (B + C)^n$，使用展开式的前提是$BC=CB$ [参见`高等数学基础知识 > 因式分解公式`]
+  - $B=E$
+  - $BC=CB=0$
 - 相似，若$P^{-1} A P=\Lambda$，则$P^{-1} A^{n} P=\Lambda^{n}$，则$A^{n}=P\Lambda^{n}P^{-1}$
 - 初等行变换，即$P_1^mAP_2^n$（左行右列）
 
 ## 伴随、逆与初等阵
 
+接下来的全部内容的矩阵必是方阵
+
 ### 伴随矩阵
 
 定义
 
--  $A^{*}=\left[\begin{array}{cccc}{A_{11}} & {A_{21}} & {\cdots} & {A_{n 1}} \\ {A_{12}} & {A_{22}} & {\cdots} & {A_{n 2}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {A_{1 n}} & {A_{2 n}} & {\cdots} & {A_{m}}\end{array}\right]$，$\boldsymbol{A A}^{*}=\boldsymbol{A}^{*} \boldsymbol{A}=|\boldsymbol{A}| \boldsymbol{E}$
-  - 拓展：若$A$可逆（换句话说$|A|\neq0$），则$A^{-1}=\frac{1}{|A|} A^{*}$，也即$ A^{*}=|A|A^{-1}$
+-  $A^{*}=\left[\begin{array}{cccc}{A_{11}} & {A_{21}} & {\cdots} & {A_{n 1}} \\ {A_{12}} & {A_{22}} & {\cdots} & {A_{n 2}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {A_{1 n}} & {A_{2 n}} & {\cdots} & {A_{m}}\end{array}\right]$
+-  ${A A}^{*}={A}^{*} {A}=|{A}|{E}$
 
 公式
 
-- $\left(A^{*}\right)^{*}=|A|^{n-2} A$
-- $(k A)^{*}=k^{n-1} A^{*}$
-- $(A B )^{*}=B^{*} A^{*}$
+- ${A A}^{*}={A}^{*} {A}=|{A}|{E}$
 - $\left|A^{*}\right|=|A|^{n-1}$
+  - 推导过程：$|AA^*|=||A|E|=|A|^n \Rightarrow |A||A^*|=|A|^n \Rightarrow |A^*|=|A|^{n-1}$
+- $\left(A^{T}\right)^{*}=\left(A^{*}\right)^{T}$
+  - $\left(A^{-1}\right)^{*}=\left(A^{*}\right)^{-1}$
+  - $\left(A^{T}\right)^{-1}=(A^{-1} ){T}$
+- $(k A)^{*}=k^{n-1} A^{*}$
+  - $|k A|=k^{n}|A|$
+  - $(k A)^{T}=k A^{T}$
+  - $(k A)^{-1}=\frac{1}{k} A^{-1}$
+- $A^{-1} =\frac{1}{|A|}A^{*}$
+- $ A^{*}=|A|A^{-1}$
+- $\left(A^{-1}\right)^{*}=\left(A^{*}\right)^{-1}$
+- $\left(A^{*}\right)^{*}=|A|^{n-2} A$
+- $|\left(A^{*}\right)^{*}|=|A|^{(n-1)^2}$
+- $(A B )^{*}=B^{*} A^{*}$
+  - $(A B )^{T}=B^{T} A^{T}$
+  - $(A B )^{-1}=B^{-1} A^{-1}$
 
 秩 (TODO: 待补充)
 
@@ -814,8 +837,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 定义
 
-- 条件：必须是方阵
-- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代21>
+- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代19, 线代21>
 - 等价说法：非奇异矩阵 = 可逆矩阵
 
 性质
@@ -824,17 +846,33 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - $(k A)^{-1}=\frac{1}{k} A^{-1}$
 - $(A B)^{-1}=B^{-1} A^{-1}$
 - $\left|A^{-1}\right|=|A|^{-1}$
-- $AA^{-1} = A^{-1}A = E$ <1000题 线代19>
+- $\left(A^{T}\right)^{-1}=(A^{-1} ){T}$
 
-解题技巧
+求逆
 
-- 求可逆矩阵
-  - 定义
+- 具体型
   - 利用伴随矩阵，即$A^{-1}=\frac{1}{|A|} A^{*}$
-  - 初等变换法，即$\left[ \begin{array}{c:c} \begin{matrix} A \end{matrix} & \begin{matrix} E \end{matrix} \end{array} \right ] =\left[ \begin{array}{c:c} \begin{matrix} E \end{matrix} & \begin{matrix} A^{-1} \end{matrix} \end{array} \right ] $
-  - 利用分块矩阵‼️
-    - 主对角线 $\left[\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right]^{-1}=\left[\begin{array}{ll}{A^{-1}} & {O} \\ {O} & {B^{-1}}\end{array}\right]$
-    - 副对角线 $\left[\begin{array}{ll}{O} & {A} \\ {B} & {O}\end{array}\right]^{-1}=\left[\begin{array}{cc}{O} & {B^{-1}} \\ {A^{-1}} & {O}\end{array}\right]$
+  - 初等变换法，即$(A|E)=(E|A^{-1})$
+- 抽象型
+  - 定义
+  - $A=BC$且$B$和$C$都可逆，则$A^{-1}=C^{-1}B^{-1}$
+
+分块矩阵
+
+- 加法
+- 数乘
+- 乘法
+- $\left(\begin{array}{ll}{A} & {0} \\ {0} & {B}\end{array}\right)^{n}=\left(\begin{array}{ll}{A^{n}} & {0} \\ {0} & {B^{n}}\end{array}\right)$
+- 求逆
+  - 主对角线直接求逆，左边乘上同行的，右边乘上同列的，最后加一个负号
+    - $\left[\begin{array}{ll}{B} & {O} \\ {D} & {C}\end{array}\right]^{-1}=\left[\begin{array}{ll}{B^{-1}} & {O} \\ {-C^{-1}DB^{-1}} & {C^{-1}}\end{array}\right]$
+    - $\left[\begin{array}{ll}{B} & {D} \\ {O} & {C}\end{array}\right]^{-1}=\left[\begin{array}{ll}{B^{-1}} & {-B^{-1}DC^{-1}} \\ {O} & {C^{-1}}\end{array}\right]$
+  - 副对角线换位置求逆，$O$和$D$也换位置后，左边乘上同行的，右边乘上同列的，最后加一个负号
+    - $\left[\begin{array}{ll}{O} & {B} \\ {C} & {D}\end{array}\right]^{-1}=\left[\begin{array}{ll}{-C^{-1}DB^{-1}} & {C^{-1}} \\ {B^{-1}} & {O}\end{array}\right]$
+    - $\left[\begin{array}{ll}{D} & {B} \\ {C} & {O}\end{array}\right]^{-1}=\left[\begin{array}{ll}{O} & {C^{-1}} \\ {B^{-1}} & {-B^{-1}DC^{-1}}\end{array}\right]$
+
+解题技
+
 - 证明矩阵是否可逆
   - 利用行列式，如果$|A|\neq0$，那么矩阵$A$可逆 <1000题 线代29>
 - 求$(A+B)^{-1}$没有直接可以用的性质，要借助单位矩阵$E$来将其化为相乘后，在使用可逆的性质求解 <1000题 线代18>
