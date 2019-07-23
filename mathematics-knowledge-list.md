@@ -782,38 +782,41 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 ## 求$\boldsymbol{A}^n$(方阵的幂)
 
-- 秩为1型，若$\boldsymbol{A}=\boldsymbol{\alpha}\boldsymbol{\beta}^T$，其中$\boldsymbol{\alpha}$和$\boldsymbol{\beta}$是n维非零<u>列向量</u>，则$\boldsymbol{A}^n = l^{n-1}\boldsymbol{A}$，其中$l=\sum\limits_{i=1}^n a_{ii}$（迹）
-- $A=\left[\begin{array}{lll}{0} & {a} & {c} \\ {0} & {0} & {b} \\ {0} & {0} & {0}\end{array}\right]$型，$A^{2}=\left[\begin{array}{ccc}{0} & {0} & {a b} \\ {0} & {0} & {0} \\ {0} & {0} & {0}\end{array}\right], A^{3}=A^{4}=\cdots=A^{n}=0$
-- 用相似，若$P^{-1} A P=\Lambda$，则$P^{-1} A^{n} P=\Lambda^{n}$，则$A^{n}=P\Lambda^{n}P^{-1}$
+- $r(A) = 1$型，若$\boldsymbol{A}=\boldsymbol{\alpha}\boldsymbol{\beta}^T$，其中$\boldsymbol{\alpha}$和$\boldsymbol{\beta}$是n维非零<u>列向量</u>，则$\boldsymbol{A}^n = l^{n-1}\boldsymbol{A}$，其中$l=\sum\limits_{i=1}^n a_{ii}$（迹）
 - 用归纳法，先求出$A^2, A^3, \cdots$，然后找规律 <1000题 线代27>
+- $A^n = (B + C)^n$
+- 相似，若$P^{-1} A P=\Lambda$，则$P^{-1} A^{n} P=\Lambda^{n}$，则$A^{n}=P\Lambda^{n}P^{-1}$
+- 初等行变换，即$P_1^mAP_2^n$（左行右列）
 
-## 伴随矩阵
+## 伴随、逆与初等阵
 
-性质
+### 伴随矩阵
+
+定义
+
+-  $A^{*}=\left[\begin{array}{cccc}{A_{11}} & {A_{21}} & {\cdots} & {A_{n 1}} \\ {A_{12}} & {A_{22}} & {\cdots} & {A_{n 2}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {A_{1 n}} & {A_{2 n}} & {\cdots} & {A_{m}}\end{array}\right]$，$\boldsymbol{A A}^{*}=\boldsymbol{A}^{*} \boldsymbol{A}=|\boldsymbol{A}| \boldsymbol{E}$
+  - 拓展：若$A$可逆（换句话说$|A|\neq0$），则$A^{-1}=\frac{1}{|A|} A^{*}$，也即$ A^{*}=|A|A^{-1}$
+
+公式
 
 - $\left(A^{*}\right)^{*}=|A|^{n-2} A$
 - $(k A)^{*}=k^{n-1} A^{*}$
 - $(A B )^{*}=B^{*} A^{*}$
 - $\left|A^{*}\right|=|A|^{n-1}$
 
-求伴随
-
-- 定义 $A^{*}=\left[\begin{array}{cccc}{A_{11}} & {A_{21}} & {\cdots} & {A_{n 1}} \\ {A_{12}} & {A_{22}} & {\cdots} & {A_{n 2}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {A_{1 n}} & {A_{2 n}} & {\cdots} & {A_{m}}\end{array}\right]$，$\boldsymbol{A A}^{*}=\boldsymbol{A}^{*} \boldsymbol{A}=|\boldsymbol{A}| \boldsymbol{E}$
-- 若$A$可逆（换句话说$|A|\neq0$），则$A^{-1}=\frac{1}{|A|} A^{*}$，也即$ A^{*}=|A|A^{-1}$
+秩 (TODO: 待补充)
 
 解题思路
 
 - 若$a_{ij}=A_{ij}$，那么$A^T=A^*$ <1000题 线代29>
 
-## 可逆矩阵
+### 可逆矩阵
 
-条件
+定义
 
-- 必须是方阵
-
-等价说法
-
-- 非奇异矩阵 = 可逆矩阵
+- 条件：必须是方阵
+- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代21>
+- 等价说法：非奇异矩阵 = 可逆矩阵
 
 性质
 
@@ -823,24 +826,50 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - $\left|A^{-1}\right|=|A|^{-1}$
 - $AA^{-1} = A^{-1}A = E$ <1000题 线代19>
 
-求可逆矩阵
-
-- 定义法，即$AB=E\Rightarrow A=B^{-1}$ <1000题 线代21>
-- 利用伴随矩阵，即$A^{-1}=\frac{1}{|A|} A^{*}$
-- 初等变换法，即$\left[ \begin{array}{c:c} \begin{matrix} A \end{matrix} & \begin{matrix} E \end{matrix} \end{array} \right ] =\left[ \begin{array}{c:c} \begin{matrix} E \end{matrix} & \begin{matrix} A^{-1} \end{matrix} \end{array} \right ] $
-- 利用分块矩阵
-  - 主对角线 $\left[\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right]^{-1}=\left[\begin{array}{ll}{A^{-1}} & {O} \\ {O} & {B^{-1}}\end{array}\right]$
-  - 副对角线 $\left[\begin{array}{ll}{O} & {A} \\ {B} & {O}\end{array}\right]^{-1}=\left[\begin{array}{cc}{O} & {B^{-1}} \\ {A^{-1}} & {O}\end{array}\right]$
-
-证明矩阵是否可逆
-
-- 利用行列式，如果$|A|\neq0$，那么矩阵$A$可逆 <1000题 线代29>
-
 解题技巧
 
+- 求可逆矩阵
+  - 定义
+  - 利用伴随矩阵，即$A^{-1}=\frac{1}{|A|} A^{*}$
+  - 初等变换法，即$\left[ \begin{array}{c:c} \begin{matrix} A \end{matrix} & \begin{matrix} E \end{matrix} \end{array} \right ] =\left[ \begin{array}{c:c} \begin{matrix} E \end{matrix} & \begin{matrix} A^{-1} \end{matrix} \end{array} \right ] $
+  - 利用分块矩阵‼️
+    - 主对角线 $\left[\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right]^{-1}=\left[\begin{array}{ll}{A^{-1}} & {O} \\ {O} & {B^{-1}}\end{array}\right]$
+    - 副对角线 $\left[\begin{array}{ll}{O} & {A} \\ {B} & {O}\end{array}\right]^{-1}=\left[\begin{array}{cc}{O} & {B^{-1}} \\ {A^{-1}} & {O}\end{array}\right]$
+- 证明矩阵是否可逆
+  - 利用行列式，如果$|A|\neq0$，那么矩阵$A$可逆 <1000题 线代29>
 - 求$(A+B)^{-1}$没有直接可以用的性质，要借助单位矩阵$E$来将其化为相乘后，在使用可逆的性质求解 <1000题 线代18>
 
-## 秩的性质 
+### 初等阵
+
+定义
+
+性质
+
+- 转置
+- 逆
+- 伴随
+
+左行右列定理
+
+应用
+
+## 矩阵方程
+
+定义
+
+化简
+
+求解
+
+- 直接求解
+- 化方程组
+- 待定元素法
+
+## 秩
+
+定义
+
+公式
 
 - $r(A+B)$
 - $r(AB)$
@@ -850,14 +879,15 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - $r(A|B)$
 - $r(A^*)$
 
+考法
+
+- 化阶梯
+- 用公式
+
 ## 特殊矩阵
 
 - 正交矩阵是指$\boldsymbol{A}^T\boldsymbol{A}=\boldsymbol{E} \Leftrightarrow \boldsymbol{A}^T=\boldsymbol{A}^{-1}$，其性质有
   - 特征值全部为$1$或$-1$ <1000题 线代15, 线代16>
-
-## 伴随矩阵
-
-- 伴随矩阵与原矩阵的关系 *(p38)*
 
 # 概率分布
 
