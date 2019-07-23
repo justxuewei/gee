@@ -54,6 +54,8 @@
 
 - $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3, 线代19>
 - $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19>
+- n是<u>正偶数</u>时，$a^{n}-b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\dots+a b^{n-2}-b^{n-1}\right) $ <1000题 线代32>
+- n是<u>正奇数</u>时，$a^{n}+b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\cdots-a b^{n-2}+b^{n-1}\right)$
 - $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$
 
 ## 奇偶性
@@ -783,17 +785,20 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 ## 求$\boldsymbol{A}^n$(方阵的幂)
 
-- $r(A) = 1$型，若$\boldsymbol{A}=\boldsymbol{\alpha}\boldsymbol{\beta}^T$，其中$\boldsymbol{\alpha}$和$\boldsymbol{\beta}$是n维非零<u>列向量</u>，则$\boldsymbol{A}^n = l^{n-1}\boldsymbol{A}$，其中$l=\sum\limits_{i=1}^n a_{ii}$（迹）
+- $r(A) = 1$型，若${A}={\alpha}{\beta}^T$，其中${\alpha}$和${\beta}$是n维非零<u>列向量</u>，则${A}^n = l^{n-1}{A}$，其中$l=\alpha^T\beta=\sum\limits_{i=1}^n a_{ii}$（迹） <1000题 线代34>
 - 用归纳法，先求出$A^2, A^3, \cdots$，然后找规律 <1000题 线代27>
   - $ A^{2}=k A\Rightarrow A^{n}=k^{n-1} A$
   - $A^{2}=k E$
     - $A^{2 n}=(k E)^{n}=k^{n} E$
     - $A^{2 n+1}=k^{n} A$
+  - $A=\left[\begin{array}{lll}{0} & {a} & {c} \\ {0} & {0} & {b} \\ {0} & {0} & {0}\end{array}\right]$型，则$A^{2}=\left[\begin{array}{ccc}{0} & {0} & {a b} \\ {0} & {0} & {0} \\ {0} & {0} & {0}\end{array}\right]$，$A^{3}=A^{4}=\cdots=A^{n}=0$
+  - $A=\left[\begin{array}{lll}{0} & {a} & {b} & c \\ {0} & {0} & {d} & f \\ {0} & {0} & {0} & e \\ 0 & 0 & 0 & 0 \end{array}\right]$型，则$A^3 = \left[\begin{array}{lll}{0} & {0} & {0} & {ade} \\ {0} & {0} & {0} & 0 \\ {0} & {0} & {0} & 0 \\ 0 & 0 & 0 & 0 \end{array}\right]$，$A^4=A^5=\cdots=A^n=0$
 - $A^n = (B + C)^n$，使用展开式的前提是$BC=CB$ [参见`高等数学基础知识 > 因式分解公式`]
   - $B=E$
   - $BC=CB=0$
 - 相似，若$P^{-1} A P=\Lambda$，则$P^{-1} A^{n} P=\Lambda^{n}$，则$A^{n}=P\Lambda^{n}P^{-1}$
 - 初等行变换，即$P_1^mAP_2^n$（左行右列）
+- 分块矩阵，$\left[\begin{array}{ll}{A} & {0} \\ {0} & {B}\end{array}\right]^{n}=\left[\begin{array}{ll}{A^{n}} & {0} \\ {0} & {B^{n}}\end{array}\right]$ <1000题 线代40>
 
 ## 伴随、逆与初等阵
 
@@ -810,7 +815,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 - ${A A}^{*}={A}^{*} {A}=|{A}|{E}$
 - $\left|A^{*}\right|=|A|^{n-1}$
-  - 推导过程：$|AA^*|=||A|E|=|A|^n \Rightarrow |A||A^*|=|A|^n \Rightarrow |A^*|=|A|^{n-1}$
+  - 推导过程：$|AA^*|=\left|\left|A\right|E\right|=|A|^n \Rightarrow |A||A^*|=|A|^n \Rightarrow |A^*|=|A|^{n-1}$
 - $\left(A^{T}\right)^{*}=\left(A^{*}\right)^{T}$
   - $\left(A^{-1}\right)^{*}=\left(A^{*}\right)^{-1}$
   - $\left(A^{T}\right)^{-1}=(A^{-1} ){T}$
@@ -832,6 +837,8 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 解题思路
 
 - 若$a_{ij}=A_{ij}$，那么$A^T=A^*$ <1000题 线代29>
+  - $|A|=1$
+  - 矩阵$A$可逆且正交
 
 ### 可逆矩阵
 
@@ -862,7 +869,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - 加法
 - 数乘
 - 乘法
-- $\left(\begin{array}{ll}{A} & {0} \\ {0} & {B}\end{array}\right)^{n}=\left(\begin{array}{ll}{A^{n}} & {0} \\ {0} & {B^{n}}\end{array}\right)$
+- $\left[\begin{array}{ll}{A} & {0} \\ {0} & {B}\end{array}\right]^{n}=\left[\begin{array}{ll}{A^{n}} & {0} \\ {0} & {B^{n}}\end{array}\right]$
 - 求逆
   - 主对角线直接求逆，左边乘上同行的，右边乘上同列的，最后加一个负号
     - $\left[\begin{array}{ll}{B} & {O} \\ {D} & {C}\end{array}\right]^{-1}=\left[\begin{array}{ll}{B^{-1}} & {O} \\ {-C^{-1}DB^{-1}} & {C^{-1}}\end{array}\right]$
@@ -875,6 +882,12 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 - 证明矩阵是否可逆
   - 利用行列式，如果$|A|\neq0$，那么矩阵$A$可逆 <1000题 线代29>
+  - 秩等于行数
+  - 行向量(或列向量)是线性无关组
+  - 齐次线性方程组$AX=0$仅有零解
+  - 非齐次线性方程组$AX=b$有唯一解
+  - 可以经过初等行变换化为单位矩阵，即该矩阵等价于n阶单位矩阵
+  - 特征值全部非0 <1000题 线代34>
 - 求$(A+B)^{-1}$没有直接可以用的性质，要借助单位矩阵$E$来将其化为相乘后，在使用可逆的性质求解 <1000题 线代18>
 
 ### 初等阵
@@ -926,6 +939,23 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 - 正交矩阵是指$\boldsymbol{A}^T\boldsymbol{A}=\boldsymbol{E} \Leftrightarrow \boldsymbol{A}^T=\boldsymbol{A}^{-1}$，其性质有
   - 特征值全部为$1$或$-1$ <1000题 线代15, 线代16>
+
+## 等价、合同与相似
+
+矩阵等价 [(ref)](https://blog.csdn.net/abraham_li/article/details/50058123)
+
+- 定义：对同型矩阵A、B，存在可逆阵P和Q，使得$B=PAQ$
+- 充要条件：A与B的秩相同
+
+矩阵合同
+
+- 定义：对同型方阵A、B，存在可逆阵P使得$B=P^{T} A P$
+
+矩阵相似
+
+- 定义：对同型方阵A、B，存在可逆阵P，使得$B=P^{-1} A P$
+
+关系：等价（只有秩相同）–>合同（秩和正负惯性指数相同）–>相似（秩，正负惯性指数，特征值均相同）
 
 # 概率分布
 
