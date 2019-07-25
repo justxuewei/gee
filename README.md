@@ -7,6 +7,7 @@
 - [概率论与数理统计知识清单](ma-probability-and-statistics-kl.md)
 - [马克思主义知识框架](po-marxism-kf.xmind)(请使用xmind查看)
 - [英语词组清单](en-phrase-kl.md)
+- [数据结构知识清单](cs-data-structure-kl.md)
 
 ---
 

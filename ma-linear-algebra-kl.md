@@ -66,7 +66,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - 数乘 <1000题 线代21>
   $k A=A k=k\left[\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{m 1}} & {a_{m 2}} & {\cdots} & {a_{m n}}\end{array}\right]=\left[\begin{array}{cccc}{k a_{11}} & {k a_{12}} & {\cdots} & {k a_{1 n}} \\ {k a_{21}} & {k a_{22}} & {\cdots} & {k a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {k a_{m 1}} & {k a_{m 2}} & {\cdots} & {k a_{m n}}\end{array}\right]$
 
-## 求$\boldsymbol{A}^n$(方阵的幂)
+## 求方阵的高阶幂（$A^n$）
 
 - $r(A) = 1$型，若${A}={\alpha}{\beta}^T$，其中${\alpha}$和${\beta}$是n维非零<u>列向量</u>，则${A}^n = l^{n-1}{A}$，其中$l=\alpha^T\beta=\sum\limits_{i=1}^n a_{ii}$（迹） <1000题 线代34>
 - 用归纳法，先求出$A^2, A^3, \cdots$，然后找规律 <1000题 线代27>
@@ -115,7 +115,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
   - $(A B )^{T}=B^{T} A^{T}$
   - $(A B )^{-1}=B^{-1} A^{-1}$
 
-秩 (TODO: 待补充)
+秩 [参见 `矩阵 > 秩 > 公式`]
 
 解题思路
 
@@ -244,7 +244,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - 矩阵中线性无关的向量个数
 - 对于一个$n\times n$的矩阵，$r(A)=n$等价于$|A|\neq0$等价于矩阵A可逆
 
-公式，A是一个$m\times n$的矩阵，B是任意满足条件的矩阵
+公式，在没有具体说明的时候，A是一个$m\times n$的矩阵，B是任意满足条件的矩阵
 
 - $0\leq r(A) \leq \min\{m, n\}$
 - $r(kA)=r(A)$
@@ -274,8 +274,15 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 ## 特殊矩阵
 
-- 正交矩阵是指$\boldsymbol{A}^T\boldsymbol{A}=\boldsymbol{E} \Leftrightarrow \boldsymbol{A}^T=\boldsymbol{A}^{-1}$，其性质有
+正交矩阵
+
+- 性质：正交矩阵是指${A}^T{A}={E} \Leftrightarrow {A}^T={A}^{-1}$（这个等价是在A可逆的前提下的），其性质有
   - 特征值全部为$1$或$-1$ <1000题 线代15, 线代16>
+- 正交矩阵与T、-1和\*的关系：如果A是正交阵，则$A^T$、$A^{-1}$和$A^{*}$都是正交矩阵
+
+实对称矩阵
+
+- 实对称矩阵与T、-1和\*的关系：如果A是正交阵，则$A^T$、$A^{-1}$和$A^{*}$都是实对称矩阵
 
 ## 等价、合同与相似
 
