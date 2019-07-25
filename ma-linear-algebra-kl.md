@@ -261,7 +261,11 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
   - $n, \quad r(A)=n$
   - $1,\quad r(A)=n-1$
   - $0,\quad r(A)<n-1$
-- 矩阵A
+- ★（二次型）设矩阵$A_{n\times n}$且$A^2=A$，则可以推出$r(A)+r(A-E)=n$或$r(A)+r(E-A)=n$
+- ★（相似理论）设矩阵$A_{n\times n}$且$A^2=E$，则可以推出$r(A+E)+r(A-E)=n$或$r(E+A)+r(E-A)=n$
+- ★（齐次方程组）设矩阵$A_{m\times n}$且$AX=O$可以推出$s=n-r(A)$，是<u>基础解析中所含向量的个数</u>等于<u>未知数个数</u>减去<u>秩</u>
+- ★（相似对角化）若$A\sim \Lambda \Leftrightarrow n_i=n-r(\lambda_iE-A)$，其中$\lambda_i$是$n_i$的重根
+-  ★若$A\sim \Lambda \Rightarrow $$r(A)$等于非零特征值的个数
 
 考法
 
