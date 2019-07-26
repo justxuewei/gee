@@ -54,6 +54,7 @@
 
 - $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3, 线代19>
 - $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19>
+- $a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2} b+\dots+a b^{n-2}+b^{n-1} \right)$ <1000题 线代62>
 - n是<u>正偶数</u>时，$a^{n}-b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\dots+a b^{n-2}-b^{n-1}\right) $ <1000题 线代32>
 - n是<u>正奇数</u>时，$a^{n}+b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\cdots-a b^{n-2}+b^{n-1}\right)$
 - $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$

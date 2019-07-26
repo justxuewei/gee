@@ -14,7 +14,9 @@
 
 # 行列式
 
-数值型行列式
+## 求行列式
+
+数值型
 
 - 性质
 
@@ -45,7 +47,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 	  $\left|\begin{array}{cccccc} {a} & {b} & {b} & {\cdots} & {b} & {b} \\ {b} & {a} & {b} & {\cdots} & {b} & {b} \\ {b} & {b} & {a} & {\cdots} & {b} & {b} \\ {\vdots} & {\vdots} & {\vdots} & {} & {\vdots} & {\vdots} \\ {b} & {b} & {b} & {\cdots} & {a} & {b} \\  {b} & {b} & {b} & {\cdots} & {b} & {a} \end{array}\right|= [a+(n-1)b](a-b)^{n-1}$
 	- 爪型转三角型 <1000题 线代6>
 
-抽象型行列式
+抽象型
 
 - 性质
   - $\left|A^{T}\right|=|A|$
@@ -57,7 +59,11 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
     - $P^{-1}AP=B \Rightarrow |P^{-1}AP|=|B|$
     - $|A B|=|A||B|$，$|P^{-1}||A||P|=|B|$
     - 由$|P^{-1}||P|=1$可以推出$|A|=|B|$
-- 矩阵的性质，适用于矩阵的每一列与$\alpha_1, \alpha_2,  \cdots, \alpha_n$有关，则可分解为$(\alpha_1, \alpha_2, \cdots, \alpha_n)\boldsymbol{C}$，其中$\boldsymbol{C}$是一个$n\times n$的矩阵 <1000题 线代13>
+- 矩阵的性质，适用于矩阵的每一列与$\alpha_1, \alpha_2,  \cdots, \alpha_n$有关，则可分解为$(\alpha_1, \alpha_2, \cdots, \alpha_n){C}$，其中${C}$是一个$n\times n$的矩阵 <1000题 线代13>
+
+## 代数余子式
+
+- 对于具体型行列式，求代数余子式之和要想到求$A^*$，然后把$A^*$所有项求和即可。 <1000题 线代53>
 
 # 矩阵
 
@@ -97,7 +103,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 公式
 
 - ${A A}^{*}={A}^{*} {A}=|{A}|{E}$
-- $\left|A^{*}\right|=|A|^{n-1}$
+- $\left|A^{*}\right|=|A|^{n-1}$ <1000题 线代50>
   - 推导过程：$|AA^*|=\left|\left|A\right|E\right|=|A|^n \Rightarrow |A||A^*|=|A|^n \Rightarrow |A^*|=|A|^{n-1}$
 - $\left(A^{T}\right)^{*}=\left(A^{*}\right)^{T}$
   - $\left(A^{-1}\right)^{*}=\left(A^{*}\right)^{-1}$
@@ -127,7 +133,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 定义
 
-- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代19, 线代21>
+- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代19, 线代21, 线代62, 线代64, 线代66（玩出花了）>
 - 等价说法：非奇异矩阵 = 可逆矩阵
 
 性质
@@ -196,7 +202,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
   - $E_{ij}^T=E_{ij}$
   - $E_i(k)^T=E_i(k)$
   - $E_{ij}(k)^T=E_{ji}(k)$
-- 逆
+- 逆 <1000题 线代58, 线代59>
   - $E_{ij}^{-1}=E_{ij}$
   - $E_i(k)^{-1}=E_i(\frac{1}{k})$
   - $E_{ij}(k)^{-1}=E_{ij}(-k)$
