@@ -1,4 +1,4 @@
-# 基础知识
+#                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         基础知识
 
 ## 单位矩阵
 
@@ -9,7 +9,7 @@
 
 ## 转置
 
-- ${A}$和${B}$是$n$阶矩阵，${A}^T\pm{B}^T = ({A}\pm{B})^T $<1000题 线代15>
+- ${A}$和${B}$是$n$阶矩阵，${A}^T\pm{B}^T = ({A}\pm{B})^T $<1000题 线代15, 线代76>
 - 假设$\alpha$和$\beta$都是<u>列向量</u>，$\alpha\beta^T$、$\beta\alpha^T$、$\alpha\alpha^T$都是矩阵（T在后面），$\alpha^T\beta$、$\beta^T\alpha$、$\alpha^T\alpha$都是数（T在前面）
 
 # 行列式
@@ -103,7 +103,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 公式
 
 - ${A A}^{*}={A}^{*} {A}=|{A}|{E}$
-- $\left|A^{*}\right|=|A|^{n-1}$ <1000题 线代50>
+- $\left|A^{*}\right|=|A|^{n-1}$ <1000题 线代50, 线代71>
   - 推导过程：$|AA^*|=\left|\left|A\right|E\right|=|A|^n \Rightarrow |A||A^*|=|A|^n \Rightarrow |A^*|=|A|^{n-1}$
 - $\left(A^{T}\right)^{*}=\left(A^{*}\right)^{T}$
   - $\left(A^{-1}\right)^{*}=\left(A^{*}\right)^{-1}$
@@ -133,7 +133,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 定义
 
-- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代19, 线代21, 线代62, 线代64, 线代66（玩出花了）>
+- $AB=E\Rightarrow A=B^{-1}$ <1000题 线代19, 线代21, 线代62, 线代64, 线代66（玩出花了）, 线代68>
 - 等价说法：非奇异矩阵 = 可逆矩阵
 
 性质
@@ -248,6 +248,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 定义
 
 - 矩阵中线性无关的向量个数
+- 存在k阶子式（行列式）不为零，任意k+1阶子式（行列式）等于零
 - 对于一个$n\times n$的矩阵，$r(A)=n$等价于$|A|\neq0$等价于矩阵A可逆
 
 公式，在没有具体说明的时候，A是一个$m\times n$的矩阵，B是任意满足条件的矩阵
@@ -262,7 +263,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - $r(A)+r(B)\le r\left(\begin{array}{ll}{A} & {O} \\ {C} & {B}\end{array}\right)\le r(A)+r(B)=r(C)$
 - $r(AB)\ge r(A)+r(B)-n$
   - ★注：若$AB=O$，则$r(A)+r(B)\le n$
-- $r(A)=r({A^T})=r(A^TA)=r(AA^T)$
+- $r(A)=r({A^T})=r(A^TA)=r(AA^T)$ <1000题 线代134>
 - ★★★伴随的秩$r(A^*)$ （证明在9讲例题5.25）
   - $n, \quad r(A)=n$
   - $1,\quad r(A)=n-1$
@@ -306,3 +307,113 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - 定义：对同型方阵A、B，存在可逆阵P，使得$B=P^{-1} A P$
 
 关系：等价（只有秩相同）–>合同（秩和正负惯性指数相同）–>相似（秩，正负惯性指数，特征值均相同）
+
+# 线性方程组
+
+## ★具体型
+
+**解含参数的线性方程组**（参考马同学线性代数）
+
+- 齐次线性方程组$AX=0$
+  1. 利用初等行变换将其化为阶梯型矩阵（注意：这里不能进行列变换；爪型需要回归原始<闭关修炼 例2.3.1>）
+  2. 求基础解系含向量的个数$s=n-r(A)$，其中基础解系为$\xi_{1}, \xi_{2}, \cdots, \xi_{s}$
+  3. 利用基础解析线性无关的特性对其进行赋值
+  4. 利用系数进行求解得到全部基础解系
+  5. 通解为$k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_{s} \xi_{s}$
+- 非齐次线性方程组$AX=\beta$
+  1. 将$(A|\beta)$利用初等行变换化为阶梯型矩阵（注意：这里不能进行列变换）
+  2. 求基础解系含向量的个数$s=n-r(A)$，其中基础解系为$
+  3. 利用基础解析线性无关的特性对其进行赋值
+  4. 利用系数进行求解得到全部基础解系
+  5. 求一个非齐次特解$\eta=\left[\begin{array}{l} x & 0 & \cdots & 0  \end{array}\right]^T$
+  6. 通解$k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_{s} \xi_{s}+\eta$
+- 对**方形**（方程个数=未知数个数）的方程组（$AX=\beta$）可用克拉默法则求解，即 <1000题 线代137>
+  - 若$|A|\ne 0 \Rightarrow AX=\beta$有唯一解$x_i = \frac{|A_i|}{|A|}$，其中$A_i$是吧矩阵A中的第i列换为$\beta$
+  - 若$|A|= 0 \Rightarrow AX=\beta$有非唯一解
+- 变体：含参的向量之间的关系
+
+**公共解** <闭关修炼 2.3.5>
+
+A的解部分是B的解，相似的B的解部分是A的解。
+
+- 方程组${A}_{m \times n} {x}={0}$和${B}_{m \times n} {x}={0}$联立变为$\left[\begin{array}{l}{A} \\ {B}\end{array}\right] x=0$，对于非齐次方程组也是同理，本质是方程组的联立；
+- 已知$A_{m \times n} x=0$的通解$k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_s\xi_s$，带入到${B}_{m \times n} {x}={0}$，求出$k_i(i=1, 2, \cdots, s)$，再代回$A_{m \times n} x=0$的通解，即公共解（仅齐次）；
+- 已知$A_{m \times n} x=0$的基础解系$\xi_{1}, \xi_{2}, \cdots, \xi_{s}$和${B}_{m \times n} {x}={0}$的基础解系$\eta_1, \eta_2, \cdots, \eta_t$，则y公共解为$\gamma =  k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k \xi_{s} - (l_{1} \boldsymbol{\eta}_{1}+l_{2} \boldsymbol{\eta}_{2}+\cdots+l_{t}\eta_t)=0$，即解$\xi_{1}+k_{2} \xi_{2}+\cdots+k \xi_{s}=l_{1} \boldsymbol{\eta}_{1}+l_{2} \boldsymbol{\eta}_{2}+\cdots+l_{t}\eta_t$，求出$k_i$或者$l_j$，即可求出公共解$\gamma$（仅齐次）。
+
+**同解**
+
+A的解完全是B的解，A可以被B线性表示
+
+- 相互带入法，$AX=0$的解满足$BX=0$，同样的$BX=0$的解也满足$AX=0$
+- $r(A)=r(B)$且单方满足（例如只需证明$AX=0$的解满足$BX=0$，而不需证明$BX=0$的解也满足$AX=0$，相反同理）
+- ★$r(A)=r(B)=r\left(\begin{array}{l}{A} \\ {B}\end{array}\right)$
+
+## 抽象型
+
+解的判定
+
+- 齐次方程组必有零解
+- 列满秩、列不满秩解得个数
+- 方程组是否有解
+- 注：
+  - $AX=0$只有非零解（或有无穷解），$AX=b$可能有解也可能无解
+  - $AX=b$有唯一解，$AX=0$只有零解
+  - $AX=b$有无穷解，$AX=0$也有无穷解
+  - 若A行满秩，则$AX=b$一定有解
+
+基础解系
+
+- 是否是基础解系（三要素） <1000题 线代133>
+  - 是解（基础解系的加减法不影响是不是解）
+  - 线性无关（通过行列式判断）
+  - $s=n-r(A)$
+- 用基础解系表示解，反过来说就是基础解系是否可以线性表示解
+  - 验证给定解是否是基础解系
+  - 建立矩阵$B=\left(\begin{array}{l} \xi_1 & \xi_2 & \cdots & \xi_s & | & \alpha_1 & \alpha_2 & \cdots & \alpha_n  \end{array}\right)$并进行初等行变换
+  - 看哪一个给定的解可以通过基础解系线性表示
+
+解的结构 <1000题 线代112>
+
+- 齐次线性方程组：$k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_{s} \xi_{s}$ 
+- 非齐次线性方程组：$k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_{s} \xi_{s}+\eta$（齐次式通解+非齐次式特解）<闭关修炼 2.3.12>
+
+解与系数的关系
+
+对于齐次线性方程组，有解${\beta}=\left[b_{1}, b_{2}, \cdots, b_{n}\right]^{\mathrm{T}}$
+
+- $a_{i 1} b_{1}+a_{i 2} b_{2}+\cdots+a_{i n} b_{n}=0$，也就是系数与解点乘为0
+  - 角色互换，已知解反求系数，${{\beta}^{\mathrm{T}}\alpha}_{i}^{\mathrm{T}}=0  $ <闭关修炼 2.3.14>
+  - $\alpha_i\perp\beta$  <闭关修炼 2.3.13>
+
+用方程组讨论秩 <闭关修炼 2.3.15, **2.3.16**; 1000题 线代132>
+
+- 对于任意$A_{m\times n}$可以推出$AX=0$与$A^TAX=0$是同解
+
+## 方程组的几何意义
+
+对于齐次线性方程组$\left\{\begin{array}{l}{a_{1} x+b_{1} y+c_{1} z=d_{1}} \\ {a_{2} x+b_{2} y+c_{2} z=d_{2}} \\ {a_{3} x+b_{3} y+c_{3} z=d_{3}}\end{array}\right.$，设${\alpha}_{1}=\left[\begin{array}{l}{a_{1}} \\ {a_{2}} \\ {a_{3}}\end{array}\right], {\alpha}_{2}=\left[\begin{array}{l}{b_{1}} \\ {b_{2}} \\ {b_{3}}\end{array}\right], {\alpha}_{3}=\left[\begin{array}{l}{c_{1}} \\ {c_{2}} \\ {c_{3}}\end{array}\right], {\alpha}_{4}=\left[\begin{array}{l}{d_{1}} \\ {d_{2}} \\ {d_{3}}\end{array}\right]$，系数矩阵的3个行向量为${\beta}_{1}=\left[a_{1}, b_{1}, c_{1}\right], {\beta}_{2}=\left[a_{2}, b_{2}, c_{2}\right], {\beta}_{3}=\left[a_{3}, b_{3}, c_{3}\right]$，增广矩阵的3个行向量为$\gamma_{1}=\left[a_{1}, b_{1}, c_{1}, d_{1}\right], \gamma_{2}=\left[a_{2}, b_{2}, c_{2}, d_{2}\right], \gamma_{3}=\left[a_{3}, b_{3}, c_{3}, d_{3}\right]$
+
+- 情况1：$r(\alpha_1, \alpha_2, \alpha_3)=3$，显然有$r(\alpha_1, \alpha_2, \alpha_3, \alpha_4)=3$，这个时候方程组有唯一解，其几何意义为这三个向量不共线
+  <img height="150" src="http://res.niuxuewei.com/2019-07-28-055433.png"/>
+- 情况2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=2$，也即$r\left({\beta}, {\beta}_{2}, {\beta}_{3}\right)=2$
+  - 情况2.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，方程有无穷多解（解是一条线）
+    - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$中有两个是线性相关的，其几何意义为两个向量共线（对应的平面重合），一个不共线
+      <img height="150" src="http://res.niuxuewei.com/2019-07-28-060536.png"/>
+    - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$互不共线
+      <img height="150" src="http://res.niuxuewei.com/2019-07-28-060920.png"/>
+  - 情况2.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，方程无解
+    - 情况2.2.1：$\beta_1, \beta_2, \beta_3$有两个共线
+      <img height="150" src="http://res.niuxuewei.com/2019-07-28-061120.png"/>
+    - 情况2.2.2：$\beta_1, \beta_2, \beta_3$互不共线
+      <img height="150" src="http://res.niuxuewei.com/2019-07-28-061309.png"/>
+- 情况3：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=1$，也即$r\left({\beta}, {\beta}_{2}, {\beta}_{3}\right)=1$
+  - 情况3.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=1$，那么有无穷多解（解是一个面），三个面重合
+    <img height="150" src="http://res.niuxuewei.com/2019-07-28-062605.png"/>
+  - 情况3.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，此时方程组无解
+    - 情况3.2.1：$\gamma_{1}, \gamma_{2}, \gamma_{3}$有两个向量线性相关
+<img height="150" src="http://res.niuxuewei.com/2019-07-28-063531.png"/>
+    - 情况3.2.2：$\gamma_{1}, \gamma_{2}, \gamma_{3}$任意两个线性无关
+      <img height="150" src="http://res.niuxuewei.com/2019-07-28-063647.png"/>
+
+
+
