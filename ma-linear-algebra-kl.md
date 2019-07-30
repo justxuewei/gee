@@ -1,4 +1,4 @@
-#                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         基础知识
+# 基础知识
 
 ## 单位矩阵
 
@@ -60,10 +60,12 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
     - $|A B|=|A||B|$，$|P^{-1}||A||P|=|B|$
     - 由$|P^{-1}||P|=1$可以推出$|A|=|B|$
 - 矩阵的性质，适用于矩阵的每一列与$\alpha_1, \alpha_2,  \cdots, \alpha_n$有关，则可分解为$(\alpha_1, \alpha_2, \cdots, \alpha_n){C}$，其中${C}$是一个$n\times n$的矩阵 <1000题 线代13>
+- 相似矩阵的行列式相同，即$P^{-1}AP=B\Rightarrow |A|=|B|$ <1000题 线代88>
 
 ## 代数余子式
 
 - 对于具体型行列式，求代数余子式之和要想到求$A^*$，然后把$A^*$所有项求和即可。 <1000题 线代53>
+- $tr(A^*)=A_{11}+A_{22}+\cdots+A_{nn}=\lambda_2\lambda_3\cdots\lambda_n+\lambda_1\lambda_3\cdots\lambda_n+\cdots+\lambda1\lambda_2\cdots\lambda_{n-1}$ [参见 `相似理论 > A的特征值和特征向量 > 特征值 `]
 
 # 矩阵
 
@@ -88,6 +90,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - 相似，若$P^{-1} A P=\Lambda$，则$P^{-1} A^{n} P=\Lambda^{n}$，则$A^{n}=P\Lambda^{n}P^{-1}$
 - 初等行变换，即$P_1^mAP_2^n$（左行右列）
 - 分块矩阵，$\left[\begin{array}{ll}{A} & {0} \\ {0} & {B}\end{array}\right]^{n}=\left[\begin{array}{ll}{A^{n}} & {0} \\ {0} & {B^{n}}\end{array}\right]$ <1000题 线代40>
+- 若$A\sim\Lambda$，则$A^n = P^{-1}\Lambda^nP$
 
 ## 伴随、逆与初等阵
 
@@ -245,51 +248,45 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 ## 秩
 
-定义
+**定义**
 
 - 矩阵中线性无关的向量个数
 - 存在k阶子式（行列式）不为零，任意k+1阶子式（行列式）等于零
 - 对于一个$n\times n$的矩阵，$r(A)=n$等价于$|A|\neq0$等价于矩阵A可逆
 
-公式，在没有具体说明的时候，A是一个$m\times n$的矩阵，B是任意满足条件的矩阵
+**公式**，在没有具体说明的时候，A是一个$m\times n$的矩阵，B是任意满足条件的矩阵
 
-- $0\leq r(A) \leq \min\{m, n\}$
+- $0\leq r(A) \leq \min\{m, n\}$，在不知道m和n的值的时候，$r(A)\leq m$和$r(A)\leq n$都是正确的
 - $r(kA)=r(A)$
-- ★初等变换不改变秩的个数，若P和Q均为可逆矩阵，则$r(A)=r(PA)=r(AQ)=r(PAQ)
-- ★乘积的秩越乘越小$r(AB)\leq \min\{r(A), r(B)\}$
-  - ★★★推广：如果$r(AB)<r(A)$，则$B_{n\times n}$是不满秩矩阵，即$r(B)<n$。证明使用反证法，如果B是可逆矩阵（满秩），则$r(A)=r(AB)$。
-- ★$r(A+B)\leq r(A)+r(B)$
+- 初等变换不改变秩的个数，若P和Q均为可逆矩阵，则$r(A)=r(PA)=r(AQ)=r(PAQ) ★
+- 乘积的秩越乘越小$r(AB)\leq \min\{r(A), r(B)\}$，也即$r(AB)\leq r(A)$和$r(AB)\leq r(B)$都是正确的 ★
+  - 推广：如果$r(AB)<r(A)$，则$B_{n\times n}$是不满秩矩阵，即$r(B)<n$。证明使用反证法，如果B是可逆矩阵（满秩），则$r(A)=r(AB)$。 ★★★
+- $r(A+B)\leq r(A)+r(B)$ ★
 - $r\left(\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right)=r(A)+r(B)$
-- $r(A)+r(B)\le r\left(\begin{array}{ll}{A} & {O} \\ {C} & {B}\end{array}\right)\le r(A)+r(B)=r(C)$
+- $r(A)+r(B)\le r\left(\begin{array}{ll}{A} & {O} \\ {C} & {B}\end{array}\right)\le r(A)+r(B)+r(C)$
 - $r(AB)\ge r(A)+r(B)-n$
   - ★注：若$AB=O$，则$r(A)+r(B)\le n$
 - $r(A)=r({A^T})=r(A^TA)=r(AA^T)$ <1000题 线代134>
-- ★★★伴随的秩$r(A^*)$ （证明在9讲例题5.25）
+- 伴随的秩$r(A^*)$ （证明在9讲例题5.25） ★★★
   - $n, \quad r(A)=n$
   - $1,\quad r(A)=n-1$
   - $0,\quad r(A)<n-1$
-- ★（二次型）设矩阵$A_{n\times n}$且$A^2=A$，则可以推出$r(A)+r(A-E)=n$或$r(A)+r(E-A)=n$
-- ★（相似理论）设矩阵$A_{n\times n}$且$A^2=E$，则可以推出$r(A+E)+r(A-E)=n$或$r(E+A)+r(E-A)=n$
-- ★（齐次方程组）设矩阵$A_{m\times n}$且$AX=O$可以推出$s=n-r(A)$，是<u>基础解析中所含向量的个数</u>等于<u>未知数个数</u>减去<u>秩</u>
-- ★（相似对角化）若$A\sim \Lambda \Leftrightarrow n_i=n-r(\lambda_iE-A)$，其中$\lambda_i$是$n_i$的重根
--  ★若$A\sim \Lambda \Rightarrow $$r(A)$等于非零特征值的个数
+- （二次型）设矩阵$A_{n\times n}$且$A^2=A$，则可以推出$r(A)+r(A-E)=n$或$r(A)+r(E-A)=n$ ★
+- （相似理论）设矩阵$A_{n\times n}$且$A^2=E$，则可以推出$r(A+E)+r(A-E)=n$或$r(E+A)+r(E-A)=n$ ★
+- （齐次方程组）设矩阵$A_{m\times n}$且$AX=O$可以推出$s=n-r(A)$，是<u>基础解析中所含向量的个数</u>等于<u>未知数个数</u>减去<u>秩</u> ★
+- （相似对角化）若$A\sim \Lambda \Leftrightarrow n_i=n-r(\lambda_iE-A)$，其中$\lambda_i$是$n_i$的重根 ★
+-  若$A\sim \Lambda \Rightarrow $$r(A)$等于非零特征值的个数 ★
 
-考法
+**求秩**
 
 - 化阶梯
 - 用公式
+- 定义法 <1000题 线代87>
+- 对于抽象型矩阵可以利用初等变换（秩不变）化简后求 <1000题 线代96>
 
-## 特殊矩阵
+**结论**
 
-正交矩阵
-
-- 性质：正交矩阵是指${A}^T{A}={E} \Leftrightarrow {A}^T={A}^{-1}$（这个等价是在A可逆的前提下的），其性质有
-  - 特征值全部为$1$或$-1$ <1000题 线代15, 线代16>
-- 正交矩阵与T、-1和\*的关系：如果A是正交阵，则$A^T$、$A^{-1}$和$A^{*}$都是正交矩阵
-
-实对称矩阵
-
-- 实对称矩阵与T、-1和\*的关系：如果A是正交阵，则$A^T$、$A^{-1}$和$A^{*}$都是实对称矩阵
+- 任意矩阵A左乘列满秩或者右乘行满秩矩阵，不改变矩阵A的秩 <1000题 线代150>
 
 ## 等价、合同与相似
 
@@ -310,7 +307,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 # 线性方程组
 
-## ★具体型
+## 具体型 ★
 
 **解含参数的线性方程组**（参考马同学线性代数）
 
@@ -344,9 +341,14 @@ A的解部分是B的解，相似的B的解部分是A的解。
 
 A的解完全是B的解，A可以被B线性表示
 
-- 相互带入法，$AX=0$的解满足$BX=0$，同样的$BX=0$的解也满足$AX=0$
+- 相互带入法，$AX=0$的解满足$BX=0$，同样的$BX=0$的解也满足$AX=0 $  <1000题 线代145>
+  - A的非齐次式的特解代入B的非齐次式，如果有点求不出来，则再将A的齐次式通解的一个代入B的齐次式中
 - $r(A)=r(B)$且单方满足（例如只需证明$AX=0$的解满足$BX=0$，而不需证明$BX=0$的解也满足$AX=0$，相反同理）
 - ★$r(A)=r(B)=r\left(\begin{array}{l}{A} \\ {B}\end{array}\right)$
+
+- 结论
+  - $A^nX=0$与$A^{n+1}X=0$是同解 <1000题 线代148>
+  - $AX=0$与$A^TAX=0$是同解 <1000题 线代149>
 
 ## 抽象型
 
@@ -393,27 +395,229 @@ A的解完全是B的解，A可以被B线性表示
 
 对于齐次线性方程组$\left\{\begin{array}{l}{a_{1} x+b_{1} y+c_{1} z=d_{1}} \\ {a_{2} x+b_{2} y+c_{2} z=d_{2}} \\ {a_{3} x+b_{3} y+c_{3} z=d_{3}}\end{array}\right.$，设${\alpha}_{1}=\left[\begin{array}{l}{a_{1}} \\ {a_{2}} \\ {a_{3}}\end{array}\right], {\alpha}_{2}=\left[\begin{array}{l}{b_{1}} \\ {b_{2}} \\ {b_{3}}\end{array}\right], {\alpha}_{3}=\left[\begin{array}{l}{c_{1}} \\ {c_{2}} \\ {c_{3}}\end{array}\right], {\alpha}_{4}=\left[\begin{array}{l}{d_{1}} \\ {d_{2}} \\ {d_{3}}\end{array}\right]$，系数矩阵的3个行向量为${\beta}_{1}=\left[a_{1}, b_{1}, c_{1}\right], {\beta}_{2}=\left[a_{2}, b_{2}, c_{2}\right], {\beta}_{3}=\left[a_{3}, b_{3}, c_{3}\right]$，增广矩阵的3个行向量为$\gamma_{1}=\left[a_{1}, b_{1}, c_{1}, d_{1}\right], \gamma_{2}=\left[a_{2}, b_{2}, c_{2}, d_{2}\right], \gamma_{3}=\left[a_{3}, b_{3}, c_{3}, d_{3}\right]$
 
-- 情况1：$r(\alpha_1, \alpha_2, \alpha_3)=3$，显然有$r(\alpha_1, \alpha_2, \alpha_3, \alpha_4)=3$，这个时候方程组有唯一解，其几何意义为这三个向量不共线
-  <img height="150" src="http://res.niuxuewei.com/2019-07-28-055433.png"/>
+- 情况1：$r(\alpha_1, \alpha_2, \alpha_3)=3$，显然有$r(\alpha_1, \alpha_2, \alpha_3, \alpha_4)=3$，这个时候方程组有唯一解，其几何意义为这三个向量不共线（图2-3-1）
 - 情况2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=2$，也即$r\left({\beta}, {\beta}_{2}, {\beta}_{3}\right)=2$
   - 情况2.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，方程有无穷多解（解是一条线）
-    - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$中有两个是线性相关的，其几何意义为两个向量共线（对应的平面重合），一个不共线
-      <img height="150" src="http://res.niuxuewei.com/2019-07-28-060536.png"/>
-    - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$互不共线
-      <img height="150" src="http://res.niuxuewei.com/2019-07-28-060920.png"/>
+    - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$中有两个是线性相关的，其几何意义为两个向量共线（对应的平面重合），一个不共线（图2-3-2）
+    - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$互不共线（图2-3-3）
+  
   - 情况2.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，方程无解
-    - 情况2.2.1：$\beta_1, \beta_2, \beta_3$有两个共线
-      <img height="150" src="http://res.niuxuewei.com/2019-07-28-061120.png"/>
-    - 情况2.2.2：$\beta_1, \beta_2, \beta_3$互不共线
-      <img height="150" src="http://res.niuxuewei.com/2019-07-28-061309.png"/>
+    - 情况2.2.1：$\beta_1, \beta_2, \beta_3$有两个共线（图2-3-4）
+    - 情况2.2.2：$\beta_1, \beta_2, \beta_3$互不共线（图2-3-5）
 - 情况3：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=1$，也即$r\left({\beta}, {\beta}_{2}, {\beta}_{3}\right)=1$
-  - 情况3.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=1$，那么有无穷多解（解是一个面），三个面重合
-    <img height="150" src="http://res.niuxuewei.com/2019-07-28-062605.png"/>
+  - 情况3.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=1$，那么有无穷多解（解是一个面），三个面重合（图2-3-6）
   - 情况3.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，此时方程组无解
-    - 情况3.2.1：$\gamma_{1}, \gamma_{2}, \gamma_{3}$有两个向量线性相关
-<img height="150" src="http://res.niuxuewei.com/2019-07-28-063531.png"/>
-    - 情况3.2.2：$\gamma_{1}, \gamma_{2}, \gamma_{3}$任意两个线性无关
-      <img height="150" src="http://res.niuxuewei.com/2019-07-28-063647.png"/>
+    - 情况3.2.1：$\gamma_{1}, \gamma_{2}, \gamma_{3}$有两个向量线性相关（图2-3-7）
+  - 情况3.2.2：$\gamma_{1}, \gamma_{2}, \gamma_{3}$任意两个线性无关（图2-3-8）
 
+<img height="150" src="http://res.niuxuewei.com/2019-07-28-055433.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-060536.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-060920.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-061120.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-061309.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-062605.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-063531.png"/><img height="150" src="http://res.niuxuewei.com/2019-07-28-063647.png"/>
 
+# 向量组
 
+## 具体型
+
+**$\beta$与$\alpha_1, \cdots, \alpha_n $ （非齐次方程组）**
+
+- 建立方程组$\left[{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{n}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\boldsymbol{\beta}$
+- 解方程
+- 结果
+  - $r(A)<r(A|\beta)$说明向量组不能表示$\beta$（方程组无解）
+  - $r(A)=r(A|\beta)=n$说明向量组可以唯一的表示$\beta$（方程组有唯一解）
+  - $r(A)=r(A|\beta)<n$说明A有无穷多种表示方法（方程组无穷解）
+
+**$\alpha_1, \cdots, \alpha_n $ （齐次方程组）**
+
+- 线性无关与线性无关定义
+  - 线性无关：仅在$k_1=k_2=\cdots=k_n=0$的情况下$k_1\alpha_1+\cdots+k_n\alpha_n=0$成立，则成为线性无关$\Leftrightarrow$$AX=0$只有零解
+  - 线性相关：存在$k_i\neq0$的情况下似的$k_1\alpha_1+\cdots+k_n\alpha_n=0$成立，则该向量方程组线性相关$\Leftrightarrow$$AX=0$有非零解
+- 向量个数(方程组的列数)与向量维度(方程组的行数)的关系
+  - 向量个数>向量维度，则向量组必线性相关
+  - 向量个数=向量维度（方形，可以用行列式）
+    - 若$|\alpha_1  \cdots \alpha_n|= 0$，则线性相关
+    - 若$|\alpha_1  \cdots \alpha_n|\neq 0$，则线性无关
+  - 向量个数<向量维度，化台阶
+- 若线性无关
+  - 加任意分量仍然无关，假设$\alpha_1, \alpha_2, \alpha_3$线性无关，则$\left[\begin{array}{c} \alpha_1 \\ a \end{array}\right], \left[\begin{array}{c} \alpha_2 \\ b \end{array}\right], \left[\begin{array}{c} \alpha_3 \\ c \end{array}\right]$也是线性无关的
+  - 减向量个数，如$\alpha_1, \alpha_2$也线性无关
+- 若线性相关
+  - 减任意分量仍然相关，如$\left[\begin{array}{c} 1 \\ 2 \end{array}\right], \left[\begin{array}{c} 2 \\ 4 \end{array}\right]$是线性相关的，则$\left[\begin{array}{c} 1 \end{array}\right], \left[\begin{array}{c} 2 \end{array}\right]$仍然是线性相关的
+  - 加向量个数
+
+**求极大线性无关组**
+
+- 构造矩阵A
+- 初等行变换化台阶
+- 每个阶梯上随便选一个<u>列向量</u>即可
+
+## 抽象型
+
+已知某些向量关系，研究另一些向量
+
+- 定义法证明线性无关
+
+  - 步骤
+    1. 写出$k_1\alpha_1+\cdots+k_n\alpha_n=0$
+    2. 证明$k_1=k_2=\cdots=k_n=0$
+
+  - 可以用的方法有
+    - 左右两边同乘一个矩阵或者重组 <闭关修炼 2.4.7>
+    - 转化为齐次方程组（$\left[{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{n}\right]X=0$，把$k_i$看做方程组的解）只有零解
+    - 与特征值、基础解系和正定综合 <1000题 线代91(略), 92(略)>
+
+- 用秩 <闭关修炼 2.4.9>
+
+  - 新向量组是原向量组的线性组合 <1000题 线代86, 线代87>
+  - 利用秩的公式 <1000题 线代90>
+
+## 向量组等价
+
+- 定义：$\left\{{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{s}\right\}$与$\left\{{\beta}_{1}, {\beta}_{2}, \cdots, {\beta}_{t}\right\}$可以互相表出，与方程组同解一样的
+- 判定方法
+  - 三秩相同$r(\alpha)=r(\beta)=r(\alpha|\beta)$
+  - $r(\alpha)=r(\beta)$且可单方表出
+- 矩阵等价于向量组等价不一样：矩阵A等价于矩阵B，在$r(A)=r(B)$的条件下即可满足
+
+## 向量空间
+
+概念：${\alpha}=a_{1} {\xi}_{1}+a_{2} {\xi}_{2}+\cdots+a_{n} {\xi}_{n}$，其中$\xi_i$为基（方程组未知量），$a_i$为坐标（是非齐次方程组的唯一解，那么$\left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right]$是满秩的，即都是线性无关的）。
+
+过渡矩阵：$\left[{\eta}_{1}, {\eta}_{2}, \cdots, {\eta}_{n}\right]=\left[{\xi}_{1}, {\xi}_{2}, \cdots, \xi_{n}\right] {C}$，$C$称为$\xi_i$到$\eta_i$的过渡矩阵。
+
+坐标变换：${\alpha}=\left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right] {x}=\left[{\eta}_{1}, {y}_{2}, \cdots, {y}_{n}\right] {y}\Leftrightarrow \left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right] {x} = \left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right] Cy$，则$x=Cy$叫坐标变换。
+
+# 相似理论
+
+这里的矩阵均为方阵
+
+## 特征值和特征向量
+
+定义：$A\xi=\lambda\xi$，其中$\lambda$称为特征值，$\xi$称为特征向量
+
+**特征值**
+
+- $(\lambda E-A)\xi=0$有解，即$\lambda E-A$不满秩，即$|\lambda E-A|=0$
+  - $\lambda_0$是特征值 $\Leftrightarrow$ $|\lambda_0 E-A|=0$
+  - $\lambda_0$不是特征值 $\Leftrightarrow$ $|\lambda_0 E-A|\neq0$（矩阵可逆、满秩）
+  - 拓展：$|aA+bE|=0$ $\Leftrightarrow$ $\lambda = -\frac{b}{a}$
+- 特征值与行列式的关系：$|A|=\lambda_1\lambda_2\cdots\lambda_n$
+- 特征值与迹的关系：$tr(A)=a_{11}+\cdots+a_{nn}=\lambda_1+\cdots+\lambda_n$
+- 公式，假设矩阵A的特征值为$\lambda$，特征向量为$\xi$
+  - $f(A)$的特征值为$f(\lambda)$，特征向量为$\xi$ ★
+    - 具体情况1：$kA$的特征值为$k\lambda$
+    - 具体情况2：$A^k$的特征值为$\lambda^k$
+    - 特殊情况：$f(A)=O$则$f(\lambda)=0$
+  - $A^{-1}$的特征值为$\frac{1}{\lambda}$，特征向量为$\xi $ ★
+    - 证明过程：$A\xi=\lambda\xi \Rightarrow A^{-1}A\xi = \lambda A^{-1}\xi \Rightarrow A^{-1}\xi=\frac{1}{\lambda}\xi$
+  - $A^*$的特征值为$\frac{|A|}{\lambda}$，特征向量为$\xi$ ★★★
+    - 证明过程：$A^*A\xi = \lambda A^*\xi  \Rightarrow |A|\xi = \lambda A^*\xi \Rightarrow A^*\xi = \frac{|A|}{\lambda}\xi$
+  - $P^{-1}AP$的特征值为$\lambda$，特征向量为$P^{-1}\xi$
+    - 证明过程：$(P^{-1}AP)(P^{-1}\xi) = \lambda (P^{-1}\xi)$
+  - $A$与$A^T$的特征值相同，特征向量完全不同，需要另行计算
+    - 证明特征值相同：$|\lambda E - A|=|(\lambda E - A)^T|（行列式性质）=|\lambda E-A^T| = 0$
+- 伴随矩阵特征值与矩阵特征值的关系：设$\lambda_1, \lambda_2, \lambda_3$是矩阵A的特征值，则$\lambda_1^*=\frac{|A|}{\lambda_1}=\frac{\lambda_1\lambda_2\lambda_3}{\lambda_1}=\lambda_2\lambda_3$，同理可以得到$\lambda_2^*=\lambda_1\lambda_3$和$\lambda_3^*=\lambda_1\lambda_2$，即$A_{11}+A_{22}+A_{33}=\lambda_2\lambda_3+\lambda_1\lambda_3+\lambda_1\lambda_2$
+
+**特征向量**
+
+- 特征向量 $\Leftrightarrow$ $(\lambda_0E-A)X=0$的非零解
+- 重要结论 ★★★
+  - k重特征值($\lambda$)至多有k个无关的特征向量($\xi$)，比如求出3个特征值，最多三个无关的特征向量
+  - $\xi_1 \rightarrow \lambda_1, \xi_2 \rightarrow \lambda_2$且$\lambda_1\ne\lambda_2$，可以推出$\xi_1$与$\xi_2$线性无关
+    - 如果矩阵A是实对称矩阵，则$\xi_1$与$\xi_2$正交
+  - $\xi_1 \rightarrow \lambda, \xi_2 \rightarrow \lambda$，在$k_1$与$k_2$不全为0的情况下，可以推出$k_1\xi_1+k_2\xi_2 \rightarrow \lambda$ ★
+    - 例如，$\xi$是特征向量，则$-\xi$也是特征向量
+  - $\xi_1 \rightarrow \lambda_1, \xi_2 \rightarrow \lambda_2$且$\lambda_1\ne\lambda_2$，在$k_1$与$k_2$不全为0的情况下，可以推出$k_1\xi_1+k_2\xi_2$不是任何特征值的特征向量 ★
+
+**矩阵方程**
+
+- $AB=0 \Rightarrow A[\beta_1, \beta_2, \cdots, \beta_n]=[0\beta_1, 0\beta_2, \cdots, 0\beta_n]$，所以每一个$\beta_i$均为特征值0对应的特征向量
+- $AB=C; C = [\lambda_1\beta_1, \lambda_2\beta_2, \cdots, \lambda_n\beta_n] \Rightarrow A[\beta_1, \beta_2, \cdots, \beta_n] = [\lambda_1\beta_1, \lambda_2\beta_2, \cdots, \lambda_n\beta_n] $，所以$\beta_i$是A的属于$\lambda_i$的特征向量
+- $AP=PB$且P可逆，则可以推出$P^{-1}AP=B$，则可以推出$A\sim B$，则$\lambda_A=\lambda_B $ ★
+- 若A的每行元素之和为k，则$A\left[\begin{array}{c}{1} \\ {1} \\ {\vdots} \\ {1}\end{array}\right]=k\left[\begin{array}{c}{1} \\ {1} \\ {\vdots} \\ {1}\end{array}\right]$，即k是A的一个特征值
+
+**秩**
+
+- $r(A)=1$，则$\lambda_1= \cdots = \lambda_{n-1}=0$，$\lambda_n=tr(A)$，其特征向量全部线性无关，必定可以相似对角化，其证明如下
+  - $A=\alpha\beta^T \Rightarrow A^2=\beta^T\alpha A = aA$，其中$a = tr(A)$，进一步化简为$A^2-aA=0$
+  - 由特征值公式可知$A^2-aA=0$的特征值为$\lambda^2-a\lambda=0$，可以推出$\lambda=0$或$\lambda=a$
+  - 又因为$tr(A)=\lambda_1+\cdots+\lambda_n$，所以$\lambda_1= \cdots = \lambda_{n-1}=0$，$\lambda_n=tr(A)$
+  - 将特征值0带入特征值定义，即$(0E-A)X=0$，$0E-A$的秩为1，则基础解系的无关向量有$s=n-1$个，即$\xi_1, \cdots, \xi_{n-1}$都线性无关
+  - 有因为$\lambda_n\ne\lambda_i(i=1, 2, \cdots, n-1)$，所以有特征向量的重要结论可知，特征向量全部线性无关
+  - $P=[\xi_1, \xi_2, \cdots, \xi_n]$是线性无关的，也即P是可逆的，$P^{-1}AP=\Lambda$，即$A\sim\Lambda$
+
+## 向量对角化 ★
+
+### A与对角阵的相似($A\sim\Lambda$)
+
+**充要条件**
+
+- A有n个无关特征向量 $\Leftrightarrow$ $A\sim\Lambda$
+- $n_i = n-r(\lambda_iE-A)$，其中$\lambda_i$是$n_i$的重根 $\Leftrightarrow$ $A\sim\Lambda$
+  - 证明：根据特征向量的重要结论可知，特征值不同时特征向量必不同，但是反过来如果特征值（重根）相同，那么还需要进一步证明其对应的特征向量是否线性无关，证明的手法就是利用$(\lambda_iE-A)X=0$，如果基础解析的个数正好是相同特征值的个数，那么我们就有理由相信A有n个无关的特征向量，进而可以推出$A\sim\Lambda$ [参见 `相似理论 > 特征值和特征向量 > 秩 > 证明`]
+
+**充分条件**
+
+- A是实对称矩阵 $\Rightarrow$ $A\sim\Lambda$
+- A有n个不同的特征值 $\Rightarrow$ $A\sim\Lambda$
+  - 因为A有n个不同的特征值必可以推出A有n个无关特征向量
+- $A^2=A$  $\Rightarrow$ $A\sim\Lambda$
+- $A^2=E$  $\Rightarrow$ $A\sim\Lambda$
+- $r(A)=1$且$tr(A)\neq0$  $\Rightarrow$ $A\sim\Lambda$
+
+**必要条件**
+
+- $A\sim\Lambda$ $\Rightarrow$ $r(A)$等于非零特征值个数
+
+**否定条件**
+
+- A的特征值全部为k且$A\neq kE$ $\Rightarrow$ $A\nsim \Lambda$
+- $A\neq0, A^k=0$，其中k为大于1的整数 $\Rightarrow$ $A\nsim \Lambda$
+
+### A与B的相似($A\sim B$)
+
+定义：$P^{-1}AP=B$
+
+**四个性质**
+
+$A\sim B$的必要条件
+
+- $|A| = |B|$
+- $r(A)=r(B)$
+- $tr(A)=tr(B)$
+- $\lambda_A=\lambda_B$
+
+可用于求参数、否定
+
+**重要结论** ★
+
+- $A\sim B \Rightarrow A^T\sim B^T, A^{-1}\sim B^{-1}, A^*\sim B^*$
+- $A\sim B \Rightarrow A^n\sim B^n, f(A)\sim f(B)$
+  - 更特殊的：$A\sim \Lambda \Rightarrow A^n\sim \Lambda^n, f(A)\sim f(\Lambda)$ ★★★
+- $A\sim B , B\sim\Lambda \Rightarrow A\sim\Lambda$
+  - 根究定义可知$P^{-1}AP=B, Q^{-1}BQ=\Lambda$
+  - 将$P^{-1}AP=B$带入$Q^{-1}BQ=\Lambda$可得$Q^{-1}P^{-1}APQ=\Lambda$，也即$(PQ)^{-1}APQ=\Lambda$
+  - 令$C=PQ$，则$C^{-1}AC=\Lambda$
+- $A\sim\Lambda, B\sim\Lambda \Rightarrow A\sim B$
+  - 根究定义可知$P^{-1}AP=\Lambda, Q^{-1}BQ=\Lambda$
+  - $P^{-1}AP = Q^{-1}BQ \Rightarrow QP^{-1}APQ^{-1}=B \Rightarrow (PQ^{-1})^{-1}A(PQ^{-1})=B$
+  - 令$C=PQ^{-1}$，则$C^{-1}AC=B$
+
+## 实对称矩阵与正交阵
+
+**正交矩阵**
+
+- 正交矩阵是指${A}^T{A}={E}$，其充要条件为
+  - $ {A}^T={A}^{-1}$
+  - A是由规范正交基组成，规范指的是单位向量，正交指的是任意向量两两垂直
+  - $A^{-1}$也是正交矩阵
+  - $A^*$也是正交矩阵
+  - $A^T$也是正交矩阵
+  - $-A$也是正交矩阵
+  - 特征值全部为$1$或$-1$ <1000题 线代15, 线代16>
+    - 证明：设A的特征值为$\lambda$，则$A^{-1}$的特征值为$\frac{1}{\lambda}$，又因为$A^T=A^{-1}$且$A$的特征值与$A^T$相同（特征向量不同），所以$\lambda=\frac{1}{\lambda}$，因此特征值全部为$1$或$-1$
+- 若P和Q为同阶正交矩阵，则$PQ$也是正交矩阵，$P+Q$则不一定是
+  - 所以问$P^{-1}Q$、$-P^*Q$是不是正交阵，要会识别
+
+**实对称矩阵**
+
+- 若$\lambda_1\ne\lambda_2$，则$\xi_1\perp\xi_2$ [参见 `相似理论 > 特征值和特征向量 > 特征向量`]
+- 若A为实对称矩阵，则必可以用一个正交矩阵P，使得$P^{-1}AP=\Lambda$
