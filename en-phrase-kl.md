@@ -81,3 +81,28 @@ pick up
 
 - 学会
   - It does not take a lifelong acquaintance to pick up various softwar programs.
+
+**RC - Passage 4**
+
+- report back (on somebody or something)
+  - 汇报 to return with information or an explanation from someone or something.
+    - I need you to report back on Walter by noon.
+    - I’ll report back as soon as I can.
+- stem from
+  - 起源于；来自 to result from something.
+    - These problems all stem from your mismanagement.
+    - Our difficulties stem from the bad weather we have been having.
+- call for
+  - 需要 to need, require, or demand something or the services of someone.
+    - The recipe calls for two cups of flour.
+    - This job calls for someone with experience.
+  - 收；接 to arrive to collect or pick up a person or a thing.
+    - I will call for you about eight this evening.
+    - The messenger will call for your reply in the morning.
+  - 大声喊（引申义：呼吁） to shout for or request someone or something.
+    - I stood on the porch and called for the dog.
+    - NBAC plans to call for a continued ban on federal government funding…
+- up in the air (about something or someone)
+  - 未决定的；悬而未决的 undecided about someone or something; uncertain about someone or something.
+    - I don’t know what Sally plans to do. Things were sort of up in the air the last time we talked.
+    - Let’s leave this question up in the air until next week.
