@@ -265,7 +265,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 - $r\left(\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right)=r(A)+r(B)$
 - $r(A)+r(B)\le r\left(\begin{array}{ll}{A} & {O} \\ {C} & {B}\end{array}\right)\le r(A)+r(B)+r(C)$
 - $r(AB)\ge r(A)+r(B)-n$
-  - ★注：若$AB=O$，则$r(A)+r(B)\le n$
+  - 注：若$AB=O$，则$r(A)+r(B)\le n$ ★
 - $r(A)=r({A^T})=r(A^TA)=r(AA^T)$ <1000题 线代134>
 - 伴随的秩$r(A^*)$ （证明在9讲例题5.25） ★★★
   - $n, \quad r(A)=n$
@@ -462,12 +462,12 @@ A的解完全是B的解，A可以被B线性表示
   - 可以用的方法有
     - 左右两边同乘一个矩阵或者重组 <闭关修炼 2.4.7>
     - 转化为齐次方程组（$\left[{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{n}\right]X=0$，把$k_i$看做方程组的解）只有零解
-    - 与特征值、基础解系和正定综合 <1000题 线代91(略), 92(略)>
+    - 与特征值、基础解系和正定综合 <1000题 线代91(略), 线代92(略), 线代187>
 
 - 用秩 <闭关修炼 2.4.9>
 
   - 新向量组是原向量组的线性组合 <1000题 线代86, 线代87>
-  - 利用秩的公式 <1000题 线代90>
+  - 利用秩的公式 <1000题 线代90, 线代101>
 
 ## 向量组等价
 
@@ -481,7 +481,9 @@ A的解完全是B的解，A可以被B线性表示
 
 概念：${\alpha}=a_{1} {\xi}_{1}+a_{2} {\xi}_{2}+\cdots+a_{n} {\xi}_{n}$，其中$\xi_i$为基（方程组未知量），$a_i$为坐标（是非齐次方程组的唯一解，那么$\left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right]$是满秩的，即都是线性无关的）。
 
-过渡矩阵：$\left[{\eta}_{1}, {\eta}_{2}, \cdots, {\eta}_{n}\right]=\left[{\xi}_{1}, {\xi}_{2}, \cdots, \xi_{n}\right] {C}$，$C$称为$\xi_i$到$\eta_i$的过渡矩阵。
+过渡矩阵：$\left[{\eta}_{1}, {\eta}_{2}, \cdots, {\eta}_{n}\right]=\left[{\xi}_{1}, {\xi}_{2}, \cdots, \xi_{n}\right] {C}$，$C$称为$\xi_i$到$\eta_i$的过渡矩阵 <1000题 线代105>
+
+- 注意C的位置是在$\left[{\xi}_{1}, {\xi}_{2}, \cdots, \xi_{n}\right] $的后面
 
 坐标变换：${\alpha}=\left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right] {x}=\left[{\eta}_{1}, {y}_{2}, \cdots, {y}_{n}\right] {y}\Leftrightarrow \left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right] {x} = \left[{\xi}_{1}, {\xi}_{2}, \cdots, {\xi}_{n}\right] Cy$，则$x=Cy$叫坐标变换。
 
@@ -491,7 +493,7 @@ A的解完全是B的解，A可以被B线性表示
 
 ## 特征值和特征向量
 
-定义：$A\xi=\lambda\xi$，其中$\lambda$称为特征值，$\xi$称为特征向量
+定义：$A\xi=\lambda\xi(\xi\ne0)$，其中$\lambda$称为特征值，$\xi$称为特征向量
 
 **特征值**
 
@@ -499,22 +501,26 @@ A的解完全是B的解，A可以被B线性表示
   - $\lambda_0$是特征值 $\Leftrightarrow$ $|\lambda_0 E-A|=0$
   - $\lambda_0$不是特征值 $\Leftrightarrow$ $|\lambda_0 E-A|\neq0$（矩阵可逆、满秩）
   - 拓展：$|aA+bE|=0$ $\Leftrightarrow$ $\lambda = -\frac{b}{a}$
-- 特征值与行列式的关系：$|A|=\lambda_1\lambda_2\cdots\lambda_n$
+- 特征值与行列式的关系：$|A|=\lambda_1\lambda_2\cdots\lambda_n$ <1000题 线代162>
 - 特征值与迹的关系：$tr(A)=a_{11}+\cdots+a_{nn}=\lambda_1+\cdots+\lambda_n$
 - 公式，假设矩阵A的特征值为$\lambda$，特征向量为$\xi$
   - $f(A)$的特征值为$f(\lambda)$，特征向量为$\xi$ ★
     - 具体情况1：$kA$的特征值为$k\lambda$
     - 具体情况2：$A^k$的特征值为$\lambda^k$
+      - $A^k$的特征向量未必是$A$的特征向量 <1000题 线代171>
     - 特殊情况：$f(A)=O$则$f(\lambda)=0$
-  - $A^{-1}$的特征值为$\frac{1}{\lambda}$，特征向量为$\xi $ ★
+  - $A^{-1}$的特征值为$\frac{1}{\lambda}(\lambda\ne0)$，特征向量为$\xi $ <1000题 线代180> ★
     - 证明过程：$A\xi=\lambda\xi \Rightarrow A^{-1}A\xi = \lambda A^{-1}\xi \Rightarrow A^{-1}\xi=\frac{1}{\lambda}\xi$
-  - $A^*$的特征值为$\frac{|A|}{\lambda}$，特征向量为$\xi$ ★★★
+  - $A^*$的特征值为$\frac{|A|}{\lambda}(\lambda\ne0)$，特征向量为$\xi$ ★★★
     - 证明过程：$A^*A\xi = \lambda A^*\xi  \Rightarrow |A|\xi = \lambda A^*\xi \Rightarrow A^*\xi = \frac{|A|}{\lambda}\xi$
+    - $A^*$的特征向量未必是$A$的特征向量 <1000题 线代171>
   - $P^{-1}AP$的特征值为$\lambda$，特征向量为$P^{-1}\xi$
     - 证明过程：$(P^{-1}AP)(P^{-1}\xi) = \lambda (P^{-1}\xi)$
   - $A$与$A^T$的特征值相同，特征向量完全不同，需要另行计算
     - 证明特征值相同：$|\lambda E - A|=|(\lambda E - A)^T|（行列式性质）=|\lambda E-A^T| = 0$
 - 伴随矩阵特征值与矩阵特征值的关系：设$\lambda_1, \lambda_2, \lambda_3$是矩阵A的特征值，则$\lambda_1^*=\frac{|A|}{\lambda_1}=\frac{\lambda_1\lambda_2\lambda_3}{\lambda_1}=\lambda_2\lambda_3$，同理可以得到$\lambda_2^*=\lambda_1\lambda_3$和$\lambda_3^*=\lambda_1\lambda_2$，即$A_{11}+A_{22}+A_{33}=\lambda_2\lambda_3+\lambda_1\lambda_3+\lambda_1\lambda_2$
+- $A+E$的特征值为$\lambda_1+1, \cdots, \lambda_n+1$，其中$\lambda_i(i=1, \cdots, n)$为A的特征值 <1000题 线代162>
+- $AB$与$BA$有相同的特征值（不是一样的特征值） <1000题 线代185>
 
 **特征向量**
 
@@ -526,6 +532,13 @@ A的解完全是B的解，A可以被B线性表示
   - $\xi_1 \rightarrow \lambda, \xi_2 \rightarrow \lambda$，在$k_1$与$k_2$不全为0的情况下，可以推出$k_1\xi_1+k_2\xi_2 \rightarrow \lambda$ ★
     - 例如，$\xi$是特征向量，则$-\xi$也是特征向量
   - $\xi_1 \rightarrow \lambda_1, \xi_2 \rightarrow \lambda_2$且$\lambda_1\ne\lambda_2$，在$k_1$与$k_2$不全为0的情况下，可以推出$k_1\xi_1+k_2\xi_2$不是任何特征值的特征向量 ★
+- 遇到求$A^n\beta$，先将$\beta$用特征向量表示出来，然后再利用特征值性质$A^n$的特征值为$\lambda^n$求解 <1000题 线代193>
+- $A=\alpha\beta^T$，即$r(A)=1$的矩阵，在$\alpha\ne0$和$\beta\ne0$的情况下，$\lambda_1=tr(A)$对应的特征向量为$\alpha$，其余的特征向量为$\left[\begin{array}{c}{b_2} \\ {-b_1} \\ 0 \\  {\vdots} \\ {0}\end{array}\right], \left[\begin{array}{c}{b_3} \\ {0} \\ -b_1 \\  {\vdots} \\ {0}\end{array}\right], \cdots, \left[\begin{array}{c}{b_n} \\ {0}\\  {\vdots} \\ {0} \\ -b_1 \end{array}\right]$ <1000题 线代205>
+
+**特征值和特征向量综合**
+
+- 已知$A\sim B$、B的具体型以及A的特征值和特征向量，反求A <1000题 线代191>
+  - 利用已知构造$P$，然后利用$P^{-1}AP=B$反求A
 
 **矩阵方程**
 
@@ -551,15 +564,16 @@ A的解完全是B的解，A可以被B线性表示
 **充要条件**
 
 - A有n个无关特征向量 $\Leftrightarrow$ $A\sim\Lambda$
+  - 设$P=[\xi_1, \xi_2, \cdots, \xi_n]$，其中P的秩为n（$\xi_i$线性无关），则$P^{-1}AP=\Lambda$
 - $n_i = n-r(\lambda_iE-A)$，其中$\lambda_i$是$n_i$的重根 $\Leftrightarrow$ $A\sim\Lambda$
   - 证明：根据特征向量的重要结论可知，特征值不同时特征向量必不同，但是反过来如果特征值（重根）相同，那么还需要进一步证明其对应的特征向量是否线性无关，证明的手法就是利用$(\lambda_iE-A)X=0$，如果基础解析的个数正好是相同特征值的个数，那么我们就有理由相信A有n个无关的特征向量，进而可以推出$A\sim\Lambda$ [参见 `相似理论 > 特征值和特征向量 > 秩 > 证明`]
 
 **充分条件**
 
-- A是实对称矩阵 $\Rightarrow$ $A\sim\Lambda$
+- A是实对称矩阵 $\Rightarrow$ $A\sim\Lambda$ <1000题 线代174>
 - A有n个不同的特征值 $\Rightarrow$ $A\sim\Lambda$
   - 因为A有n个不同的特征值必可以推出A有n个无关特征向量
-- $A^2=A$  $\Rightarrow$ $A\sim\Lambda$
+- $A^2=A$  $\Rightarrow$ $A\sim\Lambda$ <1000题 线代203>
 - $A^2=E$  $\Rightarrow$ $A\sim\Lambda$
 - $r(A)=1$且$tr(A)\neq0$  $\Rightarrow$ $A\sim\Lambda$
 
@@ -587,10 +601,10 @@ $A\sim B$的必要条件
 
 可用于求参数、否定
 
-**重要结论** ★
+**重要结论** <1000题 线代196> ★
 
 - $A\sim B \Rightarrow A^T\sim B^T, A^{-1}\sim B^{-1}, A^*\sim B^*$
-- $A\sim B \Rightarrow A^n\sim B^n, f(A)\sim f(B)$
+- $A\sim B \Rightarrow A^n\sim B^n, f(A)\sim f(B)$ <1000题 线代158>
   - 更特殊的：$A\sim \Lambda \Rightarrow A^n\sim \Lambda^n, f(A)\sim f(\Lambda)$ ★★★
 - $A\sim B , B\sim\Lambda \Rightarrow A\sim\Lambda$
   - 根究定义可知$P^{-1}AP=B, Q^{-1}BQ=\Lambda$
@@ -619,5 +633,129 @@ $A\sim B$的必要条件
 
 **实对称矩阵**
 
-- 若$\lambda_1\ne\lambda_2$，则$\xi_1\perp\xi_2$ [参见 `相似理论 > 特征值和特征向量 > 特征向量`]
+- 若$\lambda_1\ne\lambda_2$，则$\xi_1\perp\xi_2$ [参见 `相似理论 > 特征值和特征向量 > 特征向量`] <1000题 线代191>
 - 若A为实对称矩阵，则必可以用一个正交矩阵P，使得$P^{-1}AP=\Lambda$
+
+# 二次型
+
+前提：矩阵A为实对称矩阵。
+
+## 配方法
+
+**含平方项**
+
+- 配方，假设会得到$f=(ax_1+bx_2+cx_3)^2+(dx_2+ex_3)^2$
+- 换元，令$y_1=ax_1+bx_2+cx_3$，$y_2=dx_2+ex_3$
+- 反解，求出$y_i\rightarrow x_i$的变换矩阵$C_1$
+- 化为标准型
+- 再次换元（以下步骤为求规范型，其特征是前面的系数要么为+1要么为-1）
+- 反解，求出$z_i \rightarrow y_i$变换矩阵$C_2$
+- 化为规范型，从普通的化为规范型的矩阵是$C=C_1C_2$
+
+**不含平方项**
+
+- 不含平方项要创造平方项，即可以通过平方差公式来进行 <闭关修炼 2.6.3>
+
+**常用场合**
+
+- 求正惯性指数p、负惯性指数q
+  - 补充：正惯性指数指的是正系数的个数（也即正特征值的个数），负惯性指数指的是负系数的个数（也即负特征值的个数），另外$p+q=r(A)$，其意义是非零特征值的个数是该矩阵的秩
+- 判断A的正定型
+  - 补充：所谓的正定型是指矩阵的系数只能为正，不能为零或负数
+
+**矩阵语言**
+
+- 实对称矩阵A，必存在可逆矩阵C，使得$C^TAC=\Lambda$
+
+## 正交变换法
+
+**基本步骤**
+
+对于$f=x^TAx$
+
+- 求A的特征值$\lambda_1, \lambda_2, \cdots, \lambda_n$
+- 求特征值对应的特征向量$\xi_1, \xi_2, \cdots, \xi_n$
+- 将$\xi_1, \xi_2, \cdots, \xi_n$正交化、单位化为$\eta_1, \eta_2, \cdots, \eta_n$
+  - 正交化使用施密特正交法：对于任给的$\alpha_1, \alpha_2$，则$\beta_1=\alpha_1$，则$\beta_2=\alpha_2-\frac{(\alpha_2, \beta_1)}{(\beta_1, \beta_1)}\beta_1$，其原理是将$\alpha_2$投影到$\beta_1$上去，然后用$\alpha_2-投影向量$，即可得到两个正交向量
+  - 单位化
+- 令$Q=(\eta_1, \eta_2, \cdots, \eta_n)$，可得$Q^{-1}AQ=Q^TAQ=\Lambda$
+- 令$x=Qy$，则$f=x^TAx=(Qy)^TAx=y^T(Q^TAQ)y=y^T\Lambda y $ （化到这一步是标准型）
+- 如果要求化为规范型，请参考`二次型 > 配方法 > 含平方项`
+
+**考法**
+
+- 反求参数
+
+- 反求A
+
+- 最值问题
+  - 条件
+    - 是二次型问题，设$f=x^TAx=y^TQ^TAQy$
+    - A的特征值$\lambda_1\le\lambda_2\le\cdots\le\lambda_n$
+  - 结论
+    - $\lambda_1x^Tx \le x^Tx \le \lambda_nx^Tx$，这里$x^Tx=x_1^2+x_2^2+\cdots+x_n^2$
+    - 若$x^Tx=1$，则$f_{max}=\lambda_n$，$f_{min}=\lambda_1$
+
+- 几何应用
+
+  | $\lambda_1, \lambda_2, \lambda_3$的符号 | $f(x_1, x_2, x_3)=1$ |
+  | :-------------------------------------: | :------------------: |
+  |                   3正                   |    椭球面（左1）     |
+  |                 2正1负                  |  单叶双曲面（左2）   |
+  |                 1正2负                  |  双叶双曲面（左3）   |
+|                 2正1零                  |   椭圆柱面（右2）    |
+  |                1正1负1零                |   双曲柱面（右1）    |
+
+  <img height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Ellipsoid_cut_by_plane.gif/440px-Ellipsoid_cut_by_plane.gif"/><img height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/HyperboloidOfOneSheet.png/300px-HyperboloidOfOneSheet.png"/><img height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/HyperboloidOfTwoSheets.png/300px-HyperboloidOfTwoSheets.png"/><img height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cylinder_geometry.svg/324px-Cylinder_geometry.svg.png"/><img height="150" src="http://res.niuxuewei.com/2019-08-02-040048.png"/>
+
+  注：
+  
+  - 这里$f(x_1, x_2, x_3)=2$也可以
+
+## 实对称矩阵合同
+
+- 前提：实对称矩阵
+- A与B合同 $\Leftrightarrow$ 存在可逆矩阵C，使得$C^TAC=B$ $\Rightarrow$ $p_A=p_B, q_A=q_B$，即A正惯性指数等于B，A的负惯性指数等于B
+- 与相似的联系：相似必合同，因为相似要求特征值要相同
+- 考法：
+  - 告知A和B，求C，使得$C^TAC=B$ <闭关修炼 2.6.15>
+    - 结题技巧：利用二次型化为标准型，来求出C
+  - A合同于B，B合同于C，则A合同于C
+    - 证明方法：$P^TAP=B, Q^TBQ=C \Rightarrow (PQ)^TA(PQ)=C$
+
+## 正定二次型
+
+**前提**
+
+- $A=A^T$
+
+**充要条件**
+
+$f=x^TAx$正定
+
+- $\Leftrightarrow$ $\forall x\ne0, f>0$
+- $\Leftrightarrow$ $p=n$，即系数全整（p是正惯性指数）
+- $\Leftrightarrow$ A的特征值全部大于0
+- $\Leftrightarrow$ $A=D^TD$，其中D是一个可逆矩阵 <闭关修炼 2.6.20>
+- $\Leftrightarrow$ A合同于E <闭关修炼 2.6.20>
+- $\Leftrightarrow$ A的顺序主子式全部大于0 <闭关修炼 2.6.18>
+
+**必要条件**
+
+- $a_{ii}>0$，A中的主对角线元素大于0
+- $|A|>0$，因为A的顺序主子式全部大于0
+
+**重要结论** ★
+
+- 如果A正定，则以下矩阵全部正定
+  - $kA$
+  - $A^{-1}$
+  - $A^*$
+  - $A^m$，m为正整数
+  - $C^TAC$，C为可逆矩阵
+- A和B正定，则下列全部正定
+  - $A+B$
+  - $\left[\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right]$
+- A和B正定且AB=BA，则AB正定
+- A正定且A是正交矩阵，则A=E
+
