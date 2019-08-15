@@ -106,3 +106,90 @@ pick up
   - 未决定的；悬而未决的 undecided about someone or something; uncertain about someone or something.
     - I don’t know what Sally plans to do. Things were sort of up in the air the last time we talked.
     - Let’s leave this question up in the air until next week.
+
+**RC - Passage 5**
+
+- for centuries
+  - 几个世纪以来
+- cut and dried
+  - 死板的；老套的 fixed; determined beforehand; usual and uninteresting.
+    - I find your writing quite boring. It’s too cut and dried.
+    - The lecture was, as usual, cut and dried.
+- be filled with
+  - 全是；满是
+    - History is filled with examples of it.
+- amount to
+  - 变得成功 to become worthwhile or successful.
+    - I hope Charles amounts to something some day.
+    - I doubt that this business will ever amount to anything really profitable.
+  - 相当于 [for something] to be the equivalent of something.
+    - Why, doing this amounts to cheating!
+    - Your comments amount to treason.
+- put *someone or something* forward
+  - 移动 to move someone or something forward.
+    - The director put all the players forward during the last scene, leaving more room for the chorus to come on for the finale.
+    - Could you put your left foot forward a little?
+  - 提出 to suggest someone or something
+    - I would like to put forward a plan.
+- carry something out
+  - to perform a task; to perform an assignment.
+    - “This is a very important job,” said Jane. “Do you think you can carry it out?”
+- in favor (of someone or something )
+  - 支持
+    - Are you in favor of lower taxes?
+
+# 2000
+
+**CT**
+
+- insure against *something*
+  - 保证...以免受...;预防 to guard or protect against something.
+    - You must insure against theft and fire.
+    - I will insure against all risks.
+
+**RC - Passage 1**
+
+- at a loss
+  - 茫然；不知所措 uncertain as to how to proceed
+    - By the mid-1980s Americans had found themselves at a loss over their fading industrial competitiveness.
+- sweep into
+  - 冲入；跑进 to dash or run into some place
+    - The kids swept into the candy store and bought little bits of things.
+    - They swept in and spent all of a dollar before they left.
+- on the ropes
+  - 处境岌岌可危；处于不利境地 in a defensive and often helpless position
+    - America's machine-tool industry was on the ropes.
+- as though
+  - 好像 = as if
+    - It's as though she invented the term.
+- for a while
+  - 暂时；一段时间
+- take *someone or something* for granted
+  - 认为...理所应当；轻视 to expect someone or something to be always available to serve in some way without thanks or recognition; to value someone or something too lightly.
+    - I wish you didn’t take me for granted.
+    - I guess that I take a lot of things for granted.
+- inquire into
+  - 调查；探究 to look into something; to investigate something by asking questions.
+    - I will inquire into your complaint. It sounds as if something is wrong.
+    - We have not inquired into it yet.
+- yield to
+  - 取代
+    - Self-doubt has yielded to blind pride.
+  - 放弃
+    - Will she yield to growing pressure for her to retire?
+
+**RC - Passage 3**
+
+- with regard to = in regard to
+  - 就...而言；关于 concerning someone or something.
+    - What shall we do in regard to planning dinner?
+    - With regard to Bill, I think he is working too hard.
+- make up
+  - 制造；构成 to constitute something.
+    - Two chapters make up this volume.
+    - Over forty freight cars made up the train.
+- at will
+  - 随意的 whenever one wants; freely.
+    - You’re free to come and go at will.
+    - The soldiers were told to fire their guns at will.
+    - You can eat anything you want at will.

@@ -5,7 +5,7 @@
 常见前$n$项和
 - $\sum\limits_{k = 1}^n {k = 1 + 2 +  \cdots  + n} =\frac{n(n+1)}{2}$
 - $\sum\limits_{k = 1}^n {\left( {2k - 1} \right) = 1 + 3 +  \cdots  + \left( {2n - 1} \right)} $
-- $\sum\limits_{k = 1}^n {{k^2} = 1 + {2^2} +  \cdots  + {n^2}} $
+- $\sum\limits_{k = 1}^n {{k^2} = 1 + {2^2} +  \cdots  + {n^2}} = \frac{n(n+1)(2n+1)}{6}$ <1000题 概率112>
 - $\sum\limits_{k = 1}^n {{k^3} = 1 + {2^3} +  \cdots  + {n^3}} $
 - $\sum\limits_{k = 1}^n {k\left( {k + 1} \right) = 1 \times 2 + 2 \times 3 +  \cdots  + n \times \left( {n + 1} \right)} $
 - $\sum\limits_{k = 1}^n {{1 \over {k\left( {k + 1} \right)}} = {1 \over {1 \times 2}} + {1 \over {2 \times 3}} +  \cdots  + {1 \over {n \times \left( {n + 1} \right)}}} $
@@ -46,15 +46,18 @@
 10. 对于任意的$x$有$e^x\geq x+1$
 11. 对于$x>0$有$\ln x<x-1$
 
-## 方程求根问题
+## 方程根问题
 
 - 高阶方程求根：试根法+除法 <1000题8.37>
+- 根与系数的关系（韦达定理）
+  - $\displaystyle x_1+x_2 = -\frac{b}{a}$
+  - $\displaystyle x_1x_2 = \frac{c}{a}$
 
 ## 因式分解公式
 
 - $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3, 线代19>
 - $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19>
-- $a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2} b+\dots+a b^{n-2}+b^{n-1} \right)$ <1000题 线代62>
+- $a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2} b+\dots+a b^{n-2}+b^{n-1} \right)$ <1000题 线代62; 闭关修炼 1.1.10>
 - n是<u>正偶数</u>时，$a^{n}-b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\dots+a b^{n-2}-b^{n-1}\right) $ <1000题 线代32>
 - n是<u>正奇数</u>时，$a^{n}+b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\cdots-a b^{n-2}+b^{n-1}\right)$
 - $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$
@@ -100,8 +103,11 @@ $x \to 0$时，等价无穷小公式有：
 - $\lim\limits _{x \rightarrow \infty} \sqrt[n]{n}=1$
 - $\lim\limits_{n\rightarrow\infty} (1+\frac{1}{n})^n=e$ <1000题9.8>
   - 拓展：$\lim\limits_{n\rightarrow\infty} (1+\frac{x}{n})^n=e^x$，对其证明[在这](https://math.stackexchange.com/questions/882741/limit-of-1-x-nn-when-n-tends-to-infinity)
-
 - ${1^\infty }$型公式 $\lim u^v=e^{\lim (u-1)v}$
+
+## 总结极限
+
+- $\lim \limits_{x \rightarrow 0} \frac{1-\cos x \sqrt{\cos 2 x} \cdots \sqrt[n]{\cos n x}}{x^{2}} = \sum\limits^n_{k=1} \frac{k}{2}$ <证明: 闭关修炼 1.1.12>
 
 ## 数列极限
 
@@ -130,12 +136,12 @@ $x \to 0$时，等价无穷小公式有：
 
 - 泰勒通用展开式 *(p89)*
 
-- 常用展开式 *(p41)*
+- 常用展开式
   - $\sin x$
   - $\cos x$
   - $\arcsin x$
   - $\tan x$
-  - $\arctan x$
+  - $\arctan x=x-\frac{x^{3}}{3}+o\left(x^{3}\right)$
   - $\ln \left( {1 + x} \right)$
   - ${e^x}$
   - ${\left( {1 + x} \right)^\alpha }$
