@@ -118,6 +118,11 @@
 - 二项分布$X \sim B(n, p)$
   - 期望：$np$
   - 方差：$npq$
+  - 二项分布与0-1分布的关系：如果$X_i\sim B(1, p)$，即$X_i$服从0-1分布，并且<u>相互独立</u>，则$Y_n = \sum^n\limits_{i=1}X_i \sim B(n, p)$
+  - 求二项分布的三种方法
+    - 当$n$不太大时直接计算，即$P\{X = k\} = C^k_n p^k (1-p)^{n-k}$
+    - 当$n$较大且$p$较小时（$n > 10, p < 0.1$）利用泊松分布近似，即$\displaystyle P\{X = k\} \approx \frac{\lambda^k}{k!}e^{-\lambda} $
+    - 当$n$较大且$p$不太大且<u>求一个范围</u>时利用中心极限定理近似，即$\displaystyle P\{a < X < b\} \approx \Phi(\frac{a - EX}{\sqrt{DY}}) - \Phi(\frac{b - EX}{\sqrt{DY}}) = \Phi(\frac{a - np}{\sqrt{np(1-p)}}) - \Phi(\frac{b - np}{\sqrt{np(1-p)}})$ <1000题 概率142>
 - 泊松分布$X \sim P(\lambda)$
   - 定义：$P\{X=k\} = \frac{\lambda^{k}}{k!} e^{-\lambda}(k=0, 1, \cdots;\lambda>0)$
     - 如果给定$P\{X\le 1\} = P\{X = 0\} + P\{X = 1\}$，因为k只能取0及以上
@@ -247,6 +252,8 @@
       $\begin{aligned}P\{Z=k\}=& P\{\max \{X, Y\}=k\}=P\{X=k, Y=k\}+\cdots +P\{X=k, Y=0\}\\ &+P\{X=k-1, Y=k\}+P\{X=k-2, Y=k\}+\cdots +P\{X=0, Y=k\} \\=& p_{k} q_{k}+p_{k} q_{k+1}+\cdots+p_{k} q_{l}+p_{k+1} q_{k}+p_{k+2} q_{k}+\cdots+p_{l} q_{k}, \quad k= 0,1,2, \cdots, l \end{aligned}$
     - $Z = \min\{X, Y\}$且$0\le X,Y \le l$，则
       $\begin{aligned}P\{Z=k\}=& P\{X=k, Y=k\}+P\{X=k, Y=k+1\}+\cdots+P\{X=k, Y=l\}+\\ & P\{X=k+1, Y=k\}+P\{X=k+2, Y=k\}+\cdots+P\{X=l, Y=k\} \\=& p_{k} q_{k}+p_{k} q_{k+1}+\cdots+p_{k} q_{l}+p_{k+1} q_{k}+p_{k+2} q_{k}+\cdots+p_{l} q_{k}, \quad k= 0,1,2, \cdots, l \end{aligned}$
+  - 最值函数法
+    - $Z = \max\{X_1, X_2, \cdots, X_n\}$，则$P(Z = k) = P(Z \le k) - P(Z \le k-1)$，其意义是最大值小于等于$k$的概率减去最大值小于等于$k-1$的概率，这样最大值只能是$k$ <1000题 概率177>
 - (连, 连) $\rightarrow$ (连)
   - 分布函数法：若$(X, Y) \sim f(x, y), Z=g(X, Y)$，则
     - $\displaystyle F_{z}(z)=P\{g(X, Y) \leqslant z\}$
@@ -274,7 +281,7 @@
       - 若$XY$独立，则$F_{\max}(z) = F_X(z)F_Y(z)$
       - 拓展到n个随机变量，则$F_{\max}(z) = F_{X_1}(z)F_{X_2}(z) \cdots F_{X_n}(z)$
       - 若n个变量iid，则
-        - $F_{\max}(z) = [F(z)]^n$
+        - $F_{\max}(z) = [F(z)]^n$ <1000题 概率171>
         - $f_{\max}(z) = n[F(z)]^{n-1}f(z)$
     - min分布，则$Z = \min\{X, Y\}$
       - $F_{\min}(z) = F(\min\{X, Y\} \le z) = F(\{X \le z\} \cup \{Y \le z\}) = F_X(z) + F_Y(z) - F(z, z)$
@@ -349,6 +356,10 @@ g(X, Y)，同上
 
 - $\displaystyle E Y=\int_{-\infty}^{+\infty} y f_{Y}(y) \mathrm{d} y, E (Y^2)=\int_{-\infty}^{+\infty} y^2 f_{Y}(y) \mathrm{d} y \Rightarrow DY = E(Y^2) - (EY)^2$
 - $\displaystyle E Z=\int_{-\infty}^{+\infty} z f_{Z}(z) \mathrm{d} z, E (Z^2)=\int_{-\infty}^{+\infty} z^2 f_{Z}(z) \mathrm{d} z\Rightarrow DZ = E(Z^2) - (EZ)^2$
+
+统计量法
+
+- 在有正态分布出现的时候，可以考虑借助$\chi^2$分布等手段 <1000题 概率174>
 
 分解
 
@@ -457,18 +468,248 @@ g(X, Y)，同上
 
 ## 切比雪夫不等式
 
-定义：$\forall x > 0$，$\displaystyle P\{|X - EX| \ge \varepsilon \} \le \frac{DX}{\varepsilon^2}$
+定义：$\forall x > 0$，$\displaystyle P\{|X - EX| \ge \varepsilon \} \le \frac{DX}{\varepsilon^2}$或$\displaystyle P\{|X-E X|<\varepsilon\} \geqslant 1-\frac{D X}{\varepsilon^{2}}$
 
 - 解释：指X距离均值的距离大于$\varepsilon$的概率应该小于$\displaystyle DX \over \varepsilon^2$
 
-# 抽样分布
+# 大数定律与中心极限定理
 
-单正态总体分布 *(p161)*
+## 依概率收敛
 
-- $\bar X$
+- 设随机变量$X$与随机变量序列$\{X_n\}$，对于$\forall \varepsilon > 0$，有$\lim \limits_{n \rightarrow \infty} P\left\{\left|X_{n}-X\right|<\varepsilon\right\}=1$，则称随机变量序列$\{X_n\}$依概率收敛于随机变量$X$，记为$X_{n} \stackrel{P}{\longrightarrow} X(n \rightarrow \infty)$ <1000题 概率136>
+  - 随机变量$X$可以被常数$a$代替
+- 证明依概率收敛
+  - 若给定$\{X_n\}$的概率密度或概率分布可以使用定义法，最后通过夹逼准则来求 <1000题 概率136, 概率171>
+  - 当给定$EX = X$（或$\displaystyle \lim_{n\rightarrow\infty} EX = X$）和$DX$时，考虑使用切比雪夫不等式，最后通过夹逼准则来求 <1000题 概率137, 概率179>
+  - 大数定律
 
-- ${ {\sqrt n \left( {\overline X  - \mu } \right)} \over \sigma }$
-- ${{\sqrt n \left( {\bar X - \mu } \right)} \over S}$
-- ${n(\bar X-\mu)^2 \over S^2}$
-- ${1 \over {{\sigma ^2}}}\sum\limits_{i = 1}^n {{{({X_i} - \bar X)}^2}} $
-- ${1 \over {{\sigma ^2}}}\sum\limits_{i = 1}^n {{{({X_i} - \mu )}^2}} $
+## 大数定律
+
+- 都在讲一个问题，即$\displaystyle \frac{1}{n} \sum_{i=1}^{n} X_{i} \stackrel{P}{\longrightarrow} E\left(\frac{1}{n} \sum_{i=1}^{n} X_{i}\right)$，区别就是<u>条件不同</u>
+  - $\displaystyle \frac{1}{n} \sum_{i=1}^{n} X_{i} = \overline{X}$讲的是频率，即实际的实验测试值，如抛硬币10次3次正面7次反面，不是理想化的数值
+  - $\displaystyle E\left(\frac{1}{n} \sum_{i=1}^{n} X_{i}\right) = \mu$讲的是数学期望，是理想的值，如抛硬币正面的期望就是$\displaystyle {1\over2}$
+  - 这个公式本质上反映的就是在测试数据量极大的情况下，频率会无限逼近于期望
+- 条件不同
+  - 切比雪夫大数定律的条件更一般，要求1️⃣$\{X_n\}$相互独立、2️⃣全部$D_i$有相同的上界
+  - 辛钦大数定律限制稍多，要求1️⃣$\{X_n\}$相互独立、2️⃣同分布、3️⃣期望存在
+
+## 中心极限定理
+
+> 中心极限定理就是在符合条件的情况下将任意分布的随机变量转化为正态分布，甚至标准正态分布。
+
+列维-林德伯格定理
+
+- 条件
+  - $X_i$独立同分布
+  - $EX_i = \mu$存在，即$X_i$的期望存在
+  - $DX_i = \sigma^2$存在，即$X_i$的方差存在
+- 那么$\lim\limits_{n\rightarrow\infty} \sum\limits^n_{i=1}X_i \sim N(n\mu, n\sigma^2)$，可将其化为标准正态分布为$\displaystyle \lim\limits_{n\rightarrow\infty} \sum\limits^n_{i=1} \frac{X_i - n\mu}{\sqrt{n}\sigma} \sim N(0, 1)$
+- $\displaystyle P\left\{a<\sum\limits_{i=1}^{n} X_{i}<b\right\} \approx \Phi\left(\frac{b-n \mu}{\sqrt{n} \sigma}\right)-\Phi\left(\frac{a-n \mu}{\sqrt{n} \sigma}\right)$
+
+# 数理统计
+
+> 概率论是从总体出发推测某事件发生的概率，而数理统计是概率论的逆向方式，通过部分（抽样样本）推测总体，这是因为在现实世界中很难抽取总体样本，比如统计学校学生身高总是有人要请假的，因此数理统计是一个通过简单随机抽取的样本来推测总体的学科。
+
+## 统计量的数字特征及分布
+
+样本具有随机性与确定性
+
+- 随机性：比如说，从该大学的女生中抽取一位，但是具体抽出来哪一位是随机的。因此用大写字母$X_{i}, i=1,2, \cdots, n$表示，表示某一次从总体中随机抽取一个个体，这是一个随机变量。
+- 确定性：而某一次抽取的具体女生又是确定的，因此用小写字母$x_{i}, i=1,2, \cdots, n$表示某一次样本的具体值，这是确定的
+
+统计量
+
+- 定义：完全由样本($X_i$)所决定的量叫作统计量
+- 常用统计量
+  - 样本均值 $\displaystyle \overline{X}=\frac{1}{n} \sum\limits_{i=1}^{n} X_{i}$
+    - $E(\overline X) = E(X)$
+    - $\displaystyle D(\overline X) = \frac{D(X)}{n}$
+  - 样本方差 $\displaystyle S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}=\frac{1}{n-1}\left(\sum_{i=1}^{n} X_{i}^{2}-n \overline{X}^{2}\right)$
+    - $X_i$服从标准正态分布时，$D(S^2)$可以利用$\displaystyle \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$求出 <1000题 概率149>
+    - 利用无偏性$E(S^2) = DX$ <1000题 概率156>
+
+统计量的四大分布
+
+- 正态分布
+- $\chi^2$分布
+  - 条件
+    - 相互独立
+    - 服从标准正态分布，即$X_i \sim N(0, 1)$
+  - 定义：如果$\displaystyle X = \sum^n_{i=1}X_i^2$，则称$X$服从自由度为n的$\chi^2$分布
+  - 性质
+    - 若$X_1 \sim \chi^2(n_1), X_2 \sim \chi^2(n_2)$且$X_1, X_2$相互独立，则$X_1+X_2 \sim \chi^2(n_1 + n_2)$
+    - 若$X \sim \chi^2(n)$，则$EX = n, DX = 2n$
+- t分布
+  - 条件
+    - $X \sim N(0, 1)$且$Y \sim \chi^2(n)$
+    - 相互独立
+  - 定义：$\displaystyle t = \frac{X}{\sqrt{Y/n}}$服从自由度为n的t分布
+    - 因为X是服从标准正态分布的，而Y是服从卡方分布的，从结构上来说Y是X的n项平方和，所以为了确保比值的公平和有意义，通常除以n并开根号，这样分母也就与标准正态分布同级了。
+- F分布
+  - 条件
+    - $X \sim \chi^2(n_1)$且$Y \sim \chi^2(n_2)$
+    - 相互独立
+  - 定义：$\displaystyle F = \frac{X / n_1}{Y / n_2}$服从自由度为$(n_1, n_2)$的F分布
+    - 同t分布，为了要保证比值的公平性，所以要各自除以各自的自由度
+  - 性质 <1000题 概率148>
+    - $\displaystyle \frac{1}{F} \sim F(n_2, n_1)$，相当于分子分母互换位置
+    - $\displaystyle F_{1-\alpha}(n_1, n_2) = \frac{1}{F_\alpha(n_2, n_1)}$
+
+单正态总体分布
+
+- $\displaystyle \overline X \sim N(\mu, \frac{\sigma^2}{n})$
+  - 证明：$X_i \sim N(\mu, \sigma^2)$，则$\displaystyle \sum^n_{i=1}X_i \sim N(n\mu, n\sigma^2)$，则$\displaystyle \overline X = \frac{1}{n} \sum^n_{i=1}X_i \sim N(\mu, \frac{\sigma^2}{n})$
+  - 化为标准正态分布：$\displaystyle \frac{\overline X - \mu}{\sigma / \sqrt{n}} = \frac{\sqrt{n}(\overline X - \mu)}{\sigma} \sim N(0, 1)$
+- $\displaystyle {1 \over {{\sigma ^2}}}\sum\limits_{i = 1}^n {{{({X_i} - \mu )}^2}} \sim \chi^2(n)$
+  - 证明：因为$X_i \sim N(\mu, \sigma^2)$，所以$\displaystyle \frac{X_i - \mu}{\sigma} \sim N(0, 1)$，进而$\displaystyle \sum^n_{i=1}\frac{(X_i - \mu)^2}{\sigma^2} \sim \chi^2(n)$
+- $\displaystyle \frac{1}{\sigma^2} \sum^n_{i=1}(X_i - \overline X)^2 = \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$
+  - 证明过程略
+  - 适用于$\mu$未知$\sigma$已知的情况，这里用$\overline X$代替
+- $\displaystyle \frac{\overline X - \mu}{S / \sqrt{n}} \sim t(n-1)$
+  - 证明：因为$\displaystyle \frac{\overline X - \mu}{\sigma / \sqrt{n}} \sim N(0, 1)$且$\displaystyle \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$，则根据t分布定义，$\displaystyle \frac{\frac{\overline X - \mu}{\sigma / \sqrt{n}}}{\sqrt{\frac{(n-1)S^2}{\sigma^2 / (n-1)}}} = \frac{\overline X - \mu}{S / \sqrt{n}} = \frac{\sqrt{n}(\overline X - \mu)}{S} \sim t(n-1)$
+  - 适用于求$\overline X$分布过程中$\sigma$未知的情况，这里用$S$代替
+- $\displaystyle \frac{(\overline X - \mu)^2}{S^2 / n} \sim F(1, n-1)$
+  - 证明：因为$\displaystyle \frac{\overline X - \mu}{\sigma / \sqrt{n}} \sim N(0, 1)$，则$\displaystyle \left(\frac{\overline X - \mu}{\sigma / \sqrt{n}}\right)^2 \sim \chi^2(1)$，进而$\displaystyle \frac{\left(\frac{\overline X - \mu}{\sigma / \sqrt{n}}\right)^2}{\frac{(n-1)S^2}{\sigma^2}} = \frac{(\overline X - \mu)^2}{S^2 / n} = \frac{n(\overline X - \mu)^2}{S^2} \sim F(1, n-1)$ 
+
+## 参数估计
+
+参数估计是在已知分布的背景下求未知参数（参数通常是$\mu$或$\sigma^2$），如已知X服从泊松分布，但不知道参数$\lambda$，因此需要利用现有样本估计参数$\lambda$（在泊松分布下$\lambda = EX = \mu$）
+
+另外$\displaystyle E\overline X = \frac{1}{n} \sum^n_{i=1}EX_i$，这个与$EX$无直接关系。
+
+### 点估计
+
+> 估计值与估计量在结构上是一样的，但是估计量需要小写$x$，如$x_i$，相反估计量需要大写，如$X_i$
+
+矩估计
+
+- 一个参数
+  - 一阶矩：$\overline X = EX$
+  - 二阶矩：$\displaystyle \frac{1}{n}\sum^n_{i=1}X_i^2 = E(X^2) $ <1000题 概率168(利用无穷级数解题)>
+- 二个参数
+  - 一阶矩+二阶矩
+
+最大似然估计
+
+- 最大似然函数
+  - 离散型
+    $\displaystyle L\left(x_{1}, x_{2}, \cdots, x_{n} ; \theta\right)=\prod_{i=1}^{n} f\left(x_{i} ; \theta\right) = P\left(X=X_{1}\right) P\left(X=X_{2}\right) \cdots P\left(X=X_{n}\right)$
+    可以将$(X_1, \cdots, X_n)$看做一个联合概率分布，而实验与实验间都是<u>独立同分布</u>的，因此可以通过相乘求得联合概率分布。
+    - 例如抛硬币每次抛10次，做了两次实验，一次得到6次正面，一次得到5次正面，在$p$不知道的情况下我们可以写出概率分布如下所示$\displaystyle P(X=6) P(X=5)=\left(\begin{array}{c}{10} \\ {6}\end{array}\right) p^{6}(1-p)^{4} \cdot\left(\begin{array}{c}{10} \\ {5}\end{array}\right) p^{5}(1-p)^{5}$这样就求出一个关于$p$的函数，求导后即可获得$p$的最大似然估计值
+  - 连续型与离散型类似，只不过$P(X=x_i)$换为了$f(x_i)$，然后相乘即可，其最大似然函数为
+    $\displaystyle L\left(x_{1}, x_{2}, \cdots, x_{n} ; \theta\right)=\prod_{i=1}^{n} f\left(x_{i} ; \theta\right) = f(x_1)f(x_2)\cdots f(x_n)$
+- 取对数求导即可
+  - 对于双参数问题，即$\mu, \sigma^2$均不知道的情况下，在取对数之前的步骤是完全一致的，但是求导改为求偏导（分别对$\mu$和$\sigma^2$求偏导），然后分别求出最大值即可 <1000题 概率161>
+  - 不通过求导直接确定最大值 <1000题 概率177>
+
+估计量优劣判定
+
+- 一致性（相合性）：$\displaystyle \lim _{n \rightarrow \infty} P(|\hat{\theta}-\theta|<\epsilon)=1$ <1000题 概率171>
+- 无偏性：在一致性的基础上，$E(\hat{\theta})=\theta $ <1000题 概率172>
+  - 其实$E(\hat{\theta})$是一个与样本有直接关系的量（也就是掺杂着$X_i$的量），而$\theta$是被预测的量。这两个值相等意味着我的估计与原有式子理论上是一致的。比如$\displaystyle \frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}, \quad \frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}$都是方差一致估计量，但是前者更好，因为满足无偏性。
+- 有效性：在无偏性的基础上，$D\hat{\theta}_{1} \le D\hat{\theta}_{2}$，即$\hat{\theta}_{1}$相对波动较小，因此更有效
+
+### 区间估计
+
+#### 原理
+
+[推荐阅读[马同学的概率教程](https://www.matongxue.com/lessons/766)]“以点估点”的方法是不可取的，就以$\mu$与$\overline X$的关系而言，$\overline X$的结果很难等于$\mu$，也就是随便一次的样本均值很难等于总体均值，所以我们以每次$\overline X$为中心扩展一个区域，那么相对来说在这个区域上更容易包含$\mu$这个点，如下图所示：
+
+<img src="http://res.niuxuewei.com/2019-08-21-022152.png" width="500"/>
+
+置信区间为95%说明，有100个$\overline X$我可以很有把握的说有95个区域包含了$\mu$，那么这个区间长度应该如何定夺？其实很简单，在前面我们说过如果总体服从正态分布，则$\displaystyle \overline X \sim N(\mu, \frac{\sigma^2}{n})$，可以看到$\overline X$的期望与总体的期望一致（这是这个方法能够起效的核心），也就是可以利用$\overline X$的分布来确定区域。
+
+<img src="http://res.niuxuewei.com/2019-08-21-023055.png" width="400"/>
+
+如上图所示，紫色的区间即为$\overline X$的概率密度函数，绿色的点为实际$\overline X$的样本，紫色的阴影对应的宽度($\overline \mu - \underline \mu$)可以作为置信区间的宽度，这样我就有理由相信以$\overline \mu - \underline \mu$为宽度的区间就是我们要找的95%置信水平的置信区间 。
+
+#### 结论
+
+- $\sigma^2$已知，估$\mu$：利用$\displaystyle Z= \frac{\overline X - \mu}{\sigma / \sqrt n} \sim N(0, 1)$，那么我们要求出$\displaystyle P\left(-z_{\alpha / 2}<Z<z_{\alpha / 2}\right) = 1-\alpha$，最终移项后我们可以得到$\displaystyle P\left(\overline{X}-\frac{\sigma}{\sqrt{n}} z_{\alpha / 2}<\mu<\overline{X}+\frac{\sigma}{\sqrt{n}} z_{\alpha / 2}\right)=1-\alpha$，最终我们获得的区间为$\displaystyle \left(\overline{X} \pm \frac{\sigma}{\sqrt{n}} z_{\alpha / 2}\right)$
+
+<img src="http://res.niuxuewei.com/2019-08-21-024029.png" width="500"/> 
+
+- $\sigma^2$未知，估$\mu$：利用$\displaystyle T = \frac{\overline X - \mu}{S / \sqrt n} \sim t(n-1)$，那么通过与上面一样的移项后，可以获得的区间为$\displaystyle \left(\overline{X} \pm \frac{S}{\sqrt{n}} t_{\alpha / 2}(n-1)\right)$
+<img src="http://res.niuxuewei.com/2019-08-21-024851.png" width="500"/>
+
+## 假设检验
+
+### 原理
+
+[推荐阅读[马同学的概率教程](https://www.matongxue.com/lessons/733)]假设检验是需要先画出一个随机变量的概率分布，假设是正态分布，设$H_0: \mu \le \mu_0$（$\mu_0$是已知数），为了方便说明可以假设$\mu = \mu_0$，如下图（已经将其标准化）：
+
+<img src="http://res.niuxuewei.com/2019-08-21-055010.png" width="500"/>
+
+可以看到当样本取值在蓝色阴影区域的时候，这件事情的发生已经变成一个小概率事件了，因此就称为拒绝域，当一次实验的样本落入该区域时我们就可以拒绝$H_0$假设，而接受备择假设。但该拒绝域只拒绝了$\mu = \mu_0$，还有$\mu < \mu_0$需要检验，但是$\mu$减少之后整个分布左移动，$\mu = \mu_0$得到的拒绝域仍然成立，如下图所示。
+
+<img src="http://res.niuxuewei.com/2019-08-21-060242.png" width="500"/>
+
+不管怎么说拒绝域一直都是上方蓝色区域。
+
+以上单边检测，双边检测与单边检测类似，只是$H_0: \mu = \mu_0$，他是在说这样一个事情，比如考试怎么证明一个人会不会，那肯定是看考试成绩，单边检测是说这个人考100分时可以拒绝原假设认为这个人学习很好，而双边检测则是说这个人考0分也是学习很好（需要完美避开全部正确答案），所以双边检测的拒绝域是分布在两边的，如下图所示。
+
+<img src="http://res.niuxuewei.com/2019-08-21-060712.png" width="500"/>
+
+假设检验与置信区间有着某种冥冥之间的关系：如果置信区间的置信水平为$1-\alpha$，而拒绝域的显著性水平为$\alpha$，则置信区间以外就是拒绝域。
+
+![image-20190821141101671](http://res.niuxuewei.com/2019-08-21-061102.png)
+
+### 正态总体下的假设检验
+
+期望假设检验
+
+- $\sigma^2$已知时
+  - 单边检验，假设为$H_0: \mu \leq \mu_0, H_1: \mu > \mu_0$
+    - 将$\displaystyle \overline X \sim N(\mu_0, \frac{\sigma^2}{n})$其转换为标准正态分布$\displaystyle Z=\frac{\overline{X}-\mu_{0}}{\sigma / \sqrt{n}} \sim N(0,1)$
+    - 画出概率密度分布图，蓝色区域为拒绝域(Fig. 1)
+    - 拒绝域为$Z > z_\alpha$，因此$\displaystyle \overline X > \mu_0 + \frac{\sigma}{\sqrt n}z_\alpha$
+  - 单边检验，假设为$H_0: \mu \geq \mu_0, H_1: \mu < \mu_0$
+    - 将$\displaystyle \overline X \sim N(\mu_0, \frac{\sigma^2}{n})$其转换为标准正态分布$\displaystyle Z=\frac{\overline{X}-\mu_{0}}{\sigma / \sqrt{n}} \sim N(0,1)$
+    - 画出概率密度分布图，蓝色区域为拒绝域(与Fig. 1情况相反)
+    - 拒绝域为$Z < -z_\alpha$，因此$\displaystyle \overline X < \mu_0 - \frac{\sigma}{\sqrt n}z_\alpha$
+  - 双边检验，假设为$H_0: \mu = \mu_0, H_1: \mu \neq \mu_0$
+    - 将$\displaystyle \overline X \sim N(\mu_0, \frac{\sigma^2}{n})$其转换为标准正态分布$\displaystyle Z=\frac{\overline{X}-\mu_{0}}{\sigma / \sqrt{n}} \sim N(0,1)$
+    - 画出概率密度分布图，蓝色区域为拒绝域(Fig. 2)
+    - 拒绝域为$Z \leq -z_{\alpha / 2} \cup Z \geq z_{\alpha / 2}$，则$\displaystyle \overline X \leq \mu_0 - \frac{\sigma}{\sqrt n} z_{\alpha / 2} \cup \overline X \geq \mu_0 + \frac{\sigma}{\sqrt n} z_{\alpha / 2}$
+
+<div style="text-align:center">
+    <div style="float: left">
+      <img src="http://res.niuxuewei.com/2019-08-21-063816.png" height="200">
+      <br>
+      <p style="text-align:center; width: 100%">Fig. 1</p>
+    </div>
+    <div style="float: left">
+      <img src="http://res.niuxuewei.com/2019-08-21-063458.png" height="200">
+      <br>
+      <p style="text-align:center; width: 100%">Fig. 2</p>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+- $\sigma^2$未知时
+  - 单边检验，假设为$H_0: \mu \leq \mu_0, H_1: \mu > \mu_0$
+    - 将$\displaystyle \overline X \sim N(\mu_0, \frac{\sigma^2}{n})$其转换为$t(n-1)$分布$\displaystyle T = \frac{\overline X - \mu_0}{S / \sqrt n}$
+    - 画出概率密度分布图，蓝色区域为拒绝域(Fig. 3)
+    - 拒绝域为$T \geq t_{\alpha}(n-1)$，则$\displaystyle \overline X \geq \mu_0 + \frac{S}{\sqrt n} t_{\alpha}(n-1)$
+  - 单边检验，假设为$H_0: \mu \geq \mu_0, H_1: \mu < \mu_0$
+    - 将$\displaystyle \overline X \sim N(\mu_0, \frac{\sigma^2}{n})$其转换为$t(n-1)$分布$\displaystyle T = \frac{\overline X - \mu_0}{S / \sqrt n}$
+    - 画出概率密度分布图，蓝色区域为拒绝域(与Fig. 3情况相反)
+    - 拒绝域为$T \leq -t_{\alpha}(n-1)$，则$\displaystyle \overline X \leq \mu_0 - \frac{S}{\sqrt n} t_{\alpha}(n-1)$
+  - 双边检验，假设为$H_0: \mu = \mu_0, H_1: \mu \neq \mu_0$
+    - 将$\displaystyle \overline X \sim N(\mu_0, \frac{\sigma^2}{n})$其转换为$t(n-1)$分布$\displaystyle T = \frac{\overline X - \mu_0}{S / \sqrt n}$
+    - 画出概率密度分布图，蓝色区域为拒绝域(Fig. 4)
+    - 拒绝域为$T \leq -t_{\alpha / 2}(n-1) \cup T \geq -t_{\alpha / 2}(n-1)$，则$\displaystyle \overline X \leq \mu_0 - \frac{S}{\sqrt n}t_{\alpha / 2}(n-1) \cup \overline X \geq \mu_0 + \frac{S}{\sqrt n}t_{\alpha / 2}(n-1)$
+
+<div style="text-align:center">
+    <div style="float: left">
+      <img src="http://res.niuxuewei.com/2019-08-21-064225.png" height="200">
+      <br>
+      <p style="text-align:center; width: 100%">Fig. 3</p>
+    </div>
+    <div style="float: left">
+      <img src="http://res.niuxuewei.com/2019-08-21-064427.png" height="200">
+      <br>
+      <p style="text-align:center; width: 100%">Fig. 4</p>
+    </div>
+    <div style="clear:both"></div>
+</div>

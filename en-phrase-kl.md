@@ -193,3 +193,38 @@ pick up
     - You’re free to come and go at will.
     - The soldiers were told to fire their guns at will.
     - You can eat anything you want at will.
+
+**RC - Passage 4**
+
+- *A* be typical of *B*
+  - B以A为特色；A是B特有的..
+    - This is not typical of Chinese, but is a feature of the Thai language…
+- *A* be the envy of *someone*
+  - A令某人羡慕
+    - Britain is now the envy of the world's record companies.
+- raise eyebrows
+  - 反对
+    - He raised his eyebrows over some of the suggestions...
+- in favor (of) *something*
+  - 支持；选择 approving, supporting, or endorsing someone or something.
+    - Are you in favor of lower taxes?
+    - Of course, I’m in favor.
+
+# 2001
+
+**CT**
+
+- buy *something* up
+  - 全部买下 to buy all of something; to buy the entire supply of something.
+    - He bought the oranges up from all the groves.
+    - He bought up all the oranges and drove up the price.
+- draft bill
+  - （法律）草案
+- lay down
+  - 制定
+    - The Companies Act lays down a set of minimum requirements.
+    - Taxis must conform to the rigorous standards laid down by the police.
+- be in safe hands with *someone*
+  - 受到...的妥善保管
+    - Are you sure your money is in the safe hands with that bank?
+- 
