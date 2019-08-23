@@ -29,6 +29,7 @@
 
 - $\sin (\alpha \pm \beta)=\sin \alpha \cos \beta \pm \cos \alpha \sin \beta$ <1000题9.20>
 - $\cos(\alpha \pm \beta)=\cos \alpha \cos \beta \mp \sin \alpha \sin \beta$ <1000题9.67>
+- $\displaystyle \tan\left(\alpha \pm \beta \right) = \frac{\tan\alpha \pm \tan \beta}{1 \mp \tan\alpha\tan\beta}$ <闭关修炼 1.1.26>
 
 ## 经典不等式
 
@@ -82,7 +83,9 @@ $\lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
 - 保号性
 - 脱帽法，$a_n=C+\alpha$，其中$\alpha\rightarrow0$
 
-## 等价无穷小
+## 函数极限计算
+
+等价无穷小
 
 $x \to 0$时，等价无穷小公式有：
 
@@ -93,7 +96,7 @@ $x \to 0$时，等价无穷小公式有：
 - $(1+x)^\alpha-1\sim\alpha x$ <1000题9.4(3)>
   - 拓展：$(1+x)^{\alpha(x)}-1\sim\alpha(x) x$，其中$\alpha(x)\rightarrow0$ <1000题1.31>
 
-## 基本极限公式
+基本极限公式
 
 - $\lim\limits_{x\rightarrow0^+} x^x=1$
 - $\lim\limits_{x\rightarrow+\infty} x^{1\over x}=1$
@@ -101,17 +104,50 @@ $x \to 0$时，等价无穷小公式有：
   - 拓展：$\lim\limits_{x\rightarrow0^+} x^\alpha\ln x=0$，其中$\alpha>0$
 - $\lim\limits _{x \rightarrow \infty} \sqrt[n]{a}=1$（其中$a$为任意常数）
 - $\lim\limits _{x \rightarrow \infty} \sqrt[n]{n}=1$
-- $\lim\limits_{n\rightarrow\infty} (1+\frac{1}{n})^n=e$ <1000题9.8>
+- $\lim\limits_{n\rightarrow\infty} (1+\frac{1}{n})^n=e$  <1000题 9.8>
   - 拓展：$\lim\limits_{n\rightarrow\infty} (1+\frac{x}{n})^n=e^x$，对其证明[在这](https://math.stackexchange.com/questions/882741/limit-of-1-x-nn-when-n-tends-to-infinity)
 - ${1^\infty }$型公式 $\lim u^v=e^{\lim (u-1)v}$
 
-## 总结极限
+复杂极限公式
 
 - $\lim \limits_{x \rightarrow 0} \frac{1-\cos x \sqrt{\cos 2 x} \cdots \sqrt[n]{\cos n x}}{x^{2}} = \sum\limits^n_{k=1} \frac{k}{2}$ <证明: 闭关修炼 1.1.12>
 
-## 数列极限
+## 函数性质的存在性
 
-解题技巧
+我认为这类题主要是利用`函数极限计算`中的方法无法解决时考虑使用`存在性`
+
+具体型
+
+- 洛必达若求不出极限不代表极限不存在
+- 夹逼准则 <闭关修炼 1.1.27>
+
+抽象型
+
+- 单调有界准则
+
+## 极限的应用：连续与间断
+
+研究位置
+
+- 分段函数分段点
+- 无定义点
+
+间断，必要条件是函数在点$x_0$两侧均有定义
+
+- 第一类间断点
+  - 跳跃间断点：$\displaystyle \lim_{x\rightarrow x_0^+} f(x)$存在，$\displaystyle \lim_{x\rightarrow x_0^-} f(x)$存在，但是$\displaystyle \lim_{x\rightarrow x_0^+} f(x) \neq \lim_{x\rightarrow x_0^-} f(x)$
+  - 可去间断点：$\displaystyle \lim_{x\rightarrow x_0^+} f(x) = \lim_{x\rightarrow x_0^-} f(x) \neq f(x_0)$ <闭关修炼 1.1.33>
+    - 如果是无定义点，则$\displaystyle \frac{0}{0}$和$\displaystyle \frac{\infty}{\infty}$是重点怀疑对象
+- 第二类间断点
+  - 无穷间断点：$\displaystyle \lim_{x\rightarrow x_0^+} f(x)$或$\displaystyle \lim_{x\rightarrow x_0^-} f(x)$至少一个不存在且等于$\infty$
+  - 震荡间断点
+
+## 数列极限的定义与使用
+
+- $\displaystyle \lim_{n\rightarrow \infty} x_n = A$的充要条件是所有子列$\{x_{n_k}\}$均收敛于A
+  - $\displaystyle \lim _{n \rightarrow \infty} x_{n}=a \Leftrightarrow \lim _{n \rightarrow \infty} x_{2 n}=\lim _{n \rightarrow \infty} x_{2 n+1}=a \Leftrightarrow \lim _{n \rightarrow \infty} x_{3 n}=\lim _{n \rightarrow \infty} x_{3 n+1}=\lim _{n \rightarrow \infty} x_{3 n+2}=0$
+
+## 数列极限的存在性与计算
 
 - 递推式是单调的，使用单调有界准则
 - 递推式不是单调的，使用先斩后奏 <1000题1.77, 9.54>
@@ -140,11 +176,11 @@ $x \to 0$时，等价无穷小公式有：
   - $\sin x$
   - $\cos x$
   - $\arcsin x$
-  - $\tan x$
-  - $\arctan x=x-\frac{x^{3}}{3}+o\left(x^{3}\right)$
-  - $\ln \left( {1 + x} \right)$
-  - ${e^x}$
-  - ${\left( {1 + x} \right)^\alpha }$
+  - $\displaystyle \tan x = x+\frac{1}{3} x^{3}+o\left(x^{3}\right)$
+  - $\displaystyle \arctan x=x-\frac{x^{3}}{3}+o\left(x^{3}\right)$
+  - $\displaystyle \ln (1+x)=x-\frac{1}{2} x^{2}+\frac{1}{3} x^{3} + o(x^3)$
+  - $\displaystyle {e^x} = 1+x+\frac{x^{2}}{2 !} + o(x^2)$
+  - $\displaystyle {\left( {1 + x} \right)^\alpha }1+\alpha x+\frac{\alpha(\alpha-1)}{2} x^{2}+o\left(x^{2}\right)$
 
 ## ★导数公式
 

@@ -84,147 +84,273 @@ pick up
 
 **RC - Passage 4**
 
-- report back (on somebody or something)
-  - 汇报 to return with information or an explanation from someone or something.
-    - I need you to report back on Walter by noon.
-    - I’ll report back as soon as I can.
-- stem from
-  - 起源于；来自 to result from something.
-    - These problems all stem from your mismanagement.
-    - Our difficulties stem from the bad weather we have been having.
-- call for
-  - 需要 to need, require, or demand something or the services of someone.
-    - The recipe calls for two cups of flour.
-    - This job calls for someone with experience.
-  - 收；接 to arrive to collect or pick up a person or a thing.
-    - I will call for you about eight this evening.
-    - The messenger will call for your reply in the morning.
-  - 大声喊（引申义：呼吁） to shout for or request someone or something.
-    - I stood on the porch and called for the dog.
-    - NBAC plans to call for a continued ban on federal government funding…
-- up in the air (about something or someone)
-  - 未决定的；悬而未决的 undecided about someone or something; uncertain about someone or something.
-    - I don’t know what Sally plans to do. Things were sort of up in the air the last time we talked.
-    - Let’s leave this question up in the air until next week.
+report back (on somebody or something)
+
+- 汇报 to return with information or an explanation from someone or something.
+  - I need you to report back on Walter by noon.
+  - I’ll report back as soon as I can.
+
+stem from
+
+- 起源于；来自 to result from something.
+  - These problems all stem from your mismanagement.
+  - Our difficulties stem from the bad weather we have been having.
+
+call for
+
+- 需要 to need, require, or demand something or the services of someone.
+  - The recipe calls for two cups of flour.
+  - This job calls for someone with experience.
+- 收；接 to arrive to collect or pick up a person or a thing.
+  - I will call for you about eight this evening.
+  - The messenger will call for your reply in the morning.
+- 大声喊（引申义：呼吁） to shout for or request someone or something.
+  - I stood on the porch and called for the dog.
+  - NBAC plans to call for a continued ban on federal government funding…
+
+up in the air (about something or someone)
+
+- 未决定的；悬而未决的 undecided about someone or something; uncertain about someone or something.
+  - I don’t know what Sally plans to do. Things were sort of up in the air the last time we talked.
+  - Let’s leave this question up in the air until next week.
 
 **RC - Passage 5**
 
-- for centuries
-  - 几个世纪以来
-- cut and dried
-  - 死板的；老套的 fixed; determined beforehand; usual and uninteresting.
-    - I find your writing quite boring. It’s too cut and dried.
-    - The lecture was, as usual, cut and dried.
-- be filled with
-  - 全是；满是
-    - History is filled with examples of it.
-- amount to
-  - 变得成功 to become worthwhile or successful.
-    - I hope Charles amounts to something some day.
-    - I doubt that this business will ever amount to anything really profitable.
-  - 相当于 [for something] to be the equivalent of something.
-    - Why, doing this amounts to cheating!
-    - Your comments amount to treason.
-- put *someone or something* forward
-  - 移动 to move someone or something forward.
-    - The director put all the players forward during the last scene, leaving more room for the chorus to come on for the finale.
-    - Could you put your left foot forward a little?
-  - 提出 to suggest someone or something
-    - I would like to put forward a plan.
-- carry something out
-  - to perform a task; to perform an assignment.
-    - “This is a very important job,” said Jane. “Do you think you can carry it out?”
-- in favor (of someone or something )
-  - 支持
-    - Are you in favor of lower taxes?
+for centuries
+
+- 几个世纪以来
+
+cut and dried
+
+- 死板的；老套的 fixed; determined beforehand; usual and uninteresting.
+  - I find your writing quite boring. It’s too cut and dried.
+  - The lecture was, as usual, cut and dried.
+
+be filled with
+
+- 全是；满是
+  - History is filled with examples of it.
+
+amount to
+
+- 变得成功 to become worthwhile or successful.
+  - I hope Charles amounts to something some day.
+  - I doubt that this business will ever amount to anything really profitable.
+- 相当于 [for something] to be the equivalent of something.
+  - Why, doing this amounts to cheating!
+  - Your comments amount to treason.
+
+put *someone or something* forward
+
+- 移动 to move someone or something forward.
+  - The director put all the players forward during the last scene, leaving more room for the chorus to come on for the finale.
+  - Could you put your left foot forward a little?
+- 提出 to suggest someone or something
+  - I would like to put forward a plan.
+
+carry something out
+
+- to perform a task; to perform an assignment.
+  - “This is a very important job,” said Jane. “Do you think you can carry it out?”
+
+in favor (of *someone or something*)
+
+- 支持
+  - Are you in favor of lower taxes?
 
 # 2000
 
 **CT**
 
-- insure against *something*
-  - 保证...以免受...;预防 to guard or protect against something.
-    - You must insure against theft and fire.
-    - I will insure against all risks.
+insure against *something*
+
+- 保证...以免受...;预防 to guard or protect against something.
+  - You must insure against theft and fire.
+  - I will insure against all risks.
 
 **RC - Passage 1**
 
-- at a loss
-  - 茫然；不知所措 uncertain as to how to proceed
-    - By the mid-1980s Americans had found themselves at a loss over their fading industrial competitiveness.
-- sweep into
-  - 冲入；跑进 to dash or run into some place
-    - The kids swept into the candy store and bought little bits of things.
-    - They swept in and spent all of a dollar before they left.
-- on the ropes
-  - 处境岌岌可危；处于不利境地 in a defensive and often helpless position
-    - America's machine-tool industry was on the ropes.
-- as though
-  - 好像 = as if
-    - It's as though she invented the term.
-- for a while
-  - 暂时；一段时间
-- take *someone or something* for granted
-  - 认为...理所应当；轻视 to expect someone or something to be always available to serve in some way without thanks or recognition; to value someone or something too lightly.
-    - I wish you didn’t take me for granted.
-    - I guess that I take a lot of things for granted.
-- inquire into
-  - 调查；探究 to look into something; to investigate something by asking questions.
-    - I will inquire into your complaint. It sounds as if something is wrong.
-    - We have not inquired into it yet.
-- yield to
-  - 取代
-    - Self-doubt has yielded to blind pride.
-  - 放弃
-    - Will she yield to growing pressure for her to retire?
+at a loss
+
+- 茫然；不知所措 uncertain as to how to proceed
+  - By the mid-1980s Americans had found themselves at a loss over their fading industrial competitiveness.
+
+sweep into
+
+- 冲入；跑进 to dash or run into some place
+  - The kids swept into the candy store and bought little bits of things.
+  - They swept in and spent all of a dollar before they left.
+
+on the ropes
+
+- 处境岌岌可危；处于不利境地 in a defensive and often helpless position
+  - America's machine-tool industry was on the ropes.
+
+as though
+
+- 好像 = as if
+  - It's as though she invented the term.
+
+for a while
+
+- 暂时；一段时间
+
+take *someone or something* for granted
+
+- 认为...理所应当；轻视 to expect someone or something to be always available to serve in some way without thanks or recognition; to value someone or something too lightly.
+  - I wish you didn’t take me for granted.
+  - I guess that I take a lot of things for granted.
+
+inquire into
+
+- 调查；探究 to look into something; to investigate something by asking questions.
+  - I will inquire into your complaint. It sounds as if something is wrong.
+  - We have not inquired into it yet.
+
+yield to
+
+- 取代
+  - Self-doubt has yielded to blind pride.
+- 放弃
+  - Will she yield to growing pressure for her to retire?
 
 **RC - Passage 3**
 
-- with regard to = in regard to
-  - 就...而言；关于 concerning someone or something.
-    - What shall we do in regard to planning dinner?
-    - With regard to Bill, I think he is working too hard.
-- make up
-  - 制造；构成 to constitute something.
-    - Two chapters make up this volume.
-    - Over forty freight cars made up the train.
-- at will
-  - 随意的 whenever one wants; freely.
-    - You’re free to come and go at will.
-    - The soldiers were told to fire their guns at will.
-    - You can eat anything you want at will.
+with regard to = in regard to
+
+- 就...而言；关于 concerning someone or something.
+  - What shall we do in regard to planning dinner?
+  - With regard to Bill, I think he is working too hard.
+
+make up
+
+- 制造；构成 to constitute something.
+  - Two chapters make up this volume.
+  - Over forty freight cars made up the train.
+
+at will
+
+- 随意的 whenever one wants; freely.
+  - You’re free to come and go at will.
+  - The soldiers were told to fire their guns at will.
+  - You can eat anything you want at will.
 
 **RC - Passage 4**
 
-- *A* be typical of *B*
-  - B以A为特色；A是B特有的..
-    - This is not typical of Chinese, but is a feature of the Thai language…
-- *A* be the envy of *someone*
-  - A令某人羡慕
-    - Britain is now the envy of the world's record companies.
-- raise eyebrows
-  - 反对
-    - He raised his eyebrows over some of the suggestions...
-- in favor (of) *something*
-  - 支持；选择 approving, supporting, or endorsing someone or something.
-    - Are you in favor of lower taxes?
-    - Of course, I’m in favor.
+*A* be typical of *B*
+
+- B以A为特色；A是B特有的..
+  - This is not typical of Chinese, but is a feature of the Thai language…
+
+*A* be the envy of *someone*
+
+- A令某人羡慕
+  - Britain is now the envy of the world's record companies.
+
+raise eyebrows
+
+- 反对
+  - He raised his eyebrows over some of the suggestions...
+
+in favor (of) *something*
+
+- 支持；选择 approving, supporting, or endorsing someone or something.
+  - Are you in favor of lower taxes?
+  - Of course, I’m in favor.
 
 # 2001
 
 **CT**
 
-- buy *something* up
-  - 全部买下 to buy all of something; to buy the entire supply of something.
-    - He bought the oranges up from all the groves.
-    - He bought up all the oranges and drove up the price.
-- draft bill
-  - （法律）草案
-- lay down
-  - 制定
-    - The Companies Act lays down a set of minimum requirements.
-    - Taxis must conform to the rigorous standards laid down by the police.
-- be in safe hands with *someone*
-  - 受到...的妥善保管
-    - Are you sure your money is in the safe hands with that bank?
-- 
+buy *something* up
+
+- 全部买下 to buy all of something; to buy the entire supply of something.
+  - He bought the oranges up from all the groves.
+  - He bought up all the oranges and drove up the price.
+
+draft bill
+
+- （法律）草案
+
+lay down
+
+- 制定
+  - The Companies Act lays down a set of minimum requirements.
+  - Taxis must conform to the rigorous standards laid down by the police.
+
+be in safe hands with *someone*
+
+- 受到...的妥善保管
+  - Are you sure your money is in the safe hands with that bank?
+
+**RC - Passage 1**
+
+split *someone or something* up (into *something*)
+
+- 分裂；分离 to divide people or things up into something, such as groups.
+  - I had to split the group up into two sections—there were so many who showed up.
+  - I split up the class into two discussion sections.
+
+in terms of *something*
+
+- 就...而言；关于 regarding something; concerning something.
+  - I don’t know what to do in terms of John’s problem.
+  - Now, in terms of your proposal, don’t you think you’re asking for too much?
+
+in one's own rights
+
+- 凭...的条件
+  - This is an excellent novel in its own rights. 这是一本真正优秀的小说
+
+under way
+
+- 进行中 moving; running; started.
+  - The time has come to get this game under way.
+  - Now that the president has the meeting under way, I can relax.
+
+**RC - Passage 2**
+
+work against
+
+- 对...不利
+  - What was less visible then, however, were the new, positve forces that work against the digital divide.
+
+in the interest of *someone or something*
+
+- 为了...的利益/好处 as an advantage or benefit to someone or something; in order to advance or improve someone or something.
+  - In the interest of health, people are asked not to smoke.
+  - The police imprisoned the suspects in the interest of the safety of the public.
+
+get over
+
+- 克服，战胜
+  - How would they get over that problem, he wondered?
+
+**RC - Passage 3**
+
+turn out to be *someone or something*
+
+- 最终变为；最终发展为 to develop or become someone or something in the end.
+  - In the end, he turned out to be a handsome prince in disguise.
+  - The previous prince turned out to be a frog.
+
+head-scarching
+
+- 令人挠头的
+  - head-scarching puzzlement
+
+ready-made
+
+- 现成的
+  - a ready-made narrative structure
+
+be alien to = be opposite of
+
+- 与...相异；与...不同；违反...
+  - Their ideas are alien to our way of thinking.
+
+get around to *doing something*
+
+- 抽空去做 to find time to do something; to do something after a long delay.
+  - I finally got around to buying a new coat.
+  - It took Sally years to get around to visiting her aunt.**

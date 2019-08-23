@@ -38,7 +38,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
     $\left|\begin{array}{rrrr}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {0} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {0} & {\cdots} & {a_{nn}}\end{array}\right|=\left|\begin{array}{cccc}{a_{11}} & {0} & {\cdots} & {0} \\ {a_{21}} & {a_{22}} & {\cdots} & {0} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{nn}}\end{array}\right|=\left|\begin{array}{cccc}{a_{11}} & {0} & {\cdots} & {0} \\ {0} & {a_{22}} & {\cdots} & {0} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {0} & {0} & {\cdots} & {a_{nn}}\end{array}\right|=\prod\limits_{i=1}^{n} a_{ii}$
   - 副对角线行列式
     $\left|\begin{array}{ccccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1, n-1}} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2, n-1}} & {0} \\ {\vdots} & {\vdots} & {} & {\vdots} & {\vdots} \\ {a_{n 1}} & {0} & {\cdots} & {0} & {0}\end{array}\right|=\left|\begin{array}{cccc}{0} & {\cdots} & {0} & {a_{1 n}} \\ {0} & {\cdots} & {a_{2, n-1}} & {a_{2 n}} \\ {\vdots} & {} & {\vdots} & {\vdots} \\ {a_{n 1}} & {\cdots} & {a_{n, n-1}} & {a_{m}}\end{array}\right|=\left|\begin{array}{cccc}{0} & {\cdots} & {0} & {a_{1 n}} \\ {0} & {\cdots} & {a_{2, n-1}} & {0} \\ {\vdots} & {} & {\vdots} & {\vdots} \\ {a_{n 1}} & {\cdots} & {0} & {0}\end{array}\right|=(-1)^{\frac{n(n-1)}{2}} a_{1 n} a_{2, n-1} \cdots a_{n 1}$
-  - 拉普拉斯行列式，也分主对角和副对角线：
+  - 拉普拉斯行列式，也分主对角和副对角线（注意必须要有$O$才行 <闭关修炼 2.1.4>）
     - 主对角线$\left|\begin{array}{ll}{A} & {O} \\ {O} & {B}\end{array}\right|=\left|\begin{array}{ll}{A} & {C} \\ {O} & {B}\end{array}\right|=\left|\begin{array}{ll}{A} & {O} \\ {C} & {B}\end{array}\right|=|A||B|$ <1000题 线代2>
 	  - 副对角线$\left|\begin{array}{ll}{O} & {A} \\ {B} & {O}\end{array}\right|=\left|\begin{array}{ll}{C} & {A} \\ {B} & {O}\end{array}\right|=\left|\begin{array}{ll}{O} & {A} \\ {B} & {C}\end{array}\right|=(-1)^{m n}|A||B|$
 	- 范德蒙德行列式，其规律是$n\times n$行列式最高次数为$n-1$，如果是$(n+1)\times(n+1)$行列式则最高次数为$n$才能满足 <1000题 线代9>
@@ -60,12 +60,17 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
     - $|A B|=|A||B|$，$|P^{-1}||A||P|=|B|$
     - 由$|P^{-1}||P|=1$可以推出$|A|=|B|$
 - 矩阵的性质，适用于矩阵的每一列与$\alpha_1, \alpha_2,  \cdots, \alpha_n$有关，则可分解为$(\alpha_1, \alpha_2, \cdots, \alpha_n){C}$，其中${C}$是一个$n\times n$的矩阵 <1000题 线代13>
+- 若要求$|A+B|$，则需要通过恒等变形将加法转化为乘法后进行计算 <闭关修炼 2.1.14>
 - 相似矩阵的行列式相同，即$P^{-1}AP=B\Rightarrow |A|=|B|$ <1000题 线代88>
 
 ## 代数余子式
 
+行列式
+
+- 求余子式的线性组合，考虑行列式法，即$\displaystyle \sum^n_{j=1}k_jA_{ij} = \left|\begin{array}{cccc} * & * &* &* \\ {k_{1}} & {k_{2}} & {\cdots} & {k_{n}} \\ * & * &* &*  \end{array}\right|$ <闭关修炼 2.1.19>
+
 - 对于具体型行列式，求代数余子式之和要想到求$A^*$，然后把$A^*$所有项求和即可。 <1000题 线代53>
-- $tr(A^*)=A_{11}+A_{22}+\cdots+A_{nn}=\lambda_2\lambda_3\cdots\lambda_n+\lambda_1\lambda_3\cdots\lambda_n+\cdots+\lambda1\lambda_2\cdots\lambda_{n-1}$ [参见 `相似理论 > A的特征值和特征向量 > 特征值 `]
+- $tr(A^*)=A_{11}+A_{22}+\cdots+A_{nn}=\lambda_2\lambda_3\cdots\lambda_n+\lambda_1\lambda_3\cdots\lambda_n+\cdots+\lambda_1\lambda_2\cdots\lambda_{n-1}$ [参见 `相似理论 > A的特征值和特征向量 > 特征值 `]
 
 # 矩阵
 
@@ -173,6 +178,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 解题技
 
 - 证明矩阵是否可逆
+  - 利用定义 <闭关修炼 2.2.18, 2.2.19>
   - 利用行列式，如果$|A|\neq0$，那么矩阵$A$可逆 <1000题 线代29>
   - 秩等于行数
   - 行向量(或列向量)是线性无关组
@@ -279,7 +285,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 **求秩**
 
-- 化阶梯
+- 化阶梯（具体型） <闭关修炼 2.2.34>
 - 用公式
 - 定义法 <1000题 线代87>
 - 对于抽象型矩阵可以利用初等变换（秩不变）化简后求 <1000题 线代96>
