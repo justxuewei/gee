@@ -101,7 +101,7 @@
 
 - 判别方式
   - $f(x)\ge0$
-  - $\int_{-\infty}^{+\infty}f(x)dx=1$
+  - $\displaystyle \int_{-\infty}^{+\infty}f(x)dx=1$
 - 若$F_1(x)$与$F_2(x)$是概率分布函数，$f_1(x)$与$f_2(x)$是概率密度函数，则$F_1f_1+F_2f_2$也是概率密度函数，使用判别方式证明
 
 ## 求分布
@@ -167,6 +167,12 @@
 - 标准正态分布
 
 <img height="200" src="http://res.niuxuewei.com/2019-08-09-021646.png" /><img height="200" src="http://res.niuxuewei.com/2019-08-08-122213.png" /><img height="200" src="http://res.niuxuewei.com/2019-08-08-034245.png" />
+
+## 用分布
+
+若$X \sim F(x)$，则
+
+- 
 
 ## 求函数分布
 

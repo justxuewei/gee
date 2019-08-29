@@ -14,7 +14,7 @@
 
 常用三角函数
 
-- $\sin 2x$
+- $\sin 2x = 2\sin x\cos x$
 - $\cos 2x$
 - $\sin^2 x$
 - $\cos^2 x$
@@ -31,6 +31,10 @@
 - $\cos(\alpha \pm \beta)=\cos \alpha \cos \beta \mp \sin \alpha \sin \beta$ <1000题9.67>
 - $\displaystyle \tan\left(\alpha \pm \beta \right) = \frac{\tan\alpha \pm \tan \beta}{1 \mp \tan\alpha\tan\beta}$ <闭关修炼 1.1.26>
 
+和差化积
+
+-  $\displaystyle \cos\alpha - \cos\beta = -2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ <闭关修炼 1.1.47>
+
 ## 经典不等式
 
 经典不等式 *(2020 p111)*
@@ -39,13 +43,14 @@
 2. $\left| {a \pm b} \right|$
 3. $\left| {\left| a \right| - \left| b \right|} \right|$
 4. $\left| {\int {f\left( x \right)dx} } \right|$
-5. 平均值不等式大于等于谁？小于等于谁？
+5. $\displaystyle \sqrt{ab}\le\frac{a+b}{2}$，也可写作$\displaystyle ab \le \frac{(a+b)^2}{4}$
+   - $\displaystyle x(1-x) \le \frac{1}{4}$ <闭关修炼 3.1.6>
 6. $\sin x \lt x$，在$x>0$区间上
-7. $x\lt\tan x$，在$0<x<\frac{\pi}{2}$区间上
+7. $x\lt\tan x$，在$0 < x<\frac{\pi}{2}$区间上
 8. $\ln \left( {1 + {1 \over x}} \right)$与其他的大小关系，并证明，在什么区间上？
 9. $x,\arcsin x,\arctan x$的关系在，什么区间上？
 10. 对于任意的$x$有$e^x\geq x+1$
-11. 对于$x>0$有$\ln x<x-1$
+11. 对于$x>0$有$\ln x < x-1$
 
 ## 方程根问题
 
@@ -61,7 +66,7 @@
 - $a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2} b+\dots+a b^{n-2}+b^{n-1} \right)$ <1000题 线代62; 闭关修炼 1.1.10>
 - n是<u>正偶数</u>时，$a^{n}-b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\dots+a b^{n-2}-b^{n-1}\right) $ <1000题 线代32>
 - n是<u>正奇数</u>时，$a^{n}+b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\cdots-a b^{n-2}+b^{n-1}\right)$
-- $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$
+- $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$ <闭关修炼 1.1.60>
 
 ## 奇偶性
 
@@ -76,11 +81,11 @@
 
 ## 极限性质
 
-$\lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
+$\displaystyle \lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
 
 - 唯一性
-- 有界性
-- 保号性
+- 有界性，即$A \le a_n \le B$
+- 保号性，若$C>0$，那么当$n \rightarrow \infty$时，$a_n > 0$
 - 脱帽法，$a_n=C+\alpha$，其中$\alpha\rightarrow0$
 
 ## 函数极限计算
@@ -149,24 +154,53 @@ $x \to 0$时，等价无穷小公式有：
 
 ## 数列极限的存在性与计算
 
+变量连续化（可以看到这个方法通常是求一个函数，而非求$\displaystyle \lim_{n\rightarrow\infty} a_n$）
+
+- 若$\displaystyle \lim_{x\rightarrow \infty} f(x) = A$，则$\displaystyle \lim_{n\rightarrow \infty} f(n) = A$ <闭关修炼 1.1.42>
+  - $n \rightarrow x$
+  - $a_n \rightarrow x$
+
+ 求极限$\displaystyle \lim_{n\rightarrow\infty} a_n$
+
 - 递推式是单调的，使用单调有界准则
+  - 有界与无界
+    - $\{a_n\}$单调增加时
+      - 若有上界，则$\displaystyle \lim_{n\rightarrow\infty} a_n = A$
+      - 若上界不存在，则$\displaystyle \lim_{n\rightarrow\infty} a_n = +\infty$ <闭关修炼 1.1.45>
+    - $\{a_n\}$单调减少时
+      - 若有下界，则$\displaystyle \lim_{n\rightarrow\infty} a_n = A$
+      - 若下界不存在，则$\displaystyle \lim_{n\rightarrow\infty} a_n = -\infty$
+  - 寻找$x_n$与$x_{n+1}$的大小关系或证明有界性
+    - 利用不等式：可以用于求数列单调性，也可以用于求数列的有界性
+      - $\forall x \ge 0, \sin x\le x$，例如$x_{n+1} = \sin x_n \le x_n \Rightarrow \{x_n\}$单调减少（这里可以把$x_n$与$x_{n+1}$暂时性的看做两个变量，暂时先不要考虑$n$）
+      - $\forall x, e^x \ge x + 1$，例如$x_{n+1} = e^{x_n} - 1 \ge x_n \Rightarrow \{x_n\}$单调增加
+      - $\forall x > 0, x - 1 \ge \ln x$
+      - $\displaystyle a, b > 0, \sqrt{ab} \le \frac{a+b}{2}$，规律是随便找一个$a, b$在相加时可相互抵消的情况即可，如$\displaystyle x_{n+1} = \sqrt{x_n(3-x_n)} \le \frac{x_n+3-x_n}{2} = \frac{3}{2} \Rightarrow \{x_n\}$有上界
+    - 拉格朗日 <闭关修炼 1.1.52>
+    - 积分中值定理 <闭关修炼 1.1.51>
+  - 解题技巧
+    - 若题目中没有迭代关系，即只有$x_n$，需要先构造$x_{n+1}$与$x_n$的关系，最简单的就是$x_{n+1} = f(x_{n+1}) = g(x_n)$ <闭关修炼 1.1.48>
 - 递推式不是单调的，使用先斩后奏 <1000题1.77, 9.54>
-  1. 求极限并舍去不符合要求的点
-  2. $|x_{n+1}-A|=|f(x_n)-g(A)|$经过计算可以获得一个递推式$|x_{n+1}-A|<k|x_n-A|<\cdots<k^n|x_1-A|$，其中$0<k<1$
-  3. 当$n\rightarrow\infty$时，$0 \leq |x_{n}-A|< 0$，所以我们有理由相信$x_n$的极限为$A$
+  1. 在草稿纸上验证不单调，最简单的方式是试一下$x_1, x_2, x_3, x_4$
+  2. 求极限并舍去不符合要求的点
+     - 数学归纳法 <闭关修炼 1.1.46>
+     - 如果极限求不出来，需要利用零点定理大致确定一个范围 <闭关修炼 1.1.47>
+  3. $|x_{n+1}-A|=|f(x_n)-g(A)|$经过计算可以获得一个递推式$|x_{n+1}-A|<k|x_n-A|<\cdots<k^n|x_1-A|$，其中$0<k<1$
+  4. 当$n\rightarrow\infty$时，$0 \leq |x_{n}-A|< 0$，所以我们有理由相信$x_n$的极限为$A$
+
+夹逼准则
+
+- 基本放缩法
+
+  - $n\cdot u_{\min} \le u_1 + \cdots + u_n \le n\cdot u_{\max}$
+  - $u_i > 0$时，$1\cdot u_{\max} \le u_1 + \cdots + u_n \le n\cdot u_{\max}$ 
+
+常用恒等变形技巧
+
+- 取倒数
+  - 裂项相消
 
 # 一元函数微分学
-
-## 性质
-
-奇偶性
-
-- 奇函数求导变偶函数，偶函数求导变奇函数
-
-## 级数经典放缩公式
-
-- 当$n \to \infty $时，$\sum\limits_{i = 1}^n {{u_i}} $经典放缩公式 *(p36)*
-- 当$n$是有限项时，$\sum\limits_{i = 1}^n {{u_i}} $经典放缩公式 *(p36)*
 
 ## ★泰勒公式
 
@@ -206,7 +240,7 @@ $x \to 0$时，等价无穷小公式有：
   - ${\left[ {\cos \left( {ax + b} \right)} \right]^{(n)}}$
   - ${\left( {{1 \over {ax + b}}} \right)^{(n)}}$
 
-## 可导、连续的关系
+## 可导与连续的关系
 
 一元函数 [答案在这](https://blog.csdn.net/tantiao666/article/details/80949734)
 
@@ -222,30 +256,88 @@ $x \to 0$时，等价无穷小公式有：
 
 - 函数偏导数连续、函数偏导数存在、函数可微和函数连续的关系
 
-## 周期函数
+## 函数与导数的关系
+
+奇偶性
+
+- 奇函数求导变偶函数，偶函数求导变奇函数
+
+周期函数
 
 - 函数$f(x)$是周期函数，那么它的导数必然是周期函数（用定义法证明）
 - 函数$f(x)$是周期函数，它的原函数不一定是周期函数 [参见`一元函数积分学 > 积分性质 > 周期性 `] <1000题8.14>
 
-## 反函数
+## 特殊函数求导
 
-对于$x=x(y)$函数 <1000题8.25>
+隐函数
 
-- $\frac{dy}{dx}={1\over{dx\over dy}}={1\over x'_y}$
-- ${d^2y\over dx^2}={d\over dx}({1\over x'_y})={d\over dy}({1\over x'_y})\frac{dy}{dx}={0-x''_y\over x'^2_y} {1\over{dx\over dy}}=-{x''_y\over x'^3_y}$，这个地方极易想当然
+- 先根据$F(x, y) = 0$计算出$\displaystyle \left. y \right|_{x = a} = b$
+- 等式两边各求导可以得出$\displaystyle \left. y^\prime \right|_{x = a} = c$
+- 依次类推可以求出$y$的高阶导
+
+反函数
+
+- 对于$x=x(y)$函数 <1000题8.25；闭关修炼 1.2.20>
+  - $\displaystyle \left. \frac{dy}{dx}\right |_{x=a}={1\over{\left. dx\over dy \right |_{y=b}}}={1\over x'_y}$
+  - $\displaystyle {d^2y\over dx^2}={d\over dx}({1\over x'_y})={d\over dy}({1\over x'_y})\frac{dy}{dx}={0-x''_y\over x'^2_y} {1\over{dx\over dy}}=-{x''_y\over x'^3_y}$，这个地方极易想当然
 
 ## 几何应用
 
 曲率相关
 
-- 曲率公式$k=\frac{\left|y^{\prime \prime}\right|}{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}$
+- 曲率公式$\displaystyle k=\frac{\left|y^{\prime \prime}\right|}{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}$
+- 曲率半径$\displaystyle R=\frac{1}{k}=\frac{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}{\left|y^{\prime \prime}\right|}\left(y^{\prime \prime} \neq 0\right)$
+- 曲率圆$(X-\alpha)^{2}+(Y-\beta)^{2}=R^{2}$，其中$\displaystyle \alpha=x-\frac{y^{\prime}\left[1+\left(y^{\prime}\right)^{2}\right]}{y^{\prime \prime}}, \quad \beta=y+\frac{1+\left(y^{\prime}\right)^{2}}{y^{\prime \prime}}$
+## ★中值定理
 
-- 曲率半径$R=\frac{1}{k}=\frac{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}{\left|y^{\prime \prime}\right|}\left(y^{\prime \prime} \neq 0\right)$
+构造辅助函数
 
-- 曲率圆
-$$
-\begin{array}{c}{(X-\alpha)^{2}+(Y-\beta)^{2}=R^{2}} \\ 其中\quad{\alpha=x-\frac{y^{\prime}\left[1+\left(y^{\prime}\right)^{2}\right]}{y^{\prime \prime}}, \quad \beta=y+\frac{1+\left(y^{\prime}\right)^{2}}{y^{\prime \prime}}}\end{array}
-$$
+- $(uv)^\prime = u^\prime v + uv^\prime$
+  - $[f(x)\cdot f(x)]' = [f^2(x)]' = 2f(x)f'(x)$，所以见到$f(x)f'(x)$，做$F(x) = f^2(x)$
+  - $[f(x)\cdot f'(x)]' = [f'(x)]^2 + f(x)f''(x)$，所以见到$[f'(x)]^2 + f(x)f''(x)$，做$F(x) = f(x)\cdot f'(x)$
+  - $[f(x)\cdot e^{\varphi(x)}]' = [f'(x) + f(x)\varphi'(x)]e^{\varphi(x)}$，所以见到$f'(x)+f(x)\varphi'(x)$，做$F(x) = f(x)\cdot e^{\varphi(x)}$ <闭关修炼 1.2.68>
+    - 若见到$f'(x)+f(x)$，则$\varphi(x) = x$，做$F(x) = f(x)\cdot e^x$
+    - 若见到$f'(x)-f(x)$，则$\varphi(x) = -x$，做$F(x) = f(x)\cdot e^{-x}$
+    - 若见到$f'(x)+kf(x)$，则$\varphi(x) = kx$，做$F(x) = f(x)\cdot e^{kx}$
+  - $(uv)'' = u''v + 2u'v' + uv''$
+- $\displaystyle \left(\frac{u}{v}\right)^{\prime}=\frac{u^{\prime} v-u v^{\prime}}{v^{2}}$
+  - $\displaystyle \left[\frac{f(x)}{x}\right]^{\prime}=\frac{f^{\prime}(x) x-f(x)}{x^{2}}$，所以见到$f^{\prime}(x) x-f(x)$，做$\displaystyle F(x)=\frac{f(x)}{x}$
+  - $\displaystyle \left[\frac{f^{\prime}(x)}{f(x)}\right]^{\prime}=\frac{f^{\prime \prime}(x) f(x)-\left[f^{\prime}(x)\right]^{2}}{f^{2}(x)}$，所以见到$f^{\prime \prime}(x) f(x)-\left[f^{\prime}(x)\right]^{2}$，做$\displaystyle F(x) = \frac{f^{\prime}(x)}{f(x)}$
+    - $\displaystyle [\ln f(x)]' = \frac{f^{\prime}(x)}{f(x)}$，因此$\displaystyle [\ln f(x)]'' = \left[\frac{f^{\prime}(x)}{f(x)}\right]^{\prime}$
+- 见到$\displaystyle \int^b_a f(x)dx$，做$\displaystyle F(x) = \int^x_a f(t)dt$
+
+定理
+
+- 罗尔定理
+
+  - 定义：若$f(x)$满足
+
+    - $[a, b]$上连续
+    - $(a, b)$内可导
+    - $f(a) = f(b)$
+
+    则可以说$f'(\xi) =0, \xi\in(a, b)$。
+
+  - 常用于
+
+    - 证明$F'(\xi) = 0$ <闭关修炼 1.2.68>
+    - 证明$F^{(n)}(\xi) = 0$
+  
+- 拉格朗日中值定理
+
+  - 定义：$f(b)-f(a) = f'(\xi)(b - a), \xi\in(a, b)$
+  - 常用于
+    - 题设中有$f$与$f'$关系或“$f(b) - f(a)$” <闭关修炼 1.2.69>
+    - 证$F'(\xi)>0$或$F'(\xi)<0$
+    - 证$F^{(n)}(\xi)>0$或$F^{(n)}(\xi)<0$，$n > 2$
+    - 证$F(f'(\eta), f'(\tau)) = 0$
+    - $f'(x)$可考单调性
+
+常见关键点总结
+
+- 积分
+  - 积分中值定理：$\displaystyle \int^b_a f(x)dx = f(\xi)(b-a), \xi \in (a, b)$，对于积分$f(x)$很复杂时，可以利用换元简化计算，如$\displaystyle \int^b_a xe^{-x}f(x)dx$，可以先令$\displaystyle F(x) = xe^{-x}f(x) \Rightarrow \int^b_a F(x)dx$。题目中暗示使用积分中值定理的情况为： 
+    - 可抵消：$\displaystyle k \int^{\frac{1}{k}}_0 f(x)dx = f(\xi), \xi \in (0, \frac{1}{k})$  <闭关修炼 1.2.68>
 
 # 一元函数积分学
 
@@ -275,7 +367,7 @@ $$
 
 - $\int {{{\csc }^2}xdx} $
 
-- $\int {\tan x\sec xdx} $ $\sec x + C$
+- $\displaystyle \int {\tan x\sec xdx} =\sec x + C$
 
 - $\int {\cot x\csc xdx} $
 
@@ -283,7 +375,7 @@ $$
 
 - $\int {\ln xdx} $
 
-- $\int {{1 \over {\sqrt {1 - {x^2}} }}dx} $
+- $\displaystyle \int {{1 \over {\sqrt {1 - {x^2}} }}dx} = \arcsin x + C$
 
 - $\int { - {1 \over {\sqrt {1 - {x^2}} }}dx} $
 
@@ -316,7 +408,7 @@ I &= \int \frac{\frac{1}{\sqrt{2}}}{\sqrt{\frac{1}{2}} \cos x+\frac{1}{\sqrt{2}}
 $$
 - $\int \arctan x d x=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C$，思路是分部积分法 <1000题8.9>
 $$
-  \begin{array}{l}
+\begin{array}{l}
   {I=x \arctan x-\int \frac{x}{1+x^{2}} d x} \\ 
   {=x \arctan x-\frac{1}{2} \int \frac{2 x}{1+x^{2}} d x} \\
   {=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C}

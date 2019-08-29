@@ -313,7 +313,7 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 # 线性方程组
 
-## 具体型 ★
+## ★具体型 
 
 **解含参数的线性方程组**（参考马同学线性代数）
 
@@ -337,11 +337,11 @@ $$\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {\vdots
 
 **公共解** <闭关修炼 2.3.5>
 
-A的解部分是B的解，相似的B的解部分是A的解。
+A的解部分是B的解，相似的B的解部分是A的解，本质上都是求出$k_i$之间的关系或者$l_j$之间的关系（如$k_1 = 2k_2$）
 
 - 方程组${A}_{m \times n} {x}={0}$和${B}_{m \times n} {x}={0}$联立变为$\left[\begin{array}{l}{A} \\ {B}\end{array}\right] x=0$，对于非齐次方程组也是同理，本质是方程组的联立；
 - 已知$A_{m \times n} x=0$的通解$k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_s\xi_s$，带入到${B}_{m \times n} {x}={0}$，求出$k_i(i=1, 2, \cdots, s)$，再代回$A_{m \times n} x=0$的通解，即公共解（仅齐次）；
-- 已知$A_{m \times n} x=0$的基础解系$\xi_{1}, \xi_{2}, \cdots, \xi_{s}$和${B}_{m \times n} {x}={0}$的基础解系$\eta_1, \eta_2, \cdots, \eta_t$，则y公共解为$\gamma =  k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k \xi_{s} - (l_{1} \boldsymbol{\eta}_{1}+l_{2} \boldsymbol{\eta}_{2}+\cdots+l_{t}\eta_t)=0$，即解$\xi_{1}+k_{2} \xi_{2}+\cdots+k \xi_{s}=l_{1} \boldsymbol{\eta}_{1}+l_{2} \boldsymbol{\eta}_{2}+\cdots+l_{t}\eta_t$，求出$k_i$或者$l_j$，即可求出公共解$\gamma$（仅齐次）。
+- 已知$A_{m \times n} x=0$的基础解系$\xi_{1}, \xi_{2}, \cdots, \xi_{s}$和${B}_{m \times n} {x}={0}$的基础解系$\eta_1, \eta_2, \cdots, \eta_t$，则y公共解为$\gamma =  k_{1} \xi_{1}+k_{2} \xi_{2}+\cdots+k_s \xi_{s} - (l_{1} \boldsymbol{\eta}_{1}+l_{2} \boldsymbol{\eta}_{2}+\cdots+l_{t}\eta_t)=0$，即解$k_1\xi_{1}+k_{2} \xi_{2}+\cdots+k_s \xi_{s}=l_{1} \boldsymbol{\eta}_{1}+l_{2} \boldsymbol{\eta}_{2}+\cdots+l_{t}\eta_t$，即可求出公共解$\gamma$（仅齐次）。
 
 **同解**
 
@@ -387,11 +387,10 @@ A的解完全是B的解，A可以被B线性表示
 
 解与系数的关系
 
-对于齐次线性方程组，有解${\beta}=\left[b_{1}, b_{2}, \cdots, b_{n}\right]^{\mathrm{T}}$
-
-- $a_{i 1} b_{1}+a_{i 2} b_{2}+\cdots+a_{i n} b_{n}=0$，也就是系数与解点乘为0
-  - 角色互换，已知解反求系数，${{\beta}^{\mathrm{T}}\alpha}_{i}^{\mathrm{T}}=0  $ <闭关修炼 2.3.14>
-  - $\alpha_i\perp\beta$  <闭关修炼 2.3.13>
+- 对于齐次线性方程组有<u>非零解</u>，且$\alpha_i = [a_{i1}, a_{i2}, \cdots, a_{in}], {\beta}=\left[b_{1}, b_{2}, \cdots, b_{n}\right]^{\mathrm{T}}$
+  - $a_{i 1} b_{1}+a_{i 2} b_{2}+\cdots+a_{i n} b_{n}=0$，也就是系数与解点乘为0
+    - 角色互换，已知解反求系数，${{\beta}^{\mathrm{T}}\alpha}_{i}^{\mathrm{T}}=0  $ <闭关修炼 2.3.14>
+    - $\alpha_i\perp\beta$，即$\alpha_i\cdot \beta = 0$  <闭关修炼 2.3.13>
 
 用方程组讨论秩 <闭关修炼 2.3.15, **2.3.16**; 1000题 线代132>
 
@@ -422,7 +421,7 @@ A的解完全是B的解，A可以被B线性表示
 
 ## 具体型
 
-**$\beta$与$\alpha_1, \cdots, \alpha_n $ （非齐次方程组）**
+**非齐次方程组 - $\beta$与$\alpha_1, \cdots, \alpha_n $ **
 
 - 建立方程组$\left[{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{n}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\boldsymbol{\beta}$
 - 解方程
@@ -431,7 +430,7 @@ A的解完全是B的解，A可以被B线性表示
   - $r(A)=r(A|\beta)=n$说明向量组可以唯一的表示$\beta$（方程组有唯一解）
   - $r(A)=r(A|\beta)<n$说明A有无穷多种表示方法（方程组无穷解）
 
-**$\alpha_1, \cdots, \alpha_n $ （齐次方程组）**
+**齐次方程组 - $\alpha_1, \cdots, \alpha_n $**
 
 - 线性无关与线性无关定义
   - 线性无关：仅在$k_1=k_2=\cdots=k_n=0$的情况下$k_1\alpha_1+\cdots+k_n\alpha_n=0$成立，则成为线性无关$\Leftrightarrow$$AX=0$只有零解
@@ -466,8 +465,9 @@ A的解完全是B的解，A可以被B线性表示
     2. 证明$k_1=k_2=\cdots=k_n=0$
 
   - 可以用的方法有
+    - 利用齐次线性方程组系数与非零解的关系($\alpha_i$是行向量) <闭关修炼 2.3.13>
     - 左右两边同乘一个矩阵或者重组 <闭关修炼 2.4.7>
-    - 转化为齐次方程组（$\left[{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{n}\right]X=0$，把$k_i$看做方程组的解）只有零解
+    - 转化为齐次方程组（$\left[{\alpha}_{1}, {\alpha}_{2}, \cdots, {\alpha}_{n}\right]X=0$，把$k_i$看做方程组的解且$\alpha_i$是列向量）只有零解
     - 与特征值、基础解系和正定综合 <1000题 线代91(略), 线代92(略), 线代187>
 
 - 用秩 <闭关修炼 2.4.9>
@@ -563,7 +563,7 @@ A的解完全是B的解，A可以被B线性表示
   - 有因为$\lambda_n\ne\lambda_i(i=1, 2, \cdots, n-1)$，所以有特征向量的重要结论可知，特征向量全部线性无关
   - $P=[\xi_1, \xi_2, \cdots, \xi_n]$是线性无关的，也即P是可逆的，$P^{-1}AP=\Lambda$，即$A\sim\Lambda$
 
-## 向量对角化 ★
+## ★向量对角化 
 
 ### A与对角阵的相似($A\sim\Lambda$)
 

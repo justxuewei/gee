@@ -216,7 +216,7 @@ yield to
 
 **RC - Passage 3**
 
-with regard to = in regard to
+with regard to = in regard to = with respect to
 
 - 就...而言；关于 concerning someone or something.
   - What shall we do in regard to planning dinner?
@@ -353,4 +353,85 @@ get around to *doing something*
 
 - 抽空去做 to find time to do something; to do something after a long delay.
   - I finally got around to buying a new coat.
-  - It took Sally years to get around to visiting her aunt.**
+  - It took Sally years to get around to visiting her aunt.
+
+**RC - Passage 4**
+
+go through
+
+- 经历
+  - The world is going through a ware of mergers and acquisitions ever witnessed.
+
+turn *something or someone* into *something or someone* = change into
+
+- 变成 to change someone or something into someone or something else.
+  - turn loss into gain 转亏为盈
+
+account for
+
+- (*something or someone*) 占 to know the state of or whereabouts of someone or something.
+  - They cannot account for three of the passengers.
+- (*something*) 解释 to explain something.
+  - Your explanation accounts for everything that has happened.
+
+- 成为
+  - International affiliates account for the fast-growing segment of production in enconomies that open up and welcome foreign investment.
+
+take it upon *oneself* to *do something*
+
+- 让..承担
+  - Thank you for taking it upon yourself to organize the meeting.
+
+**RC - Passage 5**
+
+high profile
+
+- 引人注目的
+  - my relatively high profile career
+
+in the manner of
+
+- 以...的方式
+  - in the manner of a disgraced government minister
+
+step out of *something*
+
+- 离开；退出 If someone steps out of a role or situation, they leave it.
+  - I don't regret stepping out of the security of marriage.
+
+settle for *something*
+
+- 接受 to agree to accept something (even though something else would be better).
+  - We wanted a red one, but settled for a blue one.
+  - Ask your grocer for Wilson’s canned corn—the best corn in cans. Don’t settle for less.
+
+# 2002
+
+**CZ**
+
+motion pictures
+
+- 电影
+
+in the wake of
+
+- 随之而来的；随后 after something; as a result of some event.
+  - We had no place to live in the wake of the fire.
+  - In the wake of the storm, there were many broken tree limbs.
+
+in the company of *something or someone*
+
+- 在...的伴随下
+  - The mind quiets spontaneously in the company of a great soul.
+
+weigh against *someone or something*
+
+- 对...不利 to count against someone or something; [for some fact] to work against someone or something.
+  - I hope my many absences do not weigh against me on the final grade.
+  - This will weigh against you.
+
+weigh *something* against *something*
+
+- 权衡 to ponder something by balancing it against something.
+  - I weighed going to town against staying here and sleeping and I decided to stay here.
+  - When I weigh your suggestion against my own ideas, I realize that I must follow my own conscience.
