@@ -31,6 +31,10 @@
 - $\cos(\alpha \pm \beta)=\cos \alpha \cos \beta \mp \sin \alpha \sin \beta$ <1000题9.67>
 - $\displaystyle \tan\left(\alpha \pm \beta \right) = \frac{\tan\alpha \pm \tan \beta}{1 \mp \tan\alpha\tan\beta}$ <闭关修炼 1.1.26>
 
+积化和差
+
+- $\displaystyle \cos\alpha\cos\beta = \frac{1}{2}[\cos(\alpha+\beta) + \cos(\alpha - \beta)]$
+
 和差化积
 
 -  $\displaystyle \cos\alpha - \cos\beta = -2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ <闭关修炼 1.1.47>
@@ -62,11 +66,12 @@
 ## 因式分解公式
 
 - $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ <1000题9.41, 线代3, 线代19>
-- $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19>
-- $a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2} b+\dots+a b^{n-2}+b^{n-1} \right)$ <1000题 线代62; 闭关修炼 1.1.10>
+- $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$  <1000题 线代19; 闭关修炼 1.2.81>
+- $a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2} b+\dots+a b^{n-2}+b^{n-1} \right)$ <1000题 线代62; 闭关修炼 1.1.10, 1.1.56>
 - n是<u>正偶数</u>时，$a^{n}-b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\dots+a b^{n-2}-b^{n-1}\right) $ <1000题 线代32>
 - n是<u>正奇数</u>时，$a^{n}+b^{n}=(a+b)\left(a^{n-1}-a^{n-2} b+\cdots-a b^{n-2}+b^{n-1}\right)$
 - $(a+b)^{n}=\sum\limits_{k=0}^{n} C_{n}^{k} a^{n-k} b^{k}$ <闭关修炼 1.1.60>
+- $(a+b+c)^{2} = a^{2}+b^{2}+c^{2}+2 a b+2 b c+2 c a$ <闭关修炼 2.6.1>
 
 ## 奇偶性
 
@@ -81,14 +86,19 @@
 
 ## 极限性质
 
-$\displaystyle \lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
+【函数极限】$\displaystyle \lim_{x\rightarrow x_0} f(x) = A$
+
+- 保号性 [参考[这里]([https://lclfeng.github.io/2016/07/24/%E7%AC%AC%E4%B8%89%E7%AF%87/](https://lclfeng.github.io/2016/07/24/第三篇/))]
+  - 如果$f(x)\rightarrow A(x\rightarrow x_0)$，而且$A > 0$或者$A < 0$，则存在常数$\delta > 0$，使当$0 < |x - x_o| < \delta$时，有$f(x)>0$或者$f(x)<0 $ <闭关修炼 1.2.76>
+
+【数列极限】$\displaystyle \lim _{n \rightarrow \infty} a_n = C$极限存在，则具有的性质有：
 
 - 唯一性
 - 有界性，即$A \le a_n \le B$
 - 保号性，若$C>0$，那么当$n \rightarrow \infty$时，$a_n > 0$
 - 脱帽法，$a_n=C+\alpha$，其中$\alpha\rightarrow0$
 
-## 函数极限计算
+## ★函数极限计算
 
 等价无穷小
 
@@ -152,7 +162,7 @@ $x \to 0$时，等价无穷小公式有：
 - $\displaystyle \lim_{n\rightarrow \infty} x_n = A$的充要条件是所有子列$\{x_{n_k}\}$均收敛于A
   - $\displaystyle \lim _{n \rightarrow \infty} x_{n}=a \Leftrightarrow \lim _{n \rightarrow \infty} x_{2 n}=\lim _{n \rightarrow \infty} x_{2 n+1}=a \Leftrightarrow \lim _{n \rightarrow \infty} x_{3 n}=\lim _{n \rightarrow \infty} x_{3 n+1}=\lim _{n \rightarrow \infty} x_{3 n+2}=0$
 
-## 数列极限的存在性与计算
+## ★数列极限的存在性与计算
 
 变量连续化（可以看到这个方法通常是求一个函数，而非求$\displaystyle \lim_{n\rightarrow\infty} a_n$）
 
@@ -162,6 +172,7 @@ $x \to 0$时，等价无穷小公式有：
 
  求极限$\displaystyle \lim_{n\rightarrow\infty} a_n$
 
+- 等价无穷小替换 <闭关修炼 1.1.57(3)>
 - 递推式是单调的，使用单调有界准则
   - 有界与无界
     - $\{a_n\}$单调增加时
@@ -204,9 +215,10 @@ $x \to 0$时，等价无穷小公式有：
 
 ## ★泰勒公式
 
-- 泰勒通用展开式 *(p89)*
-
-- 常用展开式
+- 泰勒通用展开式
+  - 通用形式（含拉格朗日余项）：$\displaystyle f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(\xi)}{2!}(x-x_0)^2$，需要注意的是展开点为$x_0$，$\xi$在$x$与$x_0$之间，**切记不能把它当做一个常数看待** <闭关修炼1.2.75>
+  - 常在$x_0 = 0$点展开，则变为$\displaystyle f(x) = f(0) + f'(0)x+ \frac{f''(\xi)}{2!}x^2$
+- 常用展开式($x \rightarrow 0$)
   - $\sin x$
   - $\cos x$
   - $\arcsin x$
@@ -214,18 +226,18 @@ $x \to 0$时，等价无穷小公式有：
   - $\displaystyle \arctan x=x-\frac{x^{3}}{3}+o\left(x^{3}\right)$
   - $\displaystyle \ln (1+x)=x-\frac{1}{2} x^{2}+\frac{1}{3} x^{3} + o(x^3)$
   - $\displaystyle {e^x} = 1+x+\frac{x^{2}}{2 !} + o(x^2)$
-  - $\displaystyle {\left( {1 + x} \right)^\alpha }1+\alpha x+\frac{\alpha(\alpha-1)}{2} x^{2}+o\left(x^{2}\right)$
+  - $\displaystyle {\left( {1 + x} \right)^\alpha } = 1+\alpha x+\frac{\alpha(\alpha-1)}{2} x^{2}+o\left(x^{2}\right)$
 
 ## ★导数公式
 
 - 基本初等函数的导数公式 *(2020 p66)*
   - ${\left( {\arcsin x} \right)^\prime }$
   - ${\left( {\arccos x} \right)^\prime }$
-  - ${\left( {\tan x} \right)^\prime }$
+  - ${\left( {\tan x} \right)^\prime } = \sec^2 x$
   - ${\left( {\cot x} \right)^\prime }$
   - ${\left( {\arctan x} \right)^\prime }$
   - ${\left( {{\mathop{\rm arccot}\nolimits} x} \right)^\prime }$
-  - ${\left( {\sec x} \right)^\prime }$
+  - ${\left( {\sec x} \right)^\prime } = \sec x\tan x$
   - ${\left( {\csc x} \right)^\prime }$
   - ${\left[ {\ln \left( {x + \sqrt {{x^2} + 1} } \right)} \right]^\prime }$
   - ${\left[ {\ln \left( {x + \sqrt {{x^2} - 1} } \right)} \right]^\prime }$
@@ -288,7 +300,9 @@ $x \to 0$时，等价无穷小公式有：
 - 曲率公式$\displaystyle k=\frac{\left|y^{\prime \prime}\right|}{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}$
 - 曲率半径$\displaystyle R=\frac{1}{k}=\frac{\left[1+\left(y^{\prime}\right)^{2}\right]^{\frac{3}{2}}}{\left|y^{\prime \prime}\right|}\left(y^{\prime \prime} \neq 0\right)$
 - 曲率圆$(X-\alpha)^{2}+(Y-\beta)^{2}=R^{2}$，其中$\displaystyle \alpha=x-\frac{y^{\prime}\left[1+\left(y^{\prime}\right)^{2}\right]}{y^{\prime \prime}}, \quad \beta=y+\frac{1+\left(y^{\prime}\right)^{2}}{y^{\prime \prime}}$
-## ★中值定理
+## 证明题
+
+### ★中值定理
 
 构造辅助函数
 
@@ -304,7 +318,7 @@ $x \to 0$时，等价无穷小公式有：
   - $\displaystyle \left[\frac{f(x)}{x}\right]^{\prime}=\frac{f^{\prime}(x) x-f(x)}{x^{2}}$，所以见到$f^{\prime}(x) x-f(x)$，做$\displaystyle F(x)=\frac{f(x)}{x}$
   - $\displaystyle \left[\frac{f^{\prime}(x)}{f(x)}\right]^{\prime}=\frac{f^{\prime \prime}(x) f(x)-\left[f^{\prime}(x)\right]^{2}}{f^{2}(x)}$，所以见到$f^{\prime \prime}(x) f(x)-\left[f^{\prime}(x)\right]^{2}$，做$\displaystyle F(x) = \frac{f^{\prime}(x)}{f(x)}$
     - $\displaystyle [\ln f(x)]' = \frac{f^{\prime}(x)}{f(x)}$，因此$\displaystyle [\ln f(x)]'' = \left[\frac{f^{\prime}(x)}{f(x)}\right]^{\prime}$
-- 见到$\displaystyle \int^b_a f(x)dx$，做$\displaystyle F(x) = \int^x_a f(t)dt$
+- 见到$\displaystyle \int^b_a f(x)dx$，做$\displaystyle F(x) = \int^x_a f(t)dt$ <闭关修炼 1.2.70>
 
 定理
 
@@ -320,7 +334,7 @@ $x \to 0$时，等价无穷小公式有：
 
   - 常用于
 
-    - 证明$F'(\xi) = 0$ <闭关修炼 1.2.68>
+    - 证明$F'(\xi) = 0$ <闭关修炼 1.2.68, 1.2.70>
     - 证明$F^{(n)}(\xi) = 0$
   
 - 拉格朗日中值定理
@@ -329,8 +343,8 @@ $x \to 0$时，等价无穷小公式有：
   - 常用于
     - 题设中有$f$与$f'$关系或“$f(b) - f(a)$” <闭关修炼 1.2.69>
     - 证$F'(\xi)>0$或$F'(\xi)<0$
-    - 证$F^{(n)}(\xi)>0$或$F^{(n)}(\xi)<0$，$n > 2$
-    - 证$F(f'(\eta), f'(\tau)) = 0$
+    - 证$F^{(n)}(\xi)>0$或$F^{(n)}(\xi)<0$，$n > 2$ <闭关修炼 1.2.72>
+    - 证$F(f'(\eta), f'(\tau)) = 0 $ <闭关修炼 1.2.77>
     - $f'(x)$可考单调性
 
 常见关键点总结
@@ -338,6 +352,20 @@ $x \to 0$时，等价无穷小公式有：
 - 积分
   - 积分中值定理：$\displaystyle \int^b_a f(x)dx = f(\xi)(b-a), \xi \in (a, b)$，对于积分$f(x)$很复杂时，可以利用换元简化计算，如$\displaystyle \int^b_a xe^{-x}f(x)dx$，可以先令$\displaystyle F(x) = xe^{-x}f(x) \Rightarrow \int^b_a F(x)dx$。题目中暗示使用积分中值定理的情况为： 
     - 可抵消：$\displaystyle k \int^{\frac{1}{k}}_0 f(x)dx = f(\xi), \xi \in (0, \frac{1}{k})$  <闭关修炼 1.2.68>
+
+### 不等式问题
+
+单调性
+
+最值
+
+凹凸性 <闭关修炼 1.2.85>
+
+拉格朗日中值定理
+
+柯西中值定理
+
+带有拉格朗日余项的泰勒公式
 
 # 一元函数积分学
 
@@ -349,9 +377,9 @@ $x \to 0$时，等价无穷小公式有：
 - 估值定理
 - 中值定理
 - 周期性：若$f(x)$在$(-\infty,+\infty)$内连续，以$T$为周期 <1000题3.2>
-  - $\int_{a}^{a+T} f(x) \mathrm{d} x=\int_{0}^{T} f(x) \mathrm{d} x$（$a$为任意实数）<1000题8.14>
-  - $\int_{0}^{x} f(t) \mathrm{d} t$以$T$为周期$\Leftrightarrow \int_{0}^{T} f(x) \mathrm{d} x=0$ <1000题8.14>
-  - $\int f(x) \mathrm{d} x$（$f(x)$的全体原函数）周期为$T$$\Leftrightarrow \int_{0}^{T} f(x) \mathrm{d} x=0$
+  - $\displaystyle \int_{a}^{a+T} f(x) \mathrm{d} x=\int_{0}^{T} f(x) \mathrm{d} x$（$a$为任意实数）<1000题8.14>
+  - $\displaystyle \int_{0}^{x} f(t) \mathrm{d} t$以$T$为周期$\displaystyle \Leftrightarrow \int_{0}^{T} f(x) \mathrm{d} x=0$ <1000题8.14>
+  - $\displaystyle \int f(x) \mathrm{d} x$（$f(x)$的全体原函数）周期为$T$$\displaystyle \Leftrightarrow \int_{0}^{T} f(x) \mathrm{d} x=0$
 
 ## ★一元不定积分
 
@@ -363,9 +391,9 @@ $x \to 0$时，等价无穷小公式有：
 
 - $\int {\csc xdx} $ [How do you integrate cscx?](https://socratic.org/questions/how-do-you-integrate-cscx)
 
-- $\int {{{\sec }^2}xdx} $
+- $\displaystyle \int {{{\sec }^2}xdx} = \tan x + C$
 
-- $\int {{{\csc }^2}xdx} $
+- $\displaystyle \int {{{\csc }^2}xdx}  = -\cot x + C$
 
 - $\displaystyle \int {\tan x\sec xdx} =\sec x + C$
 
@@ -377,7 +405,7 @@ $x \to 0$时，等价无穷小公式有：
 
 - $\displaystyle \int {{1 \over {\sqrt {1 - {x^2}} }}dx} = \arcsin x + C$
 
-- $\int { - {1 \over {\sqrt {1 - {x^2}} }}dx} $
+- $\displaystyle \int { - {1 \over {\sqrt {1 - {x^2}} }}dx} = \arccos x + C$
 
 - $\int {{1 \over {\sqrt {1+{x^2}} }}dx}$
 $$

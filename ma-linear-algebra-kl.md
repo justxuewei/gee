@@ -401,15 +401,15 @@ A的解完全是B的解，A可以被B线性表示
 对于齐次线性方程组$\left\{\begin{array}{l}{a_{1} x+b_{1} y+c_{1} z=d_{1}} \\ {a_{2} x+b_{2} y+c_{2} z=d_{2}} \\ {a_{3} x+b_{3} y+c_{3} z=d_{3}}\end{array}\right.$，设${\alpha}_{1}=\left[\begin{array}{l}{a_{1}} \\ {a_{2}} \\ {a_{3}}\end{array}\right], {\alpha}_{2}=\left[\begin{array}{l}{b_{1}} \\ {b_{2}} \\ {b_{3}}\end{array}\right], {\alpha}_{3}=\left[\begin{array}{l}{c_{1}} \\ {c_{2}} \\ {c_{3}}\end{array}\right], {\alpha}_{4}=\left[\begin{array}{l}{d_{1}} \\ {d_{2}} \\ {d_{3}}\end{array}\right]$，系数矩阵的3个行向量为${\beta}_{1}=\left[a_{1}, b_{1}, c_{1}\right], {\beta}_{2}=\left[a_{2}, b_{2}, c_{2}\right], {\beta}_{3}=\left[a_{3}, b_{3}, c_{3}\right]$，增广矩阵的3个行向量为$\gamma_{1}=\left[a_{1}, b_{1}, c_{1}, d_{1}\right], \gamma_{2}=\left[a_{2}, b_{2}, c_{2}, d_{2}\right], \gamma_{3}=\left[a_{3}, b_{3}, c_{3}, d_{3}\right]$
 
 - 情况1：$r(\alpha_1, \alpha_2, \alpha_3)=3$，显然有$r(\alpha_1, \alpha_2, \alpha_3, \alpha_4)=3$，这个时候方程组有唯一解，其几何意义为这三个向量不共线（图2-3-1）
-- 情况2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=2$，也即$r\left({\beta}, {\beta}_{2}, {\beta}_{3}\right)=2$
+- 情况2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=2$，也即$r\left({\beta_1}, {\beta}_{2}, {\beta}_{3}\right)=2$ （特点是可以靠着二维旋转重合）
   - 情况2.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，方程有无穷多解（解是一条线）
     - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$中有两个是线性相关的，其几何意义为两个向量共线（对应的平面重合），一个不共线（图2-3-2）
     - $r\left(\gamma_{1}, \gamma_{2}, \gamma_{3}\right)=2$且$\gamma_{1}, \gamma_{2}, \gamma_{3}$互不共线（图2-3-3）
   
-  - 情况2.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，方程无解
+  - 情况2.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=3$，方程无解
     - 情况2.2.1：$\beta_1, \beta_2, \beta_3$有两个共线（图2-3-4）
     - 情况2.2.2：$\beta_1, \beta_2, \beta_3$互不共线（图2-3-5）
-- 情况3：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=1$，也即$r\left({\beta}, {\beta}_{2}, {\beta}_{3}\right)=1$
+- 情况3：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}\right)=1$，也即$r\left({\beta_1}, {\beta}_{2}, {\beta}_{3}\right)=1$ （特点是可以靠着一维移动重合，即上下平移）
   - 情况3.1：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=1$，那么有无穷多解（解是一个面），三个面重合（图2-3-6）
   - 情况3.2：$r\left({\alpha}_{1}, {\alpha}_{2}, {\alpha}_{3}, {\alpha}_{4}\right)=2$，此时方程组无解
     - 情况3.2.1：$\gamma_{1}, \gamma_{2}, \gamma_{3}$有两个向量线性相关（图2-3-7）
@@ -639,7 +639,7 @@ $A\sim B$的必要条件
 
 **实对称矩阵**
 
-- 若$\lambda_1\ne\lambda_2$，则$\xi_1\perp\xi_2$ [参见 `相似理论 > 特征值和特征向量 > 特征向量`] <1000题 线代191>
+- 若$\lambda_1\ne\lambda_2$，则$\xi_1\perp\xi_2$ [参见 `相似理论 > 特征值和特征向量 > 特征向量`] <1000题 线代191；闭关修炼 2.5.8>
 - 若A为实对称矩阵，则必可以用一个正交矩阵P，使得$P^{-1}AP=\Lambda$
 
 # 二次型

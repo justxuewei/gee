@@ -435,3 +435,44 @@ weigh *something* against *something*
 - 权衡 to ponder something by balancing it against something.
   - I weighed going to town against staying here and sleeping and I decided to stay here.
   - When I weigh your suggestion against my own ideas, I realize that I must follow my own conscience.
+
+**RC - Passage 1**
+
+show *someone* around (*some place*)
+
+- 参观 to give someone a tour of a place.
+  - I’m very glad you’ve come to work here. Let me show you around so you’ll know where things are.
+  - Welcome to our town. As soon as you unpack, I’ll get someone to show you around.
+
+off-the-cuff
+
+- 即兴的
+  - I didn't mean any offence. It was a flippant, off-the-cuff remark...
+  - Mr Baker was speaking off the cuff when he made those suggestions.
+
+light-hearted
+
+- 轻松愉快的；无忧无虑的
+  - They were light-hearted and prepared to enjoy life.
+
+in sympathy with
+
+- 赞同
+  - You are in sympathy with their point of view.
+
+**RC - Passage 2**
+
+gloom and doom
+
+- 前景惨淡
+  - Why are people so full of gloom and doom?
+
+lose sleep over
+
+- 为...操心
+  - It's not worth losing sleep over.
+
+emerge from
+
+- 摆脱
+  - A sizable portion of the world is only just emerging from economic decline.
