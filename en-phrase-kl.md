@@ -476,3 +476,211 @@ emerge from
 
 - 摆脱
   - A sizable portion of the world is only just emerging from economic decline.
+
+# 2003
+
+**CZ**
+
+give thought to
+
+- 思考 to think about something; to devote some time to thinking about something.
+  - After I have had time to give some thought to the matter, I will call you.
+
+group dynamics
+
+- 小组成员的互动
+  - A variety of small clubs can provide multiple opportunies for leadership, as well as for practice in successful group dynamics.
+
+go on to *something*
+
+- 继续做 to advance to something or to doing something.
+  - After a few years she went on to even greater heights.
+  - Larry went on to found his own company.
+
+a sense of commitment
+
+- 责任感
+
+make for
+
+- (make for *somewhere*) 走向
+  
+  - He rose from his seat and made for the door.
+- (make for *something*) 导致；有助于
+  
+  - A happy parent makes for a happy child.
+  
+
+stand for
+
+- 代表；表示
+  - AIDS stands for Acquired Immune Deficiency Syndrome...
+- 支持；主张
+  - The party is trying to give the impression that it alone stands for democracy...
+
+take for
+
+- 认为
+
+**RC - Passage 1**
+
+lie the roots for *something*
+
+- 为...奠定基础
+  - The America spymaster who laid the roots for CIA was fascinated with information.
+
+be fascinated with
+
+- 对...着迷
+  - The America spymaster who laid the roots for CIA was fascinated with information.
+
+a matter of
+
+- 关于...的问题
+  - The latest revolution isn't simply a master of gentleman reading other gentleman's email.
+
+by a large margin
+
+- 以很大优势
+  - The winner, by a large margin, was a tiny Virginia company called Open Source Solutions, ...
+
+make a splash
+
+- 引起轰动；引人注目
+  - Among the firms making the biggest splash in this new world is Straitford Inc., ...
+
+earn one's keep
+
+- 维持生计
+  - That's where Straitford earns its keep.
+
+on the chance
+
+- 有机会
+  - We went to the cinema on the chance of seeing Paul there.
+
+**RC - Passage 2**
+
+seek to
+
+- 力求；追求；争取
+  - One such cause now seeks to end biomedical research because of the theory that animals have rights ruling out their use in research.
+
+rule out
+
+- 阻止...的发生；拒绝...
+  - One such cause now seeks to end biomedical research because of the theory that animals have rights ruling out their use in research.
+
+**RC - Passage 3**
+
+merge into
+
+- 结合；合并
+  - In the 1890s, many companies merged into Trusts.
+
+have *someone* by the throat
+
+- 抓到...的要害
+  - The railroad therefore have them by the throat.
+
+on the grounds that
+
+- 由于
+  - Railroads justify rate discrimation against captive shippers on the grounds that in the long run it reduces everyone's cost.
+
+# 2004
+
+**Cloze Test**
+
+act on = act upon
+
+- 采取行动 to take action on a particular problem.
+  - I will act on this immediately.
+
+in return for (*someone or something*)
+
+- 作为回报 by way of giving something back; as a way of paying someone back for something; as part of an exchange.
+  - I helped Tom yesterday, and he helped me in return for my efforts.
+  - I paid $20 and received four tickets in return.
+
+in reply to
+
+- 对...作出回应
+  - The Murdstones said nothing in reply to these fierce words, but walked quickly out of the house.
+
+in reference to = with reference to
+
+- 关于 concerning or about someone or something; in connection with someone or something.
+  - What shall we do in reference to Bill and his problems?
+  - With reference to what problem?
+
+for lack of
+
+- 因缺乏...
+  - The plants was died for lack of water.
+
+be immune to
+
+- 对...有抵抗力
+  - This blood test will show whether or not you're immune to this disease...
+
+at length
+
+- 最终 after some time; finally.
+  - And at length, the wizard spoke.
+  - At length, the roses bloomed, and the tomatoes ripened.
+
+in case
+
+- 万一
+  - You know, just in case it's different.
+
+**RC - Passage 1**
+
+stumble across
+
+- 偶然发现；偶然遇见
+  - Hunting for a job late last year, lawyer Gant Redmon stumbled across CareerBulider, a job database on the Internet.
+
+look out for
+
+- look out for *something* 注意；注视
+  - What are the symptoms to look out for?
+- look out for *someone* 关照；关心
+  - Working with a personal search agent means having another set of eyes looking out for you.
+
+**RC - Passage 2**
+
+as yet
+
+- 到目前为止
+  - This, for those as yet unaware of such a disadvantage, refers to discrimination against those whose surnames begin with a letter in the lower half of the alphabet.
+
+thumb through *something* = leaf through *something*
+
+- 浏览 to look through a book, magazine, or newspaper, without reading it carefully.
+  - It has long been known that a taxi firm called AAAA cars has a big advantage over Zodiac cars when customers thumb through their phone directories.
+
+dream *something* up
+
+- 设想出；想像出 to invent something; to fabricate something.
+  - I don't know what to do, but I'll dream something up.
+  - Please dream up a solution for this problem.
+
+set in
+
+- 开始 to begin; to become fixed for a period of time.
+  - One theory, dreamt up in all the spare time enjoyed by the alphabetically disadvantaged, is that the rot sets in early.
+  - A severe cold spell set in early in November.
+  - When high temperatures set in, the use of electricity went up considerably.
+
+get stuck in
+
+- 陷入...；开始做某事
+  - So short-sighted Zysman junior gets stuck in the back row, and is rarely asked the improving questions posed by insensitive teachers.
+  - I hope you intend to get stuck in.
+
+plough through
+
+- 费力的翻过
+  - Shortlists for job interviews, election ballot papers, lists of conference speakers and attendees: all tent to be drawn up alphabetically, and their recipients lost interest as they plough through them.

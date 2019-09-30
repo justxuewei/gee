@@ -1,4 +1,4 @@
-# 基础知识
+#       基础知识
 
 ## 数列基础
 
@@ -15,7 +15,7 @@
 常用三角函数
 
 - $\sin 2x = 2\sin x\cos x$
-- $\cos 2x$
+- $\cos 2x = \cos^2x-\sin^2x = 1-2\sin^2x = 2\cos^2x-1$
 - $\sin^2 x$
 - $\cos^2 x$
 - $\tan 2x$
@@ -38,6 +38,10 @@
 和差化积
 
 -  $\displaystyle \cos\alpha - \cos\beta = -2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ <闭关修炼 1.1.47>
+
+反三角函数
+
+- $\displaystyle \sin \arcsin x = \sin t = \frac{x}{\sqrt{1+x^2}}$ <见OneNote笔记 P47>
 
 ## 经典不等式
 
@@ -125,7 +129,7 @@ $x \to 0$时，等价无穷小公式有：
 
 复杂极限公式
 
-- $\lim \limits_{x \rightarrow 0} \frac{1-\cos x \sqrt{\cos 2 x} \cdots \sqrt[n]{\cos n x}}{x^{2}} = \sum\limits^n_{k=1} \frac{k}{2}$ <证明: 闭关修炼 1.1.12>
+- $\displaystyle \lim \limits_{x \rightarrow 0} \frac{1-\cos x \sqrt{\cos 2 x} \cdots \sqrt[n]{\cos n x}}{x^{2}} = \sum\limits^n_{k=1} \frac{k}{2}$ <证明: 闭关修炼 1.1.12>
 
 ## 函数性质的存在性
 
@@ -196,7 +200,7 @@ $x \to 0$时，等价无穷小公式有：
   2. 求极限并舍去不符合要求的点
      - 数学归纳法 <闭关修炼 1.1.46>
      - 如果极限求不出来，需要利用零点定理大致确定一个范围 <闭关修炼 1.1.47>
-  3. $|x_{n+1}-A|=|f(x_n)-g(A)|$经过计算可以获得一个递推式$|x_{n+1}-A|<k|x_n-A|<\cdots<k^n|x_1-A|$，其中$0<k<1$
+  3. $|x_{n+1}-A|=|f(x_n)-g(A)|$，这里$A = g(A)$，经过计算可以获得一个递推式$|x_{n+1}-A|<k|x_n-A|<\cdots<k^n|x_1-A|$，其中$0<k<1$
   4. 当$n\rightarrow\infty$时，$0 \leq |x_{n}-A|< 0$，所以我们有理由相信$x_n$的极限为$A$
 
 夹逼准则
@@ -383,13 +387,13 @@ $x \to 0$时，等价无穷小公式有：
 
 ## ★一元不定积分
 
-- $\int {\tan xdx} = \int \frac{\sin x}{\cos x} d x =-\ln |\cos x|+C =\ln |\sec x|+C$
+- $\displaystyle \int {\tan xdx} = \int \frac{\sin x}{\cos x} d x =-\ln |\cos x|+C =\ln |\sec x|+C$
 
 - $\int {\cot xdx}= \int \frac{\cos x}{\sin x} d x=\ln |\sin x|+C=-\ln |\csc x|+C $
 
-- $\int {\sec xdx} $ [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
+- $\displaystyle \int {\sec xdx}= \ln |\sec x+\tan x|+C$ [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
 
-- $\int {\csc xdx} $ [How do you integrate cscx?](https://socratic.org/questions/how-do-you-integrate-cscx)
+- $\displaystyle \int {\csc xdx} = -\ln |\csc x+\cot x|+C $ [How do you integrate cscx?](https://socratic.org/questions/how-do-you-integrate-cscx)
 
 - $\displaystyle \int {{{\sec }^2}xdx} = \tan x + C$
 
@@ -417,9 +421,9 @@ I&=\int \frac{1}{\sqrt{1+\tan ^{2} \theta}} \sec ^{2} \theta d \theta (令x=\tan
 &=\ln \left|x+\sqrt{1+x^{2}}\right|+C
 \end{align}
 $$
-- $\int {{1 \over {\sqrt {{x^2} - 1} }}dx} $
+- $\displaystyle \int {{1 \over {\sqrt {{x^2} - 1} }}dx}  = \ln(x + \sqrt{x^2 - 1}) + C$
 
-- $\int \frac{1}{a^{2} x^{2}+b^{2}} d x=\frac{1}{a b} \int \frac{1}{\left(\frac{a}{b}\right)^{2} x^{2}+1} d\left(\frac{a}{b}\right) x=\frac{1}{a b} \arctan \left(\frac{a}{b} x\right)+C$ <1000题9.41>
+- $\displaystyle \int \frac{1}{a^{2} x^{2}+b^{2}} d x=\frac{1}{a b} \int \frac{1}{\left(\frac{a}{b}\right)^{2} x^{2}+1} d\left(\frac{a}{b}\right) x=\frac{1}{a b} \arctan \left(\frac{a}{b} x\right)+C$ <1000题9.41>
 
 - $\int \frac{1}{x^{2}-a^{2}} d x=\int \frac{1}{(x-a)(x+a)} d x=\frac{1}{2 a} \int \frac{1}{x-a}-\frac{1}{x+a} d x=\frac{1}{2 a} \ln \left|\frac{x-a}{x+a}\right|+C$
 
@@ -446,27 +450,27 @@ $$
 
 点火公式
 
-- $\int_0^{{\pi  \over 2}} {{{\sin }^n}xdx} $或者$\int_0^{{\pi  \over 2}} {{{\cos }^n}xdx} $
+- $\displaystyle \int_0^{{\pi  \over 2}} {{{\sin }^n}xdx} $或者$\displaystyle \int_0^{{\pi  \over 2}} {{{\cos }^n}xdx} $
 
 点火公式升级版
 
-- $\int_0^\pi  {{{\sin }^n}xdx = 2\int_0^{{\raise0.5ex\hbox{$\scriptstyle \pi $}
+- $\displaystyle \int_0^\pi  {{{\sin }^n}xdx = 2\int_0^{{\raise0.5ex\hbox{$\scriptstyle \pi $}
   \kern-0.1em/\kern-0.15em
   \lower0.25ex\hbox{$\scriptstyle 2$}}} {{{\sin }^n}xdx} } $ <1000题5.36>
-- $\int_0^\pi  {{{\cos }^n}xdx} $
+- $\displaystyle \int_0^\pi  {{{\cos }^n}xdx} $
   - $n$为奇数时，结果为$0$
-  - $n$为偶数时，结果为$2\int_0^{{\raise0.5ex\hbox{$\scriptstyle \pi $}
+  - $n$为偶数时，结果为$\displaystyle 2\int_0^{{\raise0.5ex\hbox{$\scriptstyle \pi $}
     \kern-0.1em/\kern-0.15em
     \lower0.25ex\hbox{$\scriptstyle 2$}}} {{{\cos }^n}xdx} $
-- $\int_0^{2\pi } {{{\sin }^n}xdx = } \int_0^{2\pi } {{{\cos }^n}xdx} $
+- $\displaystyle \int_0^{2\pi } {{{\sin }^n}xdx = } \int_0^{2\pi } {{{\cos }^n}xdx} $
   - $n$为奇数时，结果为$0$
-  - $n$为偶数时，结果为$4\int_0^{{\raise0.5ex\hbox{$\scriptstyle \pi $}
+  - $n$为偶数时，结果为$\displaystyle 4\int_0^{{\raise0.5ex\hbox{$\scriptstyle \pi $}
     \kern-0.1em/\kern-0.15em
     \lower0.25ex\hbox{$\scriptstyle 2$}}} {{{\sin }^n}xdx} $
 
 其他
 
-- $\int_0^a {\sqrt {{a^2} - {x^2}} dx = {1 \over 4}\pi {a^2}} $，考虑单位圆 <1000题5.17>
+- $\displaystyle \int_0^a {\sqrt {{a^2} - {x^2}} dx = {1 \over 4}\pi {a^2}} $，考虑单位圆 <1000题5.17>
 
 ## 变上限积分
 
@@ -510,12 +514,12 @@ $$f\left( {x,y} \right)$$在点$$\left( {{x_0},{y_0}} \right)$$处的二阶展�
 
 ## 直角坐标转极坐标
 
-$\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{r_1} ^{r_2}  {f(r\cos \theta ,r\sin \theta )rdr} } } $，千万不要忘了是$rdr$ <1000题5.1>
+$\displaystyle\int\!\!\!\int_D {f(x,y)d\sigma  = \int_{\theta_1} ^{\theta_2}  {d\theta \int_{r_1} ^{r_2}  {f(r\cos \theta ,r\sin \theta )rdr} } } $，千万不要忘了是$rdr$ <1000题5.1>
 
 ## 物理应用
 
-- 形心公式$\bar x = {{\int\!\!\!\int\limits_D {xd\sigma } } \over {\int\!\!\!\int\limits_D {d\sigma } }}$, $\bar y = {{\int\!\!\!\int\limits_D {yd\sigma } } \over {\int\!\!\!\int\limits_D {d\sigma } }}$
-- 质心(重心)公式$\bar x = {{\int\!\!\!\int\limits_D {x\rho \left( {x,y} \right)d\sigma } } \over {\int\!\!\!\int\limits_D {\rho \left( {x,y} \right)d\sigma } }}$,y同理，可以看出其区别在于密度$\rho \left( {x,y} \right)$是否是常数
+- 形心公式$\displaystyle \bar x = {{\int\!\!\!\int\limits_D {xd\sigma } } \over {\int\!\!\!\int\limits_D {d\sigma } }}$, $\displaystyle\bar y = {{\int\!\!\!\int\limits_D {yd\sigma } } \over {\int\!\!\!\int\limits_D {d\sigma } }}$
+- 质心(重心)公式$\displaystyle \bar x = {{\int\!\!\!\int\limits_D {x\rho \left( {x,y} \right)d\sigma } } \over {\int\!\!\!\int\limits_D {\rho \left( {x,y} \right)d\sigma } }}$,y同理，可以看出其区别在于密度$\rho \left( {x,y} \right)$是否是常数
 - 半圆的质心为${4 \over {3\pi }}R$，详见1000题5.5视频35:00左右
 - 已知薄片$D$密度为$\mu \left( {x,y} \right)$，其质量$M = \int\!\!\!\int\limits_D {\mu \left( {x,y} \right)d\sigma } $ <1000题5.46>
 
@@ -809,9 +813,9 @@ $$
 
 ## 傅里叶级数
 
-- 傅里叶级数展开式：任何连续或有有限个一类间断点的周期函数可以在$[l, -l]$展开为$f(x) \sim S(x) = \frac{a_0}{2} + \sum \limits_{n=1}^{\infty} a_n\cos  \frac{n\pi}{l}x+b_n\sin \frac{n\pi}{l}x$，其中：
-  - $a_n = \frac{1}{l}\int^l_{-l} f(x)\cos \frac{n\pi}{l} x dx$
-  - $b_n = \frac{1}{l}\int^l_{-l} f(x)\sin  \frac{n\pi}{l}x dx$
+- 傅里叶级数展开式：任何连续或有有限个一类间断点的周期函数可以在$[l, -l]$展开为$\displaystyle f(x) \sim S(x) = \frac{a_0}{2} + \sum \limits_{n=1}^{\infty} a_n\cos  \frac{n\pi}{l}x+b_n\sin \frac{n\pi}{l}x$，其中：
+  - $\displaystyle a_n = \frac{1}{l}\int^l_{-l} f(x)\cos \frac{n\pi}{l} x dx$
+  - $\displaystyle b_n = \frac{1}{l}\int^l_{-l} f(x)\sin  \frac{n\pi}{l}x dx$
 
 - 狄利克雷收敛定理
 $$
@@ -825,15 +829,25 @@ S(x)=
   \right.
 $$
 
-- 正弦级数$f(x)$是奇函数，因为正弦级数只有$b_n \sin \frac{n\pi}{l}x$，这是因为$a_n = \frac{1}{l}\int^l_{-l} f(x)\cos \frac{n\pi}{l} x dx$，奇函数$f(x)$x偶函数$\cos \frac{n\pi}{l} x$为奇函数，所以$a_n$为0，所以为正弦函数
-- 余弦函数同理，利用积分的奇偶性可以算出$b_n=0$，这样展开式就只有$a_n\cos  \frac{n\pi}{l}x$了
+- 正弦级数$f(x)$是奇函数，因为正弦级数只有$\displaystyle b_n \sin \frac{n\pi}{l}x$，这是因为$\displaystyle a_n = \frac{1}{l}\int^l_{-l} f(x)\cos \frac{n\pi}{l} x dx$，奇函数$f(x)$x偶函数$\displaystyle \cos \frac{n\pi}{l} x$为奇函数，所以$a_n$为0，所以为正弦函数
+- 余弦函数同理，利用积分的奇偶性可以算出$b_n=0$，这样展开式就只有$\displaystyle a_n\cos  \frac{n\pi}{l}x$了
 
 ## 概率论用到的无穷级数
 
 - $\sum\limits_{k = 0}^\infty  {{1 \over {k!}}} =e$
 
-# 空间解析几何
+# 几何
 
+## 参数式方程
+
+二维平面
+
+- 圆：半径为$R$，圆心为$(x_0, y_0)$，方程为$(x-x_0)^2 + (y-y_0)^2 = R$，其参数式方程为$\left\{\begin{array}{l}{x=x_0+R \cos \theta} \\ {y=y_0+R \sin \theta}\end{array}\right.$，其中$\theta$为参数，如果是一个完整的圆，则其取值范围为$0 \le \theta \le 2\pi$
+- 直线：方程为$\displaystyle \frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=t$，其参数式方程为$\left\{\begin{array}{l}{x=x_{0}+a t} \\ {y=y_{0}+b t}\end{array}\right.$，其中$0 \le t \le 1$
+
+三维空间
+
+- 直线：方程为$\displaystyle \frac{x-x_{0}}{m}=\frac{y-y_{0}}{n}=\frac{z-z_{0}}{p}=t$，则其参数方程为$\left\{\begin{array}{l}{x=x_{0}+m t} \\ {y=y_{0}+n t} \\ {z=z_{0}+p t}\end{array}\right.$，其中$0 \le t \le 1$
 
 ## 面积、体积、表面积公式以及曲线公式
 
