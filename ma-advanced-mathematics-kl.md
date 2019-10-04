@@ -842,7 +842,7 @@ $$
 
 二维平面
 
-- 圆：半径为$R$，圆心为$(x_0, y_0)$，方程为$(x-x_0)^2 + (y-y_0)^2 = R$，其参数式方程为$\left\{\begin{array}{l}{x=x_0+R \cos \theta} \\ {y=y_0+R \sin \theta}\end{array}\right.$，其中$\theta$为参数，如果是一个完整的圆，则其取值范围为$0 \le \theta \le 2\pi$
+- 圆：方程为$(x-x_0)^2 + (y-y_0)^2 = R$，其参数式方程为$\left\{\begin{array}{l}{x=x_0+R \cos \theta} \\ {y=y_0+R \sin \theta}\end{array}\right.$，其中$\theta$为参数，如果是一个完整的圆，则其取值范围为$0 \le \theta \le 2\pi$
 - 直线：方程为$\displaystyle \frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=t$，其参数式方程为$\left\{\begin{array}{l}{x=x_{0}+a t} \\ {y=y_{0}+b t}\end{array}\right.$，其中$0 \le t \le 1$
 
 三维空间

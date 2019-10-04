@@ -684,3 +684,46 @@ plough through
 
 - 费力的翻过
   - Shortlists for job interviews, election ballot papers, lists of conference speakers and attendees: all tent to be drawn up alphabetically, and their recipients lost interest as they plough through them.
+
+**RC - Passage 4**
+
+for the sake of
+
+- 为了
+  - Even our schools are where we send our children to get a practical education-not to pursue knowledge for the sake of knowledge.
+
+anything but
+
+- 根本不
+  - Ravitch's latest book, *Left Back: A century of Failed School Reforms*, traces the root of anti-intellectuallism in our schools, concluding they are anything but a counerbalance to the American distaste for intellectual pursuits.
+
+# 2005
+
+**CLOZE TEST**
+
+stick to
+
+- 紧随；附着
+  - This means that our noses are limited to perceiving those smells which float through the air, missing the majority of smells which stick to surfaces.
+- 坚持
+  - She made it clear the government would stick to its policies despite union militancy.
+
+even if
+
+- 即使
+  - In fact, though, we are extremely sensitive to smells, even if we do not generally realize it.
+
+if only
+
+- 只要；要是...就好了
+  - If only Robbie and Alexandra were here.
+
+only if
+
+- 除非
+  - Only if you say his full name.
+
+at times
+
+- 有时
+  - At times the book seems slightly sentimental.
