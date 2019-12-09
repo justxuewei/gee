@@ -145,7 +145,7 @@
     - 概率密度函数：$X\sim f(x)=\left\{\begin{array}{l}{\frac{1}{b-a}, a\le x < b} \\ {0, else}\end{array}\right.$，图3-2-1
     - 分布函数：$F(x)=\left\{\begin{array}{l}{0, x < a \\ \frac{x-a}{b-a}, a\le x < b \\ 1, x \ge b}\end{array}\right.$， 图3-2-2 
   - 期望：$\displaystyle \frac{a+b}{2}$
-  - 方程：$\displaystyle \frac{(b-a)^2}{12}$
+  - 方差：$\displaystyle \frac{(b-a)^2}{12}$
 - 指数分布$X\sim E(\lambda)$
   - 定义：下面的$\lambda>0$
     - 概率密度函数：$X\sim f(x)=\left\{\begin{array}{l}{\lambda e^{-\lambda x}, x>0} \\ {0, x \leq 0}\end{array}\right.$，图3-2-3
@@ -528,7 +528,7 @@ g(X, Y)，同上
 - 定义：完全由样本($X_i$)所决定的量叫作统计量
 - 常用统计量
   - 样本均值 $\displaystyle \overline{X}=\frac{1}{n} \sum\limits_{i=1}^{n} X_{i}$
-    - $E(\overline X) = E(X)$
+    - $E(\overline X) = E(X)$，但是$\overline X$与$E\overline X$本身没有任何关系，在参数估计的时候我们认为$EX = \overline X$，进一步的$EX = \overline X = E\overline X$
     - $\displaystyle D(\overline X) = \frac{D(X)}{n}$
   - 样本方差 $\displaystyle S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}=\frac{1}{n-1}\left(\sum_{i=1}^{n} X_{i}^{2}-n \overline{X}^{2}\right)$
     - $X_i$服从标准正态分布时，$D(S^2)$可以利用$\displaystyle \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$求出 <1000题 概率149>
@@ -610,7 +610,7 @@ g(X, Y)，同上
 
 估计量优劣判定
 
-- 一致性（相合性）：$\displaystyle \lim _{n \rightarrow \infty} P(|\hat{\theta}-\theta|<\epsilon)=1$ <1000题 概率171>
+- 一致性（相合性）：$\displaystyle \lim _{n \rightarrow \infty} P(|\hat{\theta}-\theta|<\epsilon)=1$，其中$n$是样本的数量 <1000题 概率171>
 - 无偏性：在一致性的基础上，$E(\hat{\theta})=\theta $ <1000题 概率172>
   - 其实$E(\hat{\theta})$是一个与样本有直接关系的量（也就是掺杂着$X_i$的量），而$\theta$是被预测的量。这两个值相等意味着我的估计与原有式子理论上是一致的。比如$\displaystyle \frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}, \quad \frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}$都是方差一致估计量，但是前者更好，因为满足无偏性。
 - 有效性：在无偏性的基础上，$D\hat{\theta}_{1} \le D\hat{\theta}_{2}$，即$\hat{\theta}_{1}$相对波动较小，因此更有效

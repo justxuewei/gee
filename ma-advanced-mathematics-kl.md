@@ -239,7 +239,7 @@ $x \to 0$时，等价无穷小公式有：
   - ${\left( {\arccos x} \right)^\prime }$
   - ${\left( {\tan x} \right)^\prime } = \sec^2 x$
   - ${\left( {\cot x} \right)^\prime }$
-  - ${\left( {\arctan x} \right)^\prime }$
+  - $\displaystyle {\left( {\arctan x} \right)^\prime } = \frac{1}{1+x^2}$
   - ${\left( {{\mathop{\rm arccot}\nolimits} x} \right)^\prime }$
   - ${\left( {\sec x} \right)^\prime } = \sec x\tan x$
   - ${\left( {\csc x} \right)^\prime }$
@@ -389,7 +389,7 @@ $x \to 0$时，等价无穷小公式有：
 
 - $\displaystyle \int {\tan xdx} = \int \frac{\sin x}{\cos x} d x =-\ln |\cos x|+C =\ln |\sec x|+C$
 
-- $\int {\cot xdx}= \int \frac{\cos x}{\sin x} d x=\ln |\sin x|+C=-\ln |\csc x|+C $
+- $\displaystyle \int {\cot xdx}= \int \frac{\cos x}{\sin x} d x=\ln |\sin x|+C=-\ln |\csc x|+C $
 
 - $\displaystyle \int {\sec xdx}= \ln |\sec x+\tan x|+C$ [What is the integral of sec(x)?](https://socratic.org/questions/what-is-the-integral-of-sec-x)
 
@@ -401,17 +401,17 @@ $x \to 0$时，等价无穷小公式有：
 
 - $\displaystyle \int {\tan x\sec xdx} =\sec x + C$
 
-- $\int {\cot x\csc xdx} $
+- $\displaystyle \int {\cot x\csc xdx} = -\csc x + C$
 
-- $\int {{{\sec }^3}xdx} $ [answer](https://socratic.org/questions/what-is-the-integral-of-sec-3-x)
+- $\displaystyle \int {{{\sec }^3}xdx} $ [answer](https://socratic.org/questions/what-is-the-integral-of-sec-3-x)
 
-- $\int {\ln xdx} $
+- $\displaystyle \int {\ln xdx} $
 
 - $\displaystyle \int {{1 \over {\sqrt {1 - {x^2}} }}dx} = \arcsin x + C$
 
 - $\displaystyle \int { - {1 \over {\sqrt {1 - {x^2}} }}dx} = \arccos x + C$
 
-- $\int {{1 \over {\sqrt {1+{x^2}} }}dx}$
+- $\displaystyle \int {{1 \over {\sqrt {{x^2} + 1} }}dx}$
 $$
 \begin{align}
 I&=\int \frac{1}{\sqrt{1+\tan ^{2} \theta}} \sec ^{2} \theta d \theta (令x=\tan\theta) \\
@@ -425,11 +425,11 @@ $$
 
 - $\displaystyle \int \frac{1}{a^{2} x^{2}+b^{2}} d x=\frac{1}{a b} \int \frac{1}{\left(\frac{a}{b}\right)^{2} x^{2}+1} d\left(\frac{a}{b}\right) x=\frac{1}{a b} \arctan \left(\frac{a}{b} x\right)+C$ <1000题9.41>
 
-- $\int \frac{1}{x^{2}-a^{2}} d x=\int \frac{1}{(x-a)(x+a)} d x=\frac{1}{2 a} \int \frac{1}{x-a}-\frac{1}{x+a} d x=\frac{1}{2 a} \ln \left|\frac{x-a}{x+a}\right|+C$
+- $\displaystyle \int \frac{1}{x^{2}-a^{2}} d x=\int \frac{1}{(x-a)(x+a)} d x=\frac{1}{2 a} \int \frac{1}{x-a}-\frac{1}{x+a} d x=\frac{1}{2 a} \ln \left|\frac{x-a}{x+a}\right|+C$
 
-- $\int \frac{1}{a^{2}-x^{2}} d x=\int \frac{1}{(a-x)(a+x)} d x=\frac{1}{2 a} \int \frac{1}{a-x}+\frac{1}{a+x} d x=\frac{1}{2 a} \ln \left|\frac{a+x}{a-x}\right|+C$
+- $\displaystyle \int \frac{1}{a^{2}-x^{2}} d x=\int \frac{1}{(a-x)(a+x)} d x=\frac{1}{2 a} \int \frac{1}{a-x}+\frac{1}{a+x} d x=\frac{1}{2 a} \ln \left|\frac{a+x}{a-x}\right|+C$
 
-- $\int {{1 \over {\cos x + \sin x}}dx}=-\frac{1}{\sqrt{2}} \ln \left|\csc \left(x+\frac{\pi}{4}\right)+\cot \left(x+\frac{\pi}{4}\right)\right|+C$ <1000题5.39> 
+- $\displaystyle \int {{1 \over {\cos x + \sin x}}dx}=-\frac{1}{\sqrt{2}} \ln \left|\csc \left(x+\frac{\pi}{4}\right)+\cot \left(x+\frac{\pi}{4}\right)\right|+C$ <1000题5.39> 
 $$
 \begin{align}
 I &= \int \frac{\frac{1}{\sqrt{2}}}{\sqrt{\frac{1}{2}} \cos x+\frac{1}{\sqrt{2}} \sin x} d x \\
@@ -438,7 +438,7 @@ I &= \int \frac{\frac{1}{\sqrt{2}}}{\sqrt{\frac{1}{2}} \cos x+\frac{1}{\sqrt{2}}
 &=-\frac{1}{\sqrt{2}} \ln \left|\csc \left(x+\frac{\pi}{4}\right)+\cot \left(x+\frac{\pi}{4}\right)\right|+C
 \end{align}
 $$
-- $\int \arctan x d x=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C$，思路是分部积分法 <1000题8.9>
+- $\displaystyle \int \arctan x d x=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C$，思路是分部积分法 <1000题8.9>
 $$
 \begin{array}{l}
   {I=x \arctan x-\int \frac{x}{1+x^{2}} d x} \\ 
